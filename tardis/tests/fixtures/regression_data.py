@@ -1,4 +1,5 @@
 from pathlib import Path
+import pandas as pd
 import pytest
 import re
 import os
@@ -47,7 +48,6 @@ class RegressionData:
                     full_fname_prefix.with_suffix(".h5"),
                 )
             pytest.skip("Skipping test to generate reference data")
-
         else:
             if hasattr(data, "to_hdf"):
                 ref_data = pd.read_hdf(

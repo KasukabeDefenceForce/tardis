@@ -8,7 +8,7 @@ from tardis.plasma.properties.nlte_rate_equation_solver import (
 )
 
 
-def test_prepare_bound_bound_rate_matrix(nlte_atomic_dataset, snapshot_np):
+def test_prepare_bound_bound_rate_matrix(nlte_atomic_dataset, regression_data):
     """
     Using a simple case of nlte_exc for HI, checks if prepare_bound_bound_rate_matrix generates the correct data.
     """
@@ -69,10 +69,13 @@ def test_prepare_bound_bound_rate_matrix(nlte_atomic_dataset, snapshot_np):
         r_lu_matrix,
         simple_beta_sobolev,
     )
+
     # if this test fails the first thing to check is if the reshape in the
     # methods made a view or a copy. If it's a copy rewrite the function.
     # TODO: allow rtol=1e-6
-    assert snapshot_np == np.array(actual_rate_matrix)
+    expected_rate_matrix = regression_data.check_data(actual_rate_matrix)
+
+    assert np.array_equal(expected_rate_matrix, actual_rate_matrix)
 
 
 @pytest.mark.parametrize(

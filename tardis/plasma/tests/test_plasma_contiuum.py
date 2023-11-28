@@ -7,3 +7,10 @@ def test_exp1_times_exp(snapshot_np):
     x = np.array([499.0, 501.0, 710.0])
     actual = YgData.exp1_times_exp(x)
     assert snapshot_np == actual
+
+
+def test_exp1_times_exp_rg(regression_data):
+    x = np.array([499.0, 501.0, 710.0])
+    expected_result = regression_data.check_data(x)
+    actual = YgData.exp1_times_exp(x)
+    assert np.array_equal(expected_result, actual)

@@ -50,12 +50,29 @@ def test_hdf_plasma(simulation_verysimple, attr, snapshot_np):
             actual = actual.cgs.value
         assert snapshot_np == actual
 
+# @pytest.mark.parametrize("attr", plasma_properties_list)
+# def test_hdf_plasma(simulation_verysimple, attr, regression_data):
+#     if hasattr(simulation_verysimple.plasma, attr):
+#         actual = getattr(simulation_verysimple.plasma, attr)
+#         if hasattr(actual, "cgs"):
+#             actual = actual.cgs.value
+#
+#         expected_result = regression_data.check_data(actual)
+#         assert expected_result.equals(actual)
 
 def test_hdf_levels(simulation_verysimple, snapshot_pd):
     actual = getattr(simulation_verysimple.plasma, "levels")
     if hasattr(actual, "cgs"):
         actual = actual.cgs.value
     assert snapshot_pd == pd.DataFrame(actual)
+
+def test_hdf_levels_rg(simulation_verysimple, regression_data):
+    actual = getattr(simulation_verysimple.plasma, "levels")
+    if hasattr(actual, "cgs"):
+        actual = actual.cgs.value
+    actual_df = pd.DataFrame(actual)
+    expected_result = regression_data.check_data(actual_df)
+    assert expected_result.equals(actual_df)
 
 
 scalars_list = ["time_explosion", "link_t_rad_t_electron"]
