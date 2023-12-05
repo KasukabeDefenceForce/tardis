@@ -3,6 +3,7 @@ import pandas as pd
 import pytest
 import re
 import os
+import numpy as np
 
 
 class RegressionData:
@@ -39,19 +40,48 @@ class RegressionData:
 
     def check_data(self, data):
         full_fname_prefix = (
-            self.relative_regression_data_dir
-            / self.regression_data_fname_prefix
+                self.tardis_ref_path
+                / self.regression_data_fname_prefix
         )
         if self.enable_generate_reference:
             if hasattr(data, "to_hdf"):
                 data.to_hdf(
                     full_fname_prefix.with_suffix(".h5"),
+                    key=self.regression_data_fname_prefix,
+                )
+            # Numpy
+            elif isinstance(data, np.ndarray):
+                np.save(full_fname_prefix.with_suffix(".npy"), data)
+            elif isinstance(data, str):
+                np.savetxt(
+                    full_fname_prefix.with_suffix(".txt"),
+                    [data],
+                    fmt="%s",
+                    encoding="utf-8"
+                )
+            elif np.issubdtype(type(data), np.floating):
+                np.savetxt(
+                    full_fname_prefix.with_suffix(".txt"),
+                    [data],
                 )
             pytest.skip("Skipping test to generate reference data")
         else:
             if hasattr(data, "to_hdf"):
                 ref_data = pd.read_hdf(
-                    self.tardis_ref_path / f"{full_fname_prefix}.h5"
+                    full_fname_prefix.with_suffix(".h5"),
+                    key=self.regression_data_fname_prefix,
+                )
+            elif isinstance(data, np.ndarray):
+                ref_data = np.load(full_fname_prefix.with_suffix(".npy"))
+            elif isinstance(data, str):
+                ref_data = np.loadtxt(
+                    full_fname_prefix.with_suffix(".txt"),
+                    dtype='str',
+                    encoding="utf-8"
+                )
+            elif np.issubdtype(type(data), np.floating):
+                ref_data = np.loadtxt(
+                    full_fname_prefix.with_suffix(".txt"),
                 )
             return ref_data
 
