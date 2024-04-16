@@ -9,7 +9,7 @@
 ..    </style>
 
 ##################################
-TARDIS Core Package
+TARDIS Core Package Documentation
 ##################################
 
 .. image:: graphics/tardis_banner.svg
@@ -96,7 +96,7 @@ Mission Statement
 
 
 .. toctree::
-    :caption: Other Resources 
+    :caption: Other Resources
     :hidden:
     
     resources/credits
