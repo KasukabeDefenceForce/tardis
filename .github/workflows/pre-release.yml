@@ -1,13 +1,9 @@
-#  For more information about TARDIS pipelines, please refer to:
-#
-#    https://tardis-sn.github.io/tardis/contributing/development/continuous_integration.html
-
 name: pre-release
 
 on:
   schedule:
-    - cron: '0 0 * * 0'
-  workflow_dispatch:  # manual trigger
+    - cron: "0 0 * * 0"
+  workflow_dispatch: # manual trigger
 
 defaults:
   run:
@@ -28,16 +24,16 @@ jobs:
           KEY_SECRET_JSON: ${{ secrets.ZENODO_KEY_SECRET_JSON }}
 
       - name: Download Lock File
-        run:  wget -q https://raw.githubusercontent.com/tardis-sn/tardis/master/conda-linux-64.lock
-        
+        run: wget -q https://raw.githubusercontent.com/tardis-sn/tardis/master/conda-linux-64.lock
+
       - name: Setup environment
         uses: conda-incubator/setup-miniconda@v2
         with:
-            miniforge-variant: Mambaforge
-            miniforge-version: latest
-            environment-file: conda-linux-64.lock
-            activate-environment: tardis_zenodo
-            use-mamba: true
+          miniforge-variant: Mambaforge
+          miniforge-version: latest
+          environment-file: conda-linux-64.lock
+          activate-environment: tardis_zenodo
+          use-mamba: true
 
       - name: Run Notebook
         run: jupyter nbconvert gather_data.ipynb --to html --execute --ExecutePreprocessor.timeout=6000
@@ -131,4 +127,4 @@ jobs:
         if: steps.create-pr.outputs.pull-request-operation == 'created'
 
   compare_refdata:
-      uses: tardis-sn/tardis-refdata/.github/workflows/compare-refdata.yml@master
+    uses: tardis-sn/tardis-refdata/.github/workflows/compare-refdata.yml@master
