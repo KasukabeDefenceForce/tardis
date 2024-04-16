@@ -9,7 +9,7 @@
 ..    </style>
 
 ##################################
-TARDIS Core Package Documentation
+
 ##################################
 
 .. image:: graphics/tardis_banner.svg
