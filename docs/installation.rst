@@ -18,11 +18,7 @@ Installation
 
 
 Install with lockfiles
-======================
 
-Conda lockfiles are platform-specific dependency files that produce repeatable environments.
-These files are generated on every new release. We strongly recommend installing TARDIS using
-this method by following the steps described below.
 
 1. Download the latest lockfile for your operating system from our 
    `releases section <https://github.com/tardis-sn/tardis/releases>`_, or run
