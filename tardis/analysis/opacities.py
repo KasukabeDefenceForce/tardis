@@ -1,10 +1,13 @@
 """This module provides an opacity calculator class with which the opacities
 and optical depth information may be extracted from Tardis runs."""
+
 import logging
-import numpy as np
+
 import astropy.units as units
-from tardis import constants as const
+import numpy as np
 from astropy.modeling.models import Blackbody
+
+from tardis import constants as const
 
 logger = logging.getLogger(__name__)
 
@@ -12,14 +15,7 @@ logger = logging.getLogger(__name__)
 class opacity_calculator(object):
     """Basic Tardis opacity and optical depth calculator
 
-    Given the model object of a Tardis run and a frequency grid, detailed
-    opacity and optical depth information may be extracted. In particular, the
-    following quantities may be calculated:
-        * electron-scattering opacities in each cell
-        * bound-bound scattering opacities based on the expansion opacity
-          formalism of Blinnikov et al. 1998 in each cell on the provided
-          frequency grid
-        * total opacities (i.e. electron scattering and line opacity) per each
+    Gs (i.e. electron scattering and line opacity) per each
           cell and frequency bin
         * Planck-mean total opacities
         * Planck-mean total optical depths of the model
