@@ -36,24 +36,25 @@ def download_atom_data(atomic_data_name=None, force_download=False):
     -------
         : None
     """
-    atomic_repo = get_atomic_repo_config()
+    # atomic_repo = get_atomic_repo_config()
 
-    if atomic_data_name is None:
-        atomic_data_name = atomic_repo["default"]
+    # if atomic_data_name is None:
+    #     atomic_data_name = atomic_repo["default"]
 
-    if atomic_data_name not in atomic_repo:
-        raise ValueError(f"Atomic Data name {atomic_data_name} not known")
+    # if atomic_data_name not in atomic_repo:
+    #     raise ValueError(f"Atomic Data name {atomic_data_name} not known")
 
-    dst_fname = get_data_dir() / f"{atomic_data_name}.h5"
+    # dst_fname = get_data_dir() / f"{atomic_data_name}.h5"
 
-    if dst_fname.exists() and not force_download:
-        logger.warning(
-            f"Atomic Data {atomic_data_name} already exists in {dst_fname}. Will not download - override with force_download=True."
-        )
-        return
-    src_url = atomic_repo[atomic_data_name]["url"]
-    mirrors = tuple(atomic_repo[atomic_data_name]["mirrors"])
-    checksum = atomic_repo[atomic_data_name]["md5"]
+    # if dst_fname.exists() and not force_download:
+    #     logger.warning(
+    #         f"Atomic Data {atomic_data_name} already exists in {dst_fname}. Will not download - override with force_download=True."
+    #     )
+    #     return
+    # src_url = atomic_repo[atomic_data_name]["url"]
+    # mirrors = tuple(atomic_repo[atomic_data_name]["mirrors"])
+    # checksum = atomic_repo[atomic_data_name]["md5"]
 
-    logger.info(f"Downloading atomic data from {src_url} to {dst_fname}")
-    download_from_url(src_url, dst_fname, checksum, mirrors)
+    # logger.info(f"Downloading atomic data from {src_url} to {dst_fname}")
+    # download_from_url(src_url, dst_fname, checksum, mirrors)
+    raise ValueError("ABHINAV")
