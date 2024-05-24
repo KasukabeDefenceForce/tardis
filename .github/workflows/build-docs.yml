@@ -97,16 +97,9 @@ jobs:
       - name: Setup LFS
         uses: ./.github/actions/setup_lfs
 
-      - name: Setup tmate session
-        uses: mxschmitt/action-tmate@v3
-
-      - name: Create Downloads directory (if needed)
-        run: |
-          mkdir -p Downloads
-
       - name: Copy atom_data
         run: |
-          cp -r tardis-refdata/atom_data Downloads/tardis-data
+          mkdir -p ~/Downloads/tardis-data && cp -a ./tardis-refdata/atom_data/. ~/Downloads/tardis-data
 
       - uses: mamba-org/setup-micromamba@v1
         with:
