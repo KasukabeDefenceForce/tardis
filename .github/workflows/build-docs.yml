@@ -99,7 +99,7 @@ jobs:
 
       - name: Copy atom_data
         run: |
-          cp -r tardis-refdata/atom_data Downloads/tardis_data
+          cp -r tardis-refdata/atom_data Downloads/tardis-data
 
       - uses: mamba-org/setup-micromamba@v1
         with:
