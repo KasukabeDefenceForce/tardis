@@ -97,6 +97,9 @@ jobs:
       - name: Setup LFS
         uses: ./.github/actions/setup_lfs
 
+      - name: Setup tmate session
+        uses: mxschmitt/action-tmate@v3
+
       - name: Create Downloads directory (if needed)
         run: |
           mkdir -p Downloads
