@@ -97,6 +97,10 @@ jobs:
       - name: Setup LFS
         uses: ./.github/actions/setup_lfs
 
+      - name: Create Downloads directory (if needed)
+        run: |
+          mkdir -p Downloads
+
       - name: Copy atom_data
         run: |
           cp -r tardis-refdata/atom_data Downloads/tardis-data
