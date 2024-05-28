@@ -60,6 +60,7 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Input/Output</span></p>
 <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../io/hdf/index.html">Hierarchical Data Format (HDF5)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../io/configuration/index.html">Configuration (Required Input)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../io/model/index.html">Reading Models</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../io/optional/index.html">Optional Inputs</a></li>
@@ -126,7 +127,7 @@ basic_inputs = PlasmaPropertyCollection(
     [
         TRadiative,
         Abundance,
-        Density,
+        NumberDensity,
         TimeExplosion,
         AtomicData,
         DilutionFactor,
@@ -142,11 +143,9 @@ basic_properties = PlasmaPropertyCollection(
         BetaRadiation,
         Levels,
         Lines,
-        AtomicMass,
         PartitionFunction,
         GElectron,
         IonizationData,
-        NumberDensity,
         LinesLowerLevelIndex,
         LinesUpperLevelIndex,
         TauSobolev,
@@ -270,9 +269,6 @@ two_photon_properties = PlasmaPropertyCollection(
         TwoPhotonFrequencySampler,
     ]
 )
-isotope_properties = PlasmaPropertyCollection(
-    [IsotopeAbundance, IsotopeMass, IsotopeNumberDensity]
-)
 </pre></div>
 
            </div>
@@ -283,7 +279,7 @@ isotope_properties = PlasmaPropertyCollection(
 
   <div role="contentinfo">
     <p>&#169; Copyright 2013-2024, TARDIS Collaboration.
-      <span class="lastupdated">Last updated on 22 May 2024.
+      <span class="lastupdated">Last updated on 28 May 2024.
       </span></p>
   </div>
 

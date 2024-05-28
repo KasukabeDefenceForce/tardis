@@ -60,6 +60,7 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Input/Output</span></p>
 <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../io/hdf/index.html">Hierarchical Data Format (HDF5)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../io/configuration/index.html">Configuration (Required Input)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../io/model/index.html">Reading Models</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../io/optional/index.html">Optional Inputs</a></li>
@@ -359,7 +360,7 @@ YAMLLoader.add_constructor(
                     path_or_buf, complevel=complevel, complib=complib
                 )
             except TypeError as e:
-                if e.message == &quot;Expected bytes, got HDFStore&quot;:
+                if str(e) == &quot;Expected bytes, got HDFStore&quot;:
                     # when path_or_buf is an HDFStore buffer instead
                     logger.debug(
                         &quot;Expected bytes, got HDFStore. Changing path to HDF buffer&quot;
@@ -545,7 +546,7 @@ def download_from_url(url, dst, checksum, src=None, retries=3):
 
   <div role="contentinfo">
     <p>&#169; Copyright 2013-2024, TARDIS Collaboration.
-      <span class="lastupdated">Last updated on 22 May 2024.
+      <span class="lastupdated">Last updated on 28 May 2024.
       </span></p>
   </div>
 
