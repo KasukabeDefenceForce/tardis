@@ -20,11 +20,17 @@ jobs:
           token: ${{ secrets.BOT_TOKEN }}
           fetch-depth: 0
 
-      - name: Install github-changes
-        run: sudo npm install -g github-changes
+      - name: Set up git-cliff
+        uses: kenji-miyake/setup-git-cliff@v1
 
-      - name: Update changelog
-        run: github-changes -o tardis-sn -r tardis --only-pulls --use-commit-body -f CHANGELOG.md -k ${{secrets.BOT_TOKEN}}
+      - name: Run git-cliff
+        run: GITHUB_TOKEN=${{secrets.BOT_TOKEN}} git cliff --github-repo "tardis-sn/tardis" -o CHANGELOG.md
+
+      # - name: Install github-changes
+      #   run: sudo npm install -g github-changes
+
+      # - name: Update changelog
+      #   run: github-changes -o tardis-sn -r tardis --only-pulls --use-commit-body -f CHANGELOG.md -k ${{secrets.BOT_TOKEN}}
 
       - uses: actions/upload-artifact@v3
         with:
