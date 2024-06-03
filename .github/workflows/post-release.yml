@@ -23,8 +23,14 @@ jobs:
       - name: Set up git-cliff
         uses: kenji-miyake/setup-git-cliff@v1
 
-      - name: Run git-cliff
-        run: GITHUB_TOKEN=${{secrets.BOT_TOKEN}} git cliff --github-repo "tardis-sn/tardis" -o CHANGELOG.md
+      - name: Generate a changelog
+        uses: orhun/git-cliff-action@v3
+        with:
+          config: cliff.toml
+          args: --verbose
+        env:
+          OUTPUT: CHANGELOG.md
+          GITHUB_REPO: ${{ github.repository }}
 
       # - name: Install github-changes
       #   run: sudo npm install -g github-changes
