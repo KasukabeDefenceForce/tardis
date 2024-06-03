@@ -168,6 +168,9 @@ jobs:
           user_name: "TARDIS Bot"
           user_email: "tardis.sn.bot@gmail.com"
 
+      - name: Setup tmate session
+        uses: mxschmitt/action-tmate@v3
+
       - name: Find comment
         uses: peter-evans/find-comment@v1
         id: fc
