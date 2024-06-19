@@ -83,7 +83,7 @@ jobs:
         run: asv machine --yes
 
       - name: Run benchmarks for last 5 commits if not PR
-        if: github.event_name != 'pull_request_target'
+        if: github.event_name != 'pull_request'
         run: |
           git log -n 5  --pretty=format:"%H" >> tag_commits.txt
           asv run HASHFILE:tag_commits.txt | tee asv-output.log  
@@ -93,15 +93,15 @@ jobs:
           fi
 
       - name: Generate Graphs and HTML
-        if: github.event_name != 'pull_request_target'
+        if: github.event_name != 'pull_request'
         run: asv publish
 
       - name: Delete env files
-        if: github.event_name != 'pull_request_target'
+        if: github.event_name != 'pull_request'
         run: rm -r .asv/env
 
       - name: Push results to results repository
-        if: github.event_name != 'pull_request_target'
+        if: github.event_name != 'pull_request'
         continue-on-error: true
         uses: cpina/github-action-push-to-another-repository@main
         env:
