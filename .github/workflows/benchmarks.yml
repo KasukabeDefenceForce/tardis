@@ -5,7 +5,7 @@ on:
     branches:
       - master
 
-  pull_request_target:
+  pull_request:
     branches:
       - master
 
@@ -28,12 +28,12 @@ jobs:
   build:
     if: github.event_name == 'push' ||
       github.event_name == 'workflow_dispatch' ||
-      (github.event_name == 'pull_request_target' &&
+      (github.event_name == 'pull_request' &&
       contains(github.event.pull_request.labels.*.name, 'benchmarks'))
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-        if: github.event_name != 'pull_request_target'
+        if: github.event_name != 'pull_request'
         with:
           fetch-depth: 0
 
@@ -42,7 +42,7 @@ jobs:
         with:
           ref: ${{ github.sha }}
           fetch-depth: 0
-        if: github.event_name == 'pull_request_target'
+        if: github.event_name == 'pull_request'
 
       - name: Restore Atom Data
         uses: actions/cache/restore@v4
@@ -115,7 +115,7 @@ jobs:
           target-directory: .asv
 
       - name: Compare HEAD with master if PR
-        if: github.event_name == 'pull_request_target'
+        if: github.event_name == 'pull_request'
         continue-on-error: true # TODO: step failed sporadically while testing
         run: |
           asv continuous ${{ github.event.pull_request.base.sha }} ${{ github.event.pull_request.head.sha }}  | tee asv-cont-output.log  
@@ -143,7 +143,7 @@ jobs:
           path: asv-compare-changed-output.log
 
       - name: Find Comment
-        if: always() && github.event_name == 'pull_request_target'
+        if: always() && github.event_name == 'pull_request'
         uses: peter-evans/find-comment@v1
         id: fc
         with:
@@ -151,7 +151,7 @@ jobs:
           body-includes: I ran benchmarks as you asked
 
       - name: Post comment
-        if: github.event_name == 'pull_request_target'
+        if: github.event_name == 'pull_request'
         uses: peter-evans/create-or-update-comment@v2
         with:
           token: ${{ secrets.BOT_TOKEN }}
