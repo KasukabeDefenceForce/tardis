@@ -92,9 +92,6 @@ jobs:
             exit 1
           fi
 
-      - name: Setup tmate session
-        uses: mxschmitt/action-tmate@v3
-
       - name: ASV benchmarks
         if: github.event_name != 'pull_request'
         run: asv run --bench just-discover
