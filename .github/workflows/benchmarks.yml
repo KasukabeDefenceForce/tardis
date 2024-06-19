@@ -92,6 +92,9 @@ jobs:
             exit 1
           fi
 
+      - name: Setup tmate session
+        uses: mxschmitt/action-tmate@v3
+
       - name: Generate Graphs and HTML
         if: github.event_name != 'pull_request'
         run: asv publish
