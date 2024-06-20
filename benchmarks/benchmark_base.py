@@ -63,7 +63,11 @@ class BenchmarkBase:
     def tardis_ref_path(self):
         # TODO: This route is fixed but needs to get from the arguments given in the command line.
         #       /app/tardis-refdata
-        return "/app/tardis-refdata"
+        ref_data_path = Path(
+            Path(__file__).parent.parent,
+            "tardis-refdata",
+        ).resolve()
+        return ref_data_path
 
     @property
     def atomic_dataset(self) -> AtomData:
@@ -253,6 +257,36 @@ class BenchmarkBase:
         return opacity_state_initialize(
             self.nb_simulation_verysimple.plasma,
             line_interaction_type="macroatom",
+            disable_line_scattering=self.nb_simulation_verysimple.transport.montecarlo_configuration.DISABLE_LINE_SCATTERING,
+            continuum_processes_enabled=self.nb_simulation_verysimple.transport.montecarlo_configuration.CONTINUUM_PROCESSES_ENABLED,
+        )
+
+    @property
+    def verysimple_enable_full_relativity(self):
+        return self.nb_simulation_verysimple.transport.enable_full_relativity
+
+    @property
+    def verysimple_disable_line_scattering(self):
+        return (
+            self.nb_simulation_verysimple.transport.montecarlo_configuration.DISABLE_LINE_SCATTERING
+        )
+
+    @property
+    def verysimple_continuum_processes_enabled(self):
+        return (
+            self.nb_simulation_verysimple.transport.montecarlo_configuration.CONTINUUM_PROCESSES_ENABLED
+        )
+
+    @property
+    def verysimple_tau_russian(self):
+        return (
+            self.nb_simulation_verysimple.transport.montecarlo_configuration.VPACKET_TAU_RUSSIAN
+        )
+
+    @property
+    def verysimple_survival_probability(self):
+        return (
+            self.nb_simulation_verysimple.transport.montecarlo_configuration.SURVIVAL_PROBABILITY
         )
 
     @property
