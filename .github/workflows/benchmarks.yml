@@ -70,6 +70,9 @@ jobs:
           mkdir -p tardis-ref-data/atom_data
           cp benchmarks/data/kurucz_cd23_chianti_H_He.h5 tardis-ref-data/atom_data/
 
+      - name: Setup tmate session
+        uses: mxschmitt/action-tmate@v3
+
       - name: Setup Mamba
         uses: mamba-org/setup-micromamba@v1
         with:
