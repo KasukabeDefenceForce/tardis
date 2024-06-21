@@ -87,9 +87,6 @@ jobs:
       - name: Accept all asv questions
         run: asv machine --yes
 
-      - name: Setup tmate session
-        uses: mxschmitt/action-tmate@v3
-
       - name: Run benchmarks for last 5 commits if not PR
         if: github.event_name != 'pull_request'
         run: |
