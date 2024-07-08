@@ -16,7 +16,6 @@ Installation
       or `Miniconda <https://conda.io/projects/conda/en/latest/user-guide/install/index.html>`_
       to be installed on your system.
 
-
 Install with lockfiles
 ======================
 
