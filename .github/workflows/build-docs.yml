@@ -113,7 +113,7 @@ jobs:
       - name: Install package
         run: pip install -e .
 
-      - name: Install Sphinx and extensions
+      - name: Install Sphinx and Google Analytics Extension
         run: |
           pip install sphinx
           pip install sphinxcontrib-googleanalytics
