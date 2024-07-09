@@ -256,6 +256,11 @@ htmlhelp_basename = project + "doc"
 # Prefixes that are ignored for sorting the Python module index
 modindex_common_prefix = ["tardis."]
 
+# -- Google Analytics Using Extension -------------------------------------------------
+
+if os.getenv("GITHUB_ACTIONS") or os.getenv("TRAVIS") or os.getenv("CIRCLECI") or os.getenv("GITLAB_CI"):
+  extensions.append("sphinxcontrib.googleanalytics")
+  googleanalytics_id = "G-53HJHD1BWS"
 
 # -- Options for LaTeX output -------------------------------------------------
 
