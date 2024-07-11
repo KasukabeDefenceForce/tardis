@@ -48,8 +48,6 @@ with open(toml_conf_path, 'r') as f_toml:
     toml_config = toml.load(f_toml)
 toml_config_project_dict = toml_config["project"]
 toml_config_tool_dict = toml_config['tool']
-for k,v in toml_config_project_dict.items():
-    print(k,v)
 
 # -- General configuration ----------------------------------------------------
 
