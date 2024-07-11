@@ -113,6 +113,11 @@ jobs:
       - name: Install package
         run: pip install -e .
 
+      - name: Clone gh-pages branch
+        run: |
+          git clone -b ${{ env.DEPLOY_BRANCH }} https://github.com/${{ github.repository }}.git ${{ env.DEPLOY_BRANCH }}
+          cp -r docs/_build/html ${{ env.DEPLOY_BRANCH }}/_build
+
       - name: Build documentation
         run: cd docs/ && make html NCORES=auto
 
