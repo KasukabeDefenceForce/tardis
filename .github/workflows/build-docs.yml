@@ -116,8 +116,8 @@ jobs:
       - name: Clone gh-pages branch
         run: |
           git clone -b ${{ env.DEPLOY_BRANCH }} https://github.com/${{ github.repository }}.git ${{ env.DEPLOY_BRANCH }}
-          cp -r docs/_build/html ${{ env.DEPLOY_BRANCH }}
-          
+          mkdir -p docs/_build/html && cp -r docs/_build/html ${{ env.DEPLOY_BRANCH }}
+
       - name: Build documentation
         run: cd docs/ && make html NCORES=auto
 
