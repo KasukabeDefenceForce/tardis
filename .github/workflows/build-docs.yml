@@ -116,7 +116,7 @@ jobs:
       - name: Clone gh-pages branch
         run: |
           git clone -b ${{ env.DEPLOY_BRANCH }} https://github.com/${{ github.repository }}.git ${{ env.DEPLOY_BRANCH }}
-          mkdir -p docs/_build/html && cp -r ${{ env.DEPLOY_BRANCH }} docs/_build/html
+          mkdir -p docs/_build/html && cp -r ${{ env.DEPLOY_BRANCH }}/* docs/_build/html
 
       - name: Setup tmate session
         uses: mxschmitt/action-tmate@v3
