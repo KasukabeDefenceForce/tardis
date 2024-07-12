@@ -9,7 +9,7 @@ Credits & Publication Policies
 We provide TARDIS as a free, open-source tool. If you are using it, please
 adhere to a few policies and acknowledge the TARDIS Team.
 
-Publication Policies
+Publication Policie
 ====================
 
 If you use this code for any publications or presentations please acknowledge
