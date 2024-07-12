@@ -19,16 +19,16 @@ coverage.xml
 MANIFEST
 .ipynb_checkpoints
 
-# Sphinx
-docs/api
-docs/_build
-docs/tutorials.rst
-docs/io/configuration/components/models/converters/density_parse.csv
-docs/io/configuration/components/models/converters/abund_parse.csv
-docs/io/output/plasma_graph_default.tex
-docs/io/output/plasma_graph_scaled.tex
-docs/io/output/plasma_graph_no_eq.tex
-docs/io/output/plasma_graph_with_args.tex
+# # Sphinx
+# docs/api
+# docs/_build
+# docs/tutorials.rst
+# docs/io/configuration/components/models/converters/density_parse.csv
+# docs/io/configuration/components/models/converters/abund_parse.csv
+# docs/io/output/plasma_graph_default.tex
+# docs/io/output/plasma_graph_scaled.tex
+# docs/io/output/plasma_graph_no_eq.tex
+# docs/io/output/plasma_graph_with_args.tex
 
 # Eclipse editor project files
 .project
