@@ -392,32 +392,6 @@ class opacity_calculator(object):
             Planck-mean optical depth (shape Nshells)
         """
         delta_r = self.r_outer - self.r_inner
-        delta_tau = delta_r * self.planck_kappa
-
-
-
-
-
-
-
-        
+        delta_tau = delta_r * self.planck_kappa        
 
         return delta_tau.to("")
-
-    def _calc_integrated_planck_optical_depth(self):
-        """Calculate integrated Planck-mean optical depth
-
-        For each cell, the optical depth integral from the inner shell radius
-        to the surface is determined.
-
-        Returns
-        -------
-        tau : numpy.ndarray
-            integrated Planck-mean optical depth
-        """
-        tau = np.zeros(self.nshells)
-
-        tau[-1] = self.planck_delta_tau[-1]
-        for i in range(self.nshells - 2, -1, -1):
-            tau[i] = tau[i + 1] + self.planck_delta_tau[i]
-        return tau
