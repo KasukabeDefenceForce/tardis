@@ -383,7 +383,7 @@ class IonNumberDensity(ProcessingPlasmaProperty):
                 self.ion_zero_threshold,
             )
 
-        return ion_number_density, n_electron
+        return n_electron
 
 
 class IonNumberDensityHeNLTE(ProcessingPlasmaProperty):
