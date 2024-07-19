@@ -394,6 +394,14 @@ class opacity_calculator(object):
         delta_r = self.r_outer - self.r_inner
         delta_tau = delta_r * self.planck_kappa
 
+
+
+
+
+
+
+        
+
         return delta_tau.to("")
 
     def _calc_integrated_planck_optical_depth(self):
