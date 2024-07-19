@@ -126,7 +126,6 @@ class BasePlasma(PlasmaWriterMixin):
         if property_kwargs is None:
             property_kwargs = {}
         plasma_property_objects = []
-        self.previous_iteration_properties = []
         self.outputs_dict = {}
         for plasma_property in plasma_properties:
 
