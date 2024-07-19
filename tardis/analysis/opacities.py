@@ -391,7 +391,6 @@ class opacity_calculator(object):
         delta_tau : astropy.units.Quantity ndarray (dimensionless)
             Planck-mean optical depth (shape Nshells)
         """
-
         delta_r = self.r_outer - self.r_inner
         delta_tau = delta_r * self.planck_kappa
 
@@ -413,5 +412,4 @@ class opacity_calculator(object):
         tau[-1] = self.planck_delta_tau[-1]
         for i in range(self.nshells - 2, -1, -1):
             tau[i] = tau[i + 1] + self.planck_delta_tau[i]
-
         return tau
