@@ -2,6 +2,15 @@
 <html class="writer-html5" lang="en" data-content_root="../../../../">
 <head>
   <meta charset="utf-8" />
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-53HJHD1BWS"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-53HJHD1BWS');
+    </script>
+    
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>tardis.transport.montecarlo.packet_collections &mdash; tardis</title>
       <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css?v=80d5e7a1" />
@@ -15,7 +24,7 @@
     <script src="../../../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script src="../../../../_static/documentation_options.js?v=49d3d5f2"></script>
+        <script src="../../../../_static/documentation_options.js?v=ea9e20e4"></script>
         <script src="../../../../_static/doctools.js?v=9a2dae69"></script>
         <script src="../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
         <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
@@ -130,7 +139,7 @@ packet_collection_spec = [
     (&quot;initial_energies&quot;, float64[:]),
     (&quot;packet_seeds&quot;, int64[:]),
     (&quot;time_of_simulation&quot;, float64),
-    (&quot;radiation_field_luminosity&quot;, float64),  #
+    (&quot;radiation_field_luminosity&quot;, float64),
     (&quot;output_nus&quot;, float64[:]),
     (&quot;output_energies&quot;, float64[:]),
 ]
@@ -161,7 +170,11 @@ class PacketCollection:
         self.output_nus = np.ones_like(initial_radii, dtype=np.float64) * -99.0
         self.output_energies = (
             np.ones_like(initial_radii, dtype=np.float64) * -99.0
-        )</div>
+        )
+
+    @property
+    def number_of_packets(self):
+        return len(self.initial_radii)</div>
 
 
 
@@ -231,7 +244,7 @@ class LastInteractionTracker:
 
 vpacket_collection_spec = [
     (&quot;source_rpacket_index&quot;, int64),
-    (&quot;spectrum_frequency&quot;, float64[:]),
+    (&quot;spectrum_frequency_grid&quot;, float64[:]),
     (&quot;v_packet_spawn_start_frequency&quot;, float64),
     (&quot;v_packet_spawn_end_frequency&quot;, float64),
     (&quot;nus&quot;, float64[:]),
@@ -257,13 +270,13 @@ class VPacketCollection:
     def __init__(
         self,
         source_rpacket_index,
-        spectrum_frequency,
+        spectrum_frequency_grid,
         v_packet_spawn_start_frequency,
         v_packet_spawn_end_frequency,
         number_of_vpackets,
         temporary_v_packet_bins,
     ):
-        self.spectrum_frequency = spectrum_frequency
+        self.spectrum_frequency_grid = spectrum_frequency_grid
         self.v_packet_spawn_start_frequency = v_packet_spawn_start_frequency
         self.v_packet_spawn_end_frequency = v_packet_spawn_end_frequency
         self.nus = np.empty(temporary_v_packet_bins, dtype=np.float64)
@@ -429,7 +442,7 @@ class VPacketCollection:
 <a class="viewcode-back" href="../../../../api/tardis.transport.montecarlo.packet_collections.html#tardis.transport.montecarlo.packet_collections.consolidate_vpacket_tracker">[docs]</a>
 @njit(**njit_dict_no_parallel)
 def consolidate_vpacket_tracker(
-    vpacket_collections, spectrum_frequency, start_frequency, end_frequency
+    vpacket_collections, spectrum_frequency_grid, start_frequency, end_frequency
 ):
     &quot;&quot;&quot;
     Consolidate the vpacket trackers from multiple collections into a single vpacket tracker.
@@ -438,7 +451,7 @@ def consolidate_vpacket_tracker(
     ----------
     vpacket_collections : List[VPacketCollection]
         List of vpacket collections to consolidate.
-    spectrum_frequency : ndarray
+    spectrum_frequency_grid : ndarray
         Array of spectrum frequencies.
 
     Returns
@@ -453,7 +466,7 @@ def consolidate_vpacket_tracker(
 
     vpacket_tracker = VPacketCollection(
         -1,
-        spectrum_frequency,
+        spectrum_frequency_grid,
         start_frequency,
         end_frequency,
         -1,
@@ -512,7 +525,7 @@ def consolidate_vpacket_tracker(
 
   <div role="contentinfo">
     <p>&#169; Copyright 2013-2024, TARDIS Collaboration.
-      <span class="lastupdated">Last updated on 25 Jul 2024.
+      <span class="lastupdated">Last updated on 29 Jul 2024.
       </span></p>
   </div>
 

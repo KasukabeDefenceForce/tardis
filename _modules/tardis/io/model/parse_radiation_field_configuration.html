@@ -2,12 +2,21 @@
 <html class="writer-html5" lang="en" data-content_root="../../../../">
 <head>
   <meta charset="utf-8" />
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-53HJHD1BWS"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-53HJHD1BWS');
+    </script>
+    
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>tardis.io.model.parse_radiation_field_configuration &mdash; tardis</title>
       <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css?v=80d5e7a1" />
       <link rel="stylesheet" type="text/css" href="../../../../_static/css/theme.css?v=19f00094" />
       <link rel="stylesheet" type="text/css" href="../../../../_static/graphviz.css?v=fd3f3429" />
-      <link rel="stylesheet" type="text/css" href="../../../../_static/plot_directive.css?v=7f9a90b1" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/plot_directive.css" />
 
   
     <link rel="shortcut icon" href="../../../../_static/tardis_logo.ico"/>
@@ -15,7 +24,7 @@
     <script src="../../../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script src="../../../../_static/documentation_options.js?v=671c4824"></script>
+        <script src="../../../../_static/documentation_options.js?v=ea9e20e4"></script>
         <script src="../../../../_static/doctools.js?v=9a2dae69"></script>
         <script src="../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
         <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
@@ -116,7 +125,6 @@
              
   <h1>Source code for tardis.io.model.parse_radiation_field_configuration</h1><div class="highlight"><pre>
 <span></span>import logging
-import os
 
 import numpy as np
 from astropy import units as u
@@ -125,9 +133,7 @@ from tardis import constants as const
 from tardis.io.model.parse_geometry_configuration import (
     parse_structure_from_config,
 )
-from tardis.model.radiation_field_state import (
-    DiluteBlackBodyRadiationFieldState,
-)
+from tardis.plasma.radiation_field import DilutePlanckianRadiationField
 
 logger = logging.getLogger(__name__)
 
@@ -186,9 +192,7 @@ def parse_radiation_field_state_from_config(
 
     assert len(dilution_factor) == geometry.no_of_shells
 
-    return DiluteBlackBodyRadiationFieldState(
-        temperature, dilution_factor, geometry
-    )</div>
+    return DilutePlanckianRadiationField(temperature, dilution_factor, geometry)</div>
 
 
 
@@ -254,9 +258,7 @@ def parse_radiation_field_state_from_csvy(
     else:
         dilution_factor = calculate_geometric_dilution_factor(geometry)
 
-    return DiluteBlackBodyRadiationFieldState(
-        t_radiative, dilution_factor, geometry
-    )</div>
+    return DilutePlanckianRadiationField(t_radiative, dilution_factor, geometry)</div>
 
 
 
@@ -325,7 +327,7 @@ def calculate_geometric_dilution_factor(geometry):
 
   <div role="contentinfo">
     <p>&#169; Copyright 2013-2024, TARDIS Collaboration.
-      <span class="lastupdated">Last updated on 12 Jul 2024.
+      <span class="lastupdated">Last updated on 29 Jul 2024.
       </span></p>
   </div>
 

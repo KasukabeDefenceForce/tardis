@@ -3,6 +3,15 @@
 <head>
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-53HJHD1BWS"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-53HJHD1BWS');
+    </script>
+    
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>tardis.transport package &mdash; tardis</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
@@ -16,7 +25,7 @@
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script src="../_static/documentation_options.js?v=49d3d5f2"></script>
+        <script src="../_static/documentation_options.js?v=ea9e20e4"></script>
         <script src="../_static/doctools.js?v=9a2dae69"></script>
         <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
         <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
@@ -70,9 +79,9 @@
 <li class="toctree-l4"><a class="reference internal" href="tardis.model.html">tardis.model package</a></li>
 <li class="toctree-l4"><a class="reference internal" href="tardis.opacities.html">tardis.opacities package</a></li>
 <li class="toctree-l4"><a class="reference internal" href="tardis.plasma.html">tardis.plasma package</a></li>
-<li class="toctree-l4"><a class="reference internal" href="tardis.radiation_field.html">tardis.radiation_field package</a></li>
 <li class="toctree-l4"><a class="reference internal" href="tardis.scripts.html">tardis.scripts package</a></li>
 <li class="toctree-l4"><a class="reference internal" href="tardis.simulation.html">tardis.simulation package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="tardis.spectrum.html">tardis.spectrum package</a></li>
 <li class="toctree-l4"><a class="reference internal" href="tardis.stats.html">tardis.stats package</a></li>
 <li class="toctree-l4 current"><a class="current reference internal" href="#">tardis.transport package</a></li>
 <li class="toctree-l4"><a class="reference internal" href="tardis.util.html">tardis.util package</a></li>
@@ -184,34 +193,6 @@
 <li class="toctree-l4"><a class="reference internal" href="tardis.transport.montecarlo.base.html#tardis.transport.montecarlo.base.MonteCarloTransportSolver"><code class="docutils literal notranslate"><span class="pre">MonteCarloTransportSolver</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="tardis.transport.montecarlo.formal_integral.html">tardis.transport.montecarlo.formal_integral module</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="tardis.transport.montecarlo.formal_integral.html#tardis.transport.montecarlo.formal_integral.BoundsError"><code class="docutils literal notranslate"><span class="pre">BoundsError</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="tardis.transport.montecarlo.formal_integral.html#tardis.transport.montecarlo.formal_integral.FormalIntegrator"><code class="docutils literal notranslate"><span class="pre">FormalIntegrator</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="tardis.transport.montecarlo.formal_integral.html#tardis.transport.montecarlo.formal_integral.IntegrationError"><code class="docutils literal notranslate"><span class="pre">IntegrationError</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="tardis.transport.montecarlo.formal_integral.html#tardis.transport.montecarlo.formal_integral.NumbaFormalIntegrator"><code class="docutils literal notranslate"><span class="pre">NumbaFormalIntegrator</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="tardis.transport.montecarlo.formal_integral.html#tardis.transport.montecarlo.formal_integral.calculate_p_values"><code class="docutils literal notranslate"><span class="pre">calculate_p_values()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="tardis.transport.montecarlo.formal_integral.html#tardis.transport.montecarlo.formal_integral.calculate_z"><code class="docutils literal notranslate"><span class="pre">calculate_z()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="tardis.transport.montecarlo.formal_integral.html#tardis.transport.montecarlo.formal_integral.intensity_black_body"><code class="docutils literal notranslate"><span class="pre">intensity_black_body()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="tardis.transport.montecarlo.formal_integral.html#tardis.transport.montecarlo.formal_integral.line_search"><code class="docutils literal notranslate"><span class="pre">line_search()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="tardis.transport.montecarlo.formal_integral.html#tardis.transport.montecarlo.formal_integral.numba_formal_integral"><code class="docutils literal notranslate"><span class="pre">numba_formal_integral()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="tardis.transport.montecarlo.formal_integral.html#tardis.transport.montecarlo.formal_integral.populate_z"><code class="docutils literal notranslate"><span class="pre">populate_z()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="tardis.transport.montecarlo.formal_integral.html#tardis.transport.montecarlo.formal_integral.reverse_binary_search"><code class="docutils literal notranslate"><span class="pre">reverse_binary_search()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="tardis.transport.montecarlo.formal_integral.html#tardis.transport.montecarlo.formal_integral.trapezoid_integration"><code class="docutils literal notranslate"><span class="pre">trapezoid_integration()</span></code></a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="tardis.transport.montecarlo.formal_integral_cuda.html">tardis.transport.montecarlo.formal_integral_cuda module</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="tardis.transport.montecarlo.formal_integral_cuda.html#tardis.transport.montecarlo.formal_integral_cuda.BoundsError"><code class="docutils literal notranslate"><span class="pre">BoundsError</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="tardis.transport.montecarlo.formal_integral_cuda.html#tardis.transport.montecarlo.formal_integral_cuda.CudaFormalIntegrator"><code class="docutils literal notranslate"><span class="pre">CudaFormalIntegrator</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="tardis.transport.montecarlo.formal_integral_cuda.html#tardis.transport.montecarlo.formal_integral_cuda.calculate_p_values"><code class="docutils literal notranslate"><span class="pre">calculate_p_values()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="tardis.transport.montecarlo.formal_integral_cuda.html#tardis.transport.montecarlo.formal_integral_cuda.calculate_z_cuda"><code class="docutils literal notranslate"><span class="pre">calculate_z_cuda()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="tardis.transport.montecarlo.formal_integral_cuda.html#tardis.transport.montecarlo.formal_integral_cuda.cuda_formal_integral"><code class="docutils literal notranslate"><span class="pre">cuda_formal_integral()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="tardis.transport.montecarlo.formal_integral_cuda.html#tardis.transport.montecarlo.formal_integral_cuda.intensity_black_body_cuda"><code class="docutils literal notranslate"><span class="pre">intensity_black_body_cuda()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="tardis.transport.montecarlo.formal_integral_cuda.html#tardis.transport.montecarlo.formal_integral_cuda.line_search_cuda"><code class="docutils literal notranslate"><span class="pre">line_search_cuda()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="tardis.transport.montecarlo.formal_integral_cuda.html#tardis.transport.montecarlo.formal_integral_cuda.populate_z_cuda"><code class="docutils literal notranslate"><span class="pre">populate_z_cuda()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="tardis.transport.montecarlo.formal_integral_cuda.html#tardis.transport.montecarlo.formal_integral_cuda.reverse_binary_search_cuda"><code class="docutils literal notranslate"><span class="pre">reverse_binary_search_cuda()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="tardis.transport.montecarlo.formal_integral_cuda.html#tardis.transport.montecarlo.formal_integral_cuda.trapezoid_integration_cuda"><code class="docutils literal notranslate"><span class="pre">trapezoid_integration_cuda()</span></code></a></li>
-</ul>
-</li>
 <li class="toctree-l3"><a class="reference internal" href="tardis.transport.montecarlo.interaction.html">tardis.transport.montecarlo.interaction module</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="tardis.transport.montecarlo.interaction.html#tardis.transport.montecarlo.interaction.adiabatic_cooling"><code class="docutils literal notranslate"><span class="pre">adiabatic_cooling()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="tardis.transport.montecarlo.interaction.html#tardis.transport.montecarlo.interaction.bf_cooling"><code class="docutils literal notranslate"><span class="pre">bf_cooling()</span></code></a></li>
@@ -270,6 +251,7 @@
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="tardis.transport.montecarlo.packet_trackers.html">tardis.transport.montecarlo.packet_trackers module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="tardis.transport.montecarlo.packet_trackers.html#tardis.transport.montecarlo.packet_trackers.RPacketLastInteractionTracker"><code class="docutils literal notranslate"><span class="pre">RPacketLastInteractionTracker</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="tardis.transport.montecarlo.packet_trackers.html#tardis.transport.montecarlo.packet_trackers.RPacketTracker"><code class="docutils literal notranslate"><span class="pre">RPacketTracker</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="tardis.transport.montecarlo.packet_trackers.html#tardis.transport.montecarlo.packet_trackers.rpacket_trackers_to_dataframe"><code class="docutils literal notranslate"><span class="pre">rpacket_trackers_to_dataframe()</span></code></a></li>
 </ul>
@@ -303,6 +285,10 @@
 <li class="toctree-l4"><a class="reference internal" href="tardis.transport.montecarlo.vpacket.html#tardis.transport.montecarlo.vpacket.trace_vpacket"><code class="docutils literal notranslate"><span class="pre">trace_vpacket()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="tardis.transport.montecarlo.vpacket.html#tardis.transport.montecarlo.vpacket.trace_vpacket_volley"><code class="docutils literal notranslate"><span class="pre">trace_vpacket_volley()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="tardis.transport.montecarlo.vpacket.html#tardis.transport.montecarlo.vpacket.trace_vpacket_within_shell"><code class="docutils literal notranslate"><span class="pre">trace_vpacket_within_shell()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="tardis.transport.montecarlo.weighted_packet_source.html">tardis.transport.montecarlo.weighted_packet_source module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="tardis.transport.montecarlo.weighted_packet_source.html#tardis.transport.montecarlo.weighted_packet_source.BlackBodyWeightedSource"><code class="docutils literal notranslate"><span class="pre">BlackBodyWeightedSource</span></code></a></li>
 </ul>
 </li>
 </ul>
@@ -351,7 +337,7 @@
 
   <div role="contentinfo">
     <p>&#169; Copyright 2013-2024, TARDIS Collaboration.
-      <span class="lastupdated">Last updated on 25 Jul 2024.
+      <span class="lastupdated">Last updated on 29 Jul 2024.
       </span></p>
   </div>
 

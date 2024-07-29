@@ -2,6 +2,15 @@
 <html class="writer-html5" lang="en" data-content_root="../../../../">
 <head>
   <meta charset="utf-8" />
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-53HJHD1BWS"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-53HJHD1BWS');
+    </script>
+    
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>tardis.visualization.tools.rpacket_plot &mdash; tardis</title>
       <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css?v=80d5e7a1" />
@@ -15,7 +24,7 @@
     <script src="../../../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script src="../../../../_static/documentation_options.js?v=49d3d5f2"></script>
+        <script src="../../../../_static/documentation_options.js?v=ea9e20e4"></script>
         <script src="../../../../_static/doctools.js?v=9a2dae69"></script>
         <script src="../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
         <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
@@ -600,18 +609,7 @@ class RPacketPlotter:
                 rpacket_interactions.append(0)
             else:
                 # current slope is the slope of line from previous position of the packet to the current position
-                current_slope = (
-                    rpacket_y[step_no] - rpacket_y[step_no - 1]
-                ) / (rpacket_x[step_no] - rpacket_x[step_no - 1])
-                # next slope is the slope of line from current position of the packet to the next position
-                next_slope = (rpacket_y[step_no + 1] - rpacket_y[step_no]) / (
-                    rpacket_x[step_no + 1] - rpacket_x[step_no]
-                )
-                # here if the slope changes significantly we say, its an interaction
-                if math.isclose(current_slope, next_slope, rel_tol=1e-10):
-                    rpacket_interactions.append(0)
-                else:
-                    rpacket_interactions.append(last_interaction_type[step_no])
+                rpacket_interactions.append(last_interaction_type[step_no])
 
         return rpacket_x, rpacket_y, rpacket_interactions</div>
 
@@ -837,7 +835,7 @@ class RPacketPlotter:
 
   <div role="contentinfo">
     <p>&#169; Copyright 2013-2024, TARDIS Collaboration.
-      <span class="lastupdated">Last updated on 25 Jul 2024.
+      <span class="lastupdated">Last updated on 29 Jul 2024.
       </span></p>
   </div>
 

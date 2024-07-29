@@ -2,6 +2,15 @@
 <html class="writer-html5" lang="en" data-content_root="./">
 <head>
   <meta charset="utf-8" />
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-53HJHD1BWS"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-53HJHD1BWS');
+    </script>
+    
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Index &mdash; tardis</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
@@ -15,7 +24,7 @@
     <script src="_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script src="_static/documentation_options.js?v=49d3d5f2"></script>
+        <script src="_static/documentation_options.js?v=ea9e20e4"></script>
         <script src="_static/doctools.js?v=9a2dae69"></script>
         <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
         <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
@@ -239,10 +248,10 @@
 </li>
       <li><a href="api/tardis.transport.montecarlo.interaction.html#tardis.transport.montecarlo.interaction.bf_cooling">bf_cooling() (in module tardis.transport.montecarlo.interaction)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="api/tardis.transport.montecarlo.macro_atom.html#tardis.transport.montecarlo.macro_atom.MacroAtomTransitionType.BF_EMISSION">BF_EMISSION (tardis.transport.montecarlo.macro_atom.MacroAtomTransitionType attribute)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="api/tardis.plasma.properties.continuum_processes.html#tardis.plasma.properties.continuum_processes.BfHeatingRateCoeffEstimator">BfHeatingRateCoeffEstimator (class in tardis.plasma.properties.continuum_processes)</a>
 </li>
       <li><a href="api/tardis.model.base.html#tardis.model.base.SimulationState.blackbody_packet_source">blackbody_packet_source (tardis.model.base.SimulationState property)</a>
@@ -250,6 +259,8 @@
       <li><a href="api/tardis.transport.montecarlo.packet_source.html#tardis.transport.montecarlo.packet_source.BlackBodySimpleSource">BlackBodySimpleSource (class in tardis.transport.montecarlo.packet_source)</a>
 </li>
       <li><a href="api/tardis.transport.montecarlo.packet_source.html#tardis.transport.montecarlo.packet_source.BlackBodySimpleSourceRelativistic">BlackBodySimpleSourceRelativistic (class in tardis.transport.montecarlo.packet_source)</a>
+</li>
+      <li><a href="api/tardis.transport.montecarlo.weighted_packet_source.html#tardis.transport.montecarlo.weighted_packet_source.BlackBodyWeightedSource">BlackBodyWeightedSource (class in tardis.transport.montecarlo.weighted_packet_source)</a>
 </li>
       <li><a href="api/tardis.transport.montecarlo.interaction.html#tardis.transport.montecarlo.interaction.bound_free_emission">bound_free_emission() (in module tardis.transport.montecarlo.interaction)</a>
 </li>
@@ -261,7 +272,7 @@
 </li>
       <li><a href="api/tardis.plasma.properties.continuum_processes.html#tardis.plasma.properties.continuum_processes.BoundFreeOpacity">BoundFreeOpacity (class in tardis.plasma.properties.continuum_processes)</a>
 </li>
-      <li><a href="api/tardis.transport.montecarlo.formal_integral.html#tardis.transport.montecarlo.formal_integral.BoundsError">BoundsError</a>, <a href="api/tardis.transport.montecarlo.formal_integral_cuda.html#tardis.transport.montecarlo.formal_integral_cuda.BoundsError">[1]</a>
+      <li><a href="api/tardis.spectrum.formal_integral.html#tardis.spectrum.formal_integral.BoundsError">BoundsError</a>, <a href="api/tardis.spectrum.formal_integral_cuda.html#tardis.spectrum.formal_integral_cuda.BoundsError">[1]</a>
 </li>
       <li><a href="api/tardis.plasma.properties.ion_population.html#tardis.plasma.properties.ion_population.PhiSahaLTE.broadcast_ionization_energy">broadcast_ionization_energy (tardis.plasma.properties.ion_population.PhiSahaLTE attribute)</a>
 </li>
@@ -428,6 +439,10 @@
 </li>
         <li><a href="api/tardis.plasma.properties.partition_function.html#tardis.plasma.properties.partition_function.ThermalLTEPartitionFunction.calculate">(tardis.plasma.properties.partition_function.ThermalLTEPartitionFunction method)</a>
 </li>
+        <li><a href="api/tardis.plasma.properties.plasma_input.html#tardis.plasma.properties.plasma_input.DilutionFactor.calculate">(tardis.plasma.properties.plasma_input.DilutionFactor method)</a>
+</li>
+        <li><a href="api/tardis.plasma.properties.plasma_input.html#tardis.plasma.properties.plasma_input.TRadiative.calculate">(tardis.plasma.properties.plasma_input.TRadiative method)</a>
+</li>
         <li><a href="api/tardis.plasma.properties.radiative_properties.html#tardis.plasma.properties.radiative_properties.BetaSobolev.calculate">(tardis.plasma.properties.radiative_properties.BetaSobolev method)</a>
 </li>
         <li><a href="api/tardis.plasma.properties.radiative_properties.html#tardis.plasma.properties.radiative_properties.RawRadBoundBoundTransProbs.calculate">(tardis.plasma.properties.radiative_properties.RawRadBoundBoundTransProbs method)</a>
@@ -461,7 +476,7 @@
 </li>
       <li><a href="api/tardis.model.matter.composition.html#tardis.model.matter.composition.Composition.calculate_elemental_cell_masses">calculate_elemental_cell_masses() (tardis.model.matter.composition.Composition method)</a>
 </li>
-      <li><a href="api/tardis.transport.montecarlo.montecarlo_transport_state.html#tardis.transport.montecarlo.montecarlo_transport_state.MonteCarloTransportState.calculate_emitted_luminosity">calculate_emitted_luminosity() (tardis.transport.montecarlo.montecarlo_transport_state.MonteCarloTransportState method)</a>
+      <li><a href="api/tardis.spectrum.base.html#tardis.spectrum.base.SpectrumSolver.calculate_emitted_luminosity">calculate_emitted_luminosity() (tardis.spectrum.base.SpectrumSolver method)</a>
 </li>
       <li><a href="api/tardis.energy_input.gamma_ray_packet_source.html#tardis.energy_input.gamma_ray_packet_source.RadioactivePacketSource.calculate_energy_factors">calculate_energy_factors() (tardis.energy_input.gamma_ray_packet_source.RadioactivePacketSource method)</a>
 </li>
@@ -473,6 +488,8 @@
         <li><a href="api/tardis.plasma.properties.continuum_processes.html#tardis.plasma.properties.continuum_processes.StimRecombRateCoeff.calculate_from_dilute_bb">(tardis.plasma.properties.continuum_processes.StimRecombRateCoeff static method)</a>
 </li>
       </ul></li>
+      <li><a href="api/tardis.io.model.parse_radiation_field_configuration.html#tardis.io.model.parse_radiation_field_configuration.calculate_geometric_dilution_factor">calculate_geometric_dilution_factor() (in module tardis.io.model.parse_radiation_field_configuration)</a>
+</li>
       <li><a href="api/tardis.plasma.properties.helium_nlte.html#tardis.plasma.properties.helium_nlte.HeliumNLTE.calculate_helium_one">calculate_helium_one() (tardis.plasma.properties.helium_nlte.HeliumNLTE static method)</a>
 </li>
       <li><a href="api/tardis.plasma.properties.helium_nlte.html#tardis.plasma.properties.helium_nlte.HeliumNLTE.calculate_helium_three">calculate_helium_three() (tardis.plasma.properties.helium_nlte.HeliumNLTE static method)</a>
@@ -485,14 +502,14 @@
 </li>
       <li><a href="api/tardis.model.matter.composition.html#tardis.model.matter.composition.Composition.calculate_mass_fraction_at_time">calculate_mass_fraction_at_time() (tardis.model.matter.composition.Composition method)</a>
 </li>
-      <li><a href="api/tardis.model.radiation_field_state.html#tardis.model.radiation_field_state.DiluteBlackBodyRadiationFieldState.calculate_mean_intensity">calculate_mean_intensity() (tardis.model.radiation_field_state.DiluteBlackBodyRadiationFieldState method)</a>
+      <li><a href="api/tardis.plasma.radiation_field.planck_rad_field.html#tardis.plasma.radiation_field.planck_rad_field.DilutePlanckianRadiationField.calculate_mean_intensity">calculate_mean_intensity() (tardis.plasma.radiation_field.planck_rad_field.DilutePlanckianRadiationField method)</a>
 </li>
       <li><a href="api/tardis.transport.montecarlo.estimators.continuum_radfield_properties.html#tardis.transport.montecarlo.estimators.continuum_radfield_properties.DiluteBlackBodyContinuumPropertiesSolver.calculate_mean_intensity_photo_ion_table">calculate_mean_intensity_photo_ion_table() (tardis.transport.montecarlo.estimators.continuum_radfield_properties.DiluteBlackBodyContinuumPropertiesSolver method)</a>
 </li>
-      <li><a href="api/tardis.transport.montecarlo.formal_integral.html#tardis.transport.montecarlo.formal_integral.calculate_p_values">calculate_p_values() (in module tardis.transport.montecarlo.formal_integral)</a>
+      <li><a href="api/tardis.spectrum.formal_integral.html#tardis.spectrum.formal_integral.calculate_p_values">calculate_p_values() (in module tardis.spectrum.formal_integral)</a>
 
       <ul>
-        <li><a href="api/tardis.transport.montecarlo.formal_integral_cuda.html#tardis.transport.montecarlo.formal_integral_cuda.calculate_p_values">(in module tardis.transport.montecarlo.formal_integral_cuda)</a>
+        <li><a href="api/tardis.spectrum.formal_integral_cuda.html#tardis.spectrum.formal_integral_cuda.calculate_p_values">(in module tardis.spectrum.formal_integral_cuda)</a>
 </li>
       </ul></li>
       <li><a href="api/tardis.transport.montecarlo.estimators.continuum_radfield_properties.html#tardis.transport.montecarlo.estimators.continuum_radfield_properties.DiluteBlackBodyContinuumPropertiesSolver.calculate_photo_ionization_rate_coefficient">calculate_photo_ionization_rate_coefficient() (tardis.transport.montecarlo.estimators.continuum_radfield_properties.DiluteBlackBodyContinuumPropertiesSolver method)</a>
@@ -509,15 +526,17 @@
 </li>
       <li><a href="api/tardis.plasma.properties.rate_matrix_index.html#tardis.plasma.properties.rate_matrix_index.NLTEIndexHelper.calculate_rate_matrix_index">calculate_rate_matrix_index() (tardis.plasma.properties.rate_matrix_index.NLTEIndexHelper method)</a>
 </li>
-      <li><a href="api/tardis.transport.montecarlo.montecarlo_transport_state.html#tardis.transport.montecarlo.montecarlo_transport_state.MonteCarloTransportState.calculate_reabsorbed_luminosity">calculate_reabsorbed_luminosity() (tardis.transport.montecarlo.montecarlo_transport_state.MonteCarloTransportState method)</a>
+      <li><a href="api/tardis.spectrum.base.html#tardis.spectrum.base.SpectrumSolver.calculate_reabsorbed_luminosity">calculate_reabsorbed_luminosity() (tardis.spectrum.base.SpectrumSolver method)</a>
 </li>
       <li><a href="api/tardis.analysis.html#tardis.analysis.TARDISHistory.calculate_relative_lte_level_populations">calculate_relative_lte_level_populations() (tardis.analysis.TARDISHistory method)</a>
 </li>
       <li><a href="api/tardis.opacities.tau_sobolev.html#tardis.opacities.tau_sobolev.calculate_sobolev_line_opacity">calculate_sobolev_line_opacity() (in module tardis.opacities.tau_sobolev)</a>
 </li>
-      <li><a href="api/tardis.transport.montecarlo.formal_integral.html#tardis.transport.montecarlo.formal_integral.FormalIntegrator.calculate_spectrum">calculate_spectrum() (tardis.transport.montecarlo.formal_integral.FormalIntegrator method)</a>
+      <li><a href="api/tardis.spectrum.formal_integral.html#tardis.spectrum.formal_integral.FormalIntegrator.calculate_spectrum">calculate_spectrum() (tardis.spectrum.formal_integral.FormalIntegrator method)</a>
 </li>
       <li><a href="api/tardis.transport.montecarlo.estimators.continuum_radfield_properties.html#tardis.transport.montecarlo.estimators.continuum_radfield_properties.DiluteBlackBodyContinuumPropertiesSolver.calculate_stimulated_recomb_rate_factor">calculate_stimulated_recomb_rate_factor() (tardis.transport.montecarlo.estimators.continuum_radfield_properties.DiluteBlackBodyContinuumPropertiesSolver method)</a>
+</li>
+      <li><a href="api/tardis.io.model.parse_radiation_field_configuration.html#tardis.io.model.parse_radiation_field_configuration.calculate_t_radiative_from_t_inner">calculate_t_radiative_from_t_inner() (in module tardis.io.model.parse_radiation_field_configuration)</a>
 </li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
@@ -533,13 +552,13 @@
 </li>
       <li><a href="api/tardis.plasma.properties.atomic.html#tardis.plasma.properties.atomic.YgData.calculate_yg_van_regemorter">calculate_yg_van_regemorter() (tardis.plasma.properties.atomic.YgData class method)</a>
 </li>
-      <li><a href="api/tardis.transport.montecarlo.formal_integral.html#tardis.transport.montecarlo.formal_integral.calculate_z">calculate_z() (in module tardis.transport.montecarlo.formal_integral)</a>
+      <li><a href="api/tardis.spectrum.formal_integral.html#tardis.spectrum.formal_integral.calculate_z">calculate_z() (in module tardis.spectrum.formal_integral)</a>
 </li>
-      <li><a href="api/tardis.transport.montecarlo.formal_integral_cuda.html#tardis.transport.montecarlo.formal_integral_cuda.calculate_z_cuda">calculate_z_cuda() (in module tardis.transport.montecarlo.formal_integral_cuda)</a>
+      <li><a href="api/tardis.spectrum.formal_integral_cuda.html#tardis.spectrum.formal_integral_cuda.calculate_z_cuda">calculate_z_cuda() (in module tardis.spectrum.formal_integral_cuda)</a>
 </li>
       <li><a href="api/tardis.visualization.widgets.util.html#tardis.visualization.widgets.util.Timer.cancel">cancel() (tardis.visualization.widgets.util.Timer method)</a>
 </li>
-      <li><a href="api/tardis.transport.montecarlo.formal_integral.html#tardis.transport.montecarlo.formal_integral.FormalIntegrator.check">check() (tardis.transport.montecarlo.formal_integral.FormalIntegrator method)</a>
+      <li><a href="api/tardis.spectrum.formal_integral.html#tardis.spectrum.formal_integral.FormalIntegrator.check">check() (tardis.spectrum.formal_integral.FormalIntegrator method)</a>
 </li>
       <li><a href="api/tardis.io.util.html#tardis.io.util.check_equality">check_equality() (in module tardis.io.util)</a>
 </li>
@@ -575,6 +594,8 @@
         <li><a href="api/tardis.transport.montecarlo.packet_collections.html#tardis.transport.montecarlo.packet_collections.PacketCollection.class_type">(tardis.transport.montecarlo.packet_collections.PacketCollection attribute)</a>
 </li>
         <li><a href="api/tardis.transport.montecarlo.packet_collections.html#tardis.transport.montecarlo.packet_collections.VPacketCollection.class_type">(tardis.transport.montecarlo.packet_collections.VPacketCollection attribute)</a>
+</li>
+        <li><a href="api/tardis.transport.montecarlo.packet_trackers.html#tardis.transport.montecarlo.packet_trackers.RPacketLastInteractionTracker.class_type">(tardis.transport.montecarlo.packet_trackers.RPacketLastInteractionTracker attribute)</a>
 </li>
         <li><a href="api/tardis.transport.montecarlo.packet_trackers.html#tardis.transport.montecarlo.packet_trackers.RPacketTracker.class_type">(tardis.transport.montecarlo.packet_trackers.RPacketTracker attribute)</a>
 </li>
@@ -694,6 +715,8 @@
 </li>
         <li><a href="api/tardis.transport.montecarlo.packet_source.html#tardis.transport.montecarlo.packet_source.BlackBodySimpleSourceRelativistic.create_packet_energies">(tardis.transport.montecarlo.packet_source.BlackBodySimpleSourceRelativistic method)</a>
 </li>
+        <li><a href="api/tardis.transport.montecarlo.weighted_packet_source.html#tardis.transport.montecarlo.weighted_packet_source.BlackBodyWeightedSource.create_packet_energies">(tardis.transport.montecarlo.weighted_packet_source.BlackBodyWeightedSource method)</a>
+</li>
       </ul></li>
       <li><a href="api/tardis.energy_input.gamma_ray_packet_source.html#tardis.energy_input.gamma_ray_packet_source.GammaRayPacketSource.create_packet_mus">create_packet_mus() (tardis.energy_input.gamma_ray_packet_source.GammaRayPacketSource method)</a>
 
@@ -715,6 +738,8 @@
         <li><a href="api/tardis.transport.montecarlo.packet_source.html#tardis.transport.montecarlo.packet_source.BasePacketSource.create_packet_nus">(tardis.transport.montecarlo.packet_source.BasePacketSource method)</a>
 </li>
         <li><a href="api/tardis.transport.montecarlo.packet_source.html#tardis.transport.montecarlo.packet_source.BlackBodySimpleSource.create_packet_nus">(tardis.transport.montecarlo.packet_source.BlackBodySimpleSource method)</a>
+</li>
+        <li><a href="api/tardis.transport.montecarlo.weighted_packet_source.html#tardis.transport.montecarlo.weighted_packet_source.BlackBodyWeightedSource.create_packet_nus">(tardis.transport.montecarlo.weighted_packet_source.BlackBodyWeightedSource method)</a>
 </li>
       </ul></li>
       <li><a href="api/tardis.energy_input.gamma_ray_packet_source.html#tardis.energy_input.gamma_ray_packet_source.GammaRayPacketSource.create_packet_radii">create_packet_radii() (tardis.energy_input.gamma_ray_packet_source.GammaRayPacketSource method)</a>
@@ -771,9 +796,11 @@
         <li><a href="api/tardis.visualization.widgets.custom_abundance.html#tardis.visualization.widgets.custom_abundance.DensityEditor.create_widgets">(tardis.visualization.widgets.custom_abundance.DensityEditor method)</a>
 </li>
       </ul></li>
-      <li><a href="api/tardis.transport.montecarlo.formal_integral_cuda.html#tardis.transport.montecarlo.formal_integral_cuda.cuda_formal_integral">cuda_formal_integral() (in module tardis.transport.montecarlo.formal_integral_cuda)</a>
+      <li><a href="api/tardis.spectrum.formal_integral_cuda.html#tardis.spectrum.formal_integral_cuda.cuda_formal_integral">cuda_formal_integral() (in module tardis.spectrum.formal_integral_cuda)</a>
 </li>
-      <li><a href="api/tardis.transport.montecarlo.formal_integral_cuda.html#tardis.transport.montecarlo.formal_integral_cuda.CudaFormalIntegrator">CudaFormalIntegrator (class in tardis.transport.montecarlo.formal_integral_cuda)</a>
+      <li><a href="api/tardis.spectrum.formal_integral_cuda.html#tardis.spectrum.formal_integral_cuda.cuda_vector_integrator">cuda_vector_integrator() (in module tardis.spectrum.formal_integral_cuda)</a>
+</li>
+      <li><a href="api/tardis.spectrum.formal_integral_cuda.html#tardis.spectrum.formal_integral_cuda.CudaFormalIntegrator">CudaFormalIntegrator (class in tardis.spectrum.formal_integral_cuda)</a>
 </li>
       <li><a href="api/tardis.visualization.widgets.custom_abundance.html#tardis.visualization.widgets.custom_abundance.CustomAbundanceWidget">CustomAbundanceWidget (class in tardis.visualization.widgets.custom_abundance)</a>
 </li>
@@ -819,7 +846,9 @@
 </li>
       <li><a href="api/tardis.transport.montecarlo.estimators.continuum_radfield_properties.html#tardis.transport.montecarlo.estimators.continuum_radfield_properties.DiluteBlackBodyContinuumPropertiesSolver">DiluteBlackBodyContinuumPropertiesSolver (class in tardis.transport.montecarlo.estimators.continuum_radfield_properties)</a>
 </li>
-      <li><a href="api/tardis.model.radiation_field_state.html#tardis.model.radiation_field_state.DiluteBlackBodyRadiationFieldState">DiluteBlackBodyRadiationFieldState (class in tardis.model.radiation_field_state)</a>
+      <li><a href="api/tardis.plasma.properties.plasma_input.html#tardis.plasma.properties.plasma_input.DilutePlanckianRadField">DilutePlanckianRadField (class in tardis.plasma.properties.plasma_input)</a>
+</li>
+      <li><a href="api/tardis.plasma.radiation_field.planck_rad_field.html#tardis.plasma.radiation_field.planck_rad_field.DilutePlanckianRadiationField">DilutePlanckianRadiationField (class in tardis.plasma.radiation_field.planck_rad_field)</a>
 </li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
@@ -919,7 +948,7 @@
 <h2 id="F">F</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="api/tardis.spectrum.html#tardis.spectrum.TARDISSpectrum.f_nu_to_f_lambda">f_nu_to_f_lambda() (tardis.spectrum.TARDISSpectrum method)</a>
+      <li><a href="api/tardis.spectrum.spectrum.html#tardis.spectrum.spectrum.TARDISSpectrum.f_nu_to_f_lambda">f_nu_to_f_lambda() (tardis.spectrum.spectrum.TARDISSpectrum method)</a>
 </li>
       <li><a href="api/tardis.opacities.macro_atom.util.html#tardis.opacities.macro_atom.util.fast_calculate_transition_probabilities">fast_calculate_transition_probabilities() (in module tardis.opacities.macro_atom.util)</a>
 </li>
@@ -947,19 +976,19 @@
 </li>
       <li><a href="api/tardis.util.base.html#tardis.util.base.fix_bar_layout">fix_bar_layout() (in module tardis.util.base)</a>
 </li>
-      <li><a href="api/tardis.spectrum.html#tardis.spectrum.TARDISSpectrum.flux_lambda">flux_lambda (tardis.spectrum.TARDISSpectrum property)</a>
+      <li><a href="api/tardis.spectrum.spectrum.html#tardis.spectrum.spectrum.TARDISSpectrum.flux_lambda">flux_lambda (tardis.spectrum.spectrum.TARDISSpectrum property)</a>
 </li>
-      <li><a href="api/tardis.spectrum.html#tardis.spectrum.TARDISSpectrum.flux_nu">flux_nu (tardis.spectrum.TARDISSpectrum property)</a>
+      <li><a href="api/tardis.spectrum.spectrum.html#tardis.spectrum.spectrum.TARDISSpectrum.flux_nu">flux_nu (tardis.spectrum.spectrum.TARDISSpectrum property)</a>
 </li>
-      <li><a href="api/tardis.transport.montecarlo.formal_integral.html#tardis.transport.montecarlo.formal_integral.FormalIntegrator.formal_integral">formal_integral() (tardis.transport.montecarlo.formal_integral.FormalIntegrator method)</a>
+      <li><a href="api/tardis.spectrum.formal_integral.html#tardis.spectrum.formal_integral.FormalIntegrator.formal_integral">formal_integral() (tardis.spectrum.formal_integral.FormalIntegrator method)</a>
 
       <ul>
-        <li><a href="api/tardis.transport.montecarlo.formal_integral.html#tardis.transport.montecarlo.formal_integral.NumbaFormalIntegrator.formal_integral">(tardis.transport.montecarlo.formal_integral.NumbaFormalIntegrator method)</a>
+        <li><a href="api/tardis.spectrum.formal_integral.html#tardis.spectrum.formal_integral.NumbaFormalIntegrator.formal_integral">(tardis.spectrum.formal_integral.NumbaFormalIntegrator method)</a>
 </li>
-        <li><a href="api/tardis.transport.montecarlo.formal_integral_cuda.html#tardis.transport.montecarlo.formal_integral_cuda.CudaFormalIntegrator.formal_integral">(tardis.transport.montecarlo.formal_integral_cuda.CudaFormalIntegrator method)</a>
+        <li><a href="api/tardis.spectrum.formal_integral_cuda.html#tardis.spectrum.formal_integral_cuda.CudaFormalIntegrator.formal_integral">(tardis.spectrum.formal_integral_cuda.CudaFormalIntegrator method)</a>
 </li>
       </ul></li>
-      <li><a href="api/tardis.transport.montecarlo.formal_integral.html#tardis.transport.montecarlo.formal_integral.FormalIntegrator">FormalIntegrator (class in tardis.transport.montecarlo.formal_integral)</a>
+      <li><a href="api/tardis.spectrum.formal_integral.html#tardis.spectrum.formal_integral.FormalIntegrator">FormalIntegrator (class in tardis.spectrum.formal_integral)</a>
 </li>
       <li><a href="api/tardis.io.logger.colored_logger.html#tardis.io.logger.colored_logger.ColoredFormatter.format">format() (tardis.io.logger.colored_logger.ColoredFormatter method)</a>
 </li>
@@ -985,6 +1014,8 @@
         <li><a href="api/tardis.plasma.properties.partition_function.html#tardis.plasma.properties.partition_function.LevelBoltzmannFactorNLTE.from_config">(tardis.plasma.properties.partition_function.LevelBoltzmannFactorNLTE static method)</a>
 </li>
         <li><a href="api/tardis.simulation.base.html#tardis.simulation.base.Simulation.from_config">(tardis.simulation.base.Simulation class method)</a>
+</li>
+        <li><a href="api/tardis.spectrum.base.html#tardis.spectrum.base.SpectrumSolver.from_config">(tardis.spectrum.base.SpectrumSolver class method)</a>
 </li>
         <li><a href="api/tardis.transport.montecarlo.base.html#tardis.transport.montecarlo.base.MonteCarloTransportSolver.from_config">(tardis.transport.montecarlo.base.MonteCarloTransportSolver class method)</a>
 </li>
@@ -1079,7 +1110,9 @@
 </li>
       <li><a href="api/tardis.visualization.widgets.custom_abundance.html#tardis.visualization.widgets.custom_abundance.CustomAbundanceWidget.generate_abundance_density_plot">generate_abundance_density_plot() (tardis.visualization.widgets.custom_abundance.CustomAbundanceWidget method)</a>
 </li>
-      <li><a href="api/tardis.transport.montecarlo.formal_integral.html#tardis.transport.montecarlo.formal_integral.FormalIntegrator.generate_numba_objects">generate_numba_objects() (tardis.transport.montecarlo.formal_integral.FormalIntegrator method)</a>
+      <li><a href="api/tardis.plasma.nlte.nlte_data.html#tardis.plasma.nlte.nlte_data.NLTEMatrixFactory.generate_indices">generate_indices() (tardis.plasma.nlte.nlte_data.NLTEMatrixFactory method)</a>
+</li>
+      <li><a href="api/tardis.spectrum.formal_integral.html#tardis.spectrum.formal_integral.FormalIntegrator.generate_numba_objects">generate_numba_objects() (tardis.spectrum.formal_integral.FormalIntegrator method)</a>
 </li>
       <li><a href="api/tardis.visualization.tools.rpacket_plot.html#tardis.visualization.tools.rpacket_plot.RPacketPlotter.generate_plot">generate_plot() (tardis.visualization.tools.rpacket_plot.RPacketPlotter method)</a>
 </li>
@@ -1106,7 +1139,11 @@
       <li><a href="api/tardis.energy_input.gamma_ray_transport.html#tardis.energy_input.gamma_ray_transport.get_chain_decay_power_per_ejectamass">get_chain_decay_power_per_ejectamass() (in module tardis.energy_input.gamma_ray_transport)</a>
 </li>
       <li><a href="api/tardis.io.atom_data.base.html#tardis.io.atom_data.base.NLTEData.get_collision_matrix">get_collision_matrix() (tardis.io.atom_data.base.NLTEData method)</a>
+
+      <ul>
+        <li><a href="api/tardis.plasma.nlte.nlte_data.html#tardis.plasma.nlte.nlte_data.NLTEData.get_collision_matrix">(tardis.plasma.nlte.nlte_data.NLTEData method)</a>
 </li>
+      </ul></li>
       <li><a href="api/tardis.energy_input.gamma_ray_interactions.html#tardis.energy_input.gamma_ray_interactions.get_compton_angle">get_compton_angle() (in module tardis.energy_input.gamma_ray_interactions)</a>
 </li>
       <li><a href="api/tardis.energy_input.gamma_ray_interactions.html#tardis.energy_input.gamma_ray_interactions.get_compton_fraction">get_compton_fraction() (in module tardis.energy_input.gamma_ray_interactions)</a>
@@ -1149,10 +1186,10 @@
 </li>
       <li><a href="api/tardis.io.configuration.config_internal.html#tardis.io.configuration.config_internal.get_internal_configuration">get_internal_configuration() (in module tardis.io.configuration.config_internal)</a>
 </li>
-      <li><a href="api/tardis.io.util.html#tardis.io.util.get_internal_data_path">get_internal_data_path() (in module tardis.io.util)</a>
-</li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/tardis.io.util.html#tardis.io.util.get_internal_data_path">get_internal_data_path() (in module tardis.io.util)</a>
+</li>
       <li><a href="api/tardis.transport.frame_transformations.html#tardis.transport.frame_transformations.get_inverse_doppler_factor">get_inverse_doppler_factor() (in module tardis.transport.frame_transformations)</a>
 </li>
       <li><a href="api/tardis.transport.frame_transformations.html#tardis.transport.frame_transformations.get_inverse_doppler_factor_full_relativity">get_inverse_doppler_factor_full_relativity() (in module tardis.transport.frame_transformations)</a>
@@ -1246,11 +1283,15 @@
 </li>
         <li><a href="api/tardis.simulation.base.html#tardis.simulation.base.Simulation.hdf_name">(tardis.simulation.base.Simulation attribute)</a>
 </li>
+        <li><a href="api/tardis.spectrum.base.html#tardis.spectrum.base.SpectrumSolver.hdf_name">(tardis.spectrum.base.SpectrumSolver attribute)</a>
+</li>
         <li><a href="api/tardis.transport.montecarlo.base.html#tardis.transport.montecarlo.base.MonteCarloTransportSolver.hdf_name">(tardis.transport.montecarlo.base.MonteCarloTransportSolver attribute)</a>
 </li>
         <li><a href="api/tardis.transport.montecarlo.montecarlo_transport_state.html#tardis.transport.montecarlo.montecarlo_transport_state.MonteCarloTransportState.hdf_name">(tardis.transport.montecarlo.montecarlo_transport_state.MonteCarloTransportState attribute)</a>
 </li>
         <li><a href="api/tardis.transport.montecarlo.packet_source.html#tardis.transport.montecarlo.packet_source.BlackBodySimpleSource.hdf_name">(tardis.transport.montecarlo.packet_source.BlackBodySimpleSource attribute)</a>
+</li>
+        <li><a href="api/tardis.transport.montecarlo.weighted_packet_source.html#tardis.transport.montecarlo.weighted_packet_source.BlackBodyWeightedSource.hdf_name">(tardis.transport.montecarlo.weighted_packet_source.BlackBodyWeightedSource attribute)</a>
 </li>
       </ul></li>
       <li><a href="api/tardis.io.atom_data.base.html#tardis.io.atom_data.base.AtomData.hdf_names">hdf_names (tardis.io.atom_data.base.AtomData attribute)</a>
@@ -1260,7 +1301,9 @@
       <ul>
         <li><a href="api/tardis.simulation.base.html#tardis.simulation.base.Simulation.hdf_properties">(tardis.simulation.base.Simulation attribute)</a>
 </li>
-        <li><a href="api/tardis.spectrum.html#tardis.spectrum.TARDISSpectrum.hdf_properties">(tardis.spectrum.TARDISSpectrum attribute)</a>
+        <li><a href="api/tardis.spectrum.base.html#tardis.spectrum.base.SpectrumSolver.hdf_properties">(tardis.spectrum.base.SpectrumSolver attribute)</a>
+</li>
+        <li><a href="api/tardis.spectrum.spectrum.html#tardis.spectrum.spectrum.TARDISSpectrum.hdf_properties">(tardis.spectrum.spectrum.TARDISSpectrum attribute)</a>
 </li>
         <li><a href="api/tardis.transport.montecarlo.base.html#tardis.transport.montecarlo.base.MonteCarloTransportSolver.hdf_properties">(tardis.transport.montecarlo.base.MonteCarloTransportSolver attribute)</a>
 </li>
@@ -1269,6 +1312,8 @@
         <li><a href="api/tardis.transport.montecarlo.packet_source.html#tardis.transport.montecarlo.packet_source.BlackBodySimpleSource.hdf_properties">(tardis.transport.montecarlo.packet_source.BlackBodySimpleSource attribute)</a>
 </li>
         <li><a href="api/tardis.transport.montecarlo.packet_source.html#tardis.transport.montecarlo.packet_source.BlackBodySimpleSourceRelativistic.hdf_properties">(tardis.transport.montecarlo.packet_source.BlackBodySimpleSourceRelativistic attribute)</a>
+</li>
+        <li><a href="api/tardis.transport.montecarlo.weighted_packet_source.html#tardis.transport.montecarlo.weighted_packet_source.BlackBodyWeightedSource.hdf_properties">(tardis.transport.montecarlo.weighted_packet_source.BlackBodyWeightedSource attribute)</a>
 </li>
       </ul></li>
   </ul></td>
@@ -1337,11 +1382,11 @@
         <li><a href="api/tardis.transport.montecarlo.estimators.util.html#tardis.transport.montecarlo.estimators.util.integrate_array_by_blocks">(in module tardis.transport.montecarlo.estimators.util)</a>
 </li>
       </ul></li>
-      <li><a href="api/tardis.transport.montecarlo.formal_integral.html#tardis.transport.montecarlo.formal_integral.IntegrationError">IntegrationError</a>
+      <li><a href="api/tardis.spectrum.formal_integral.html#tardis.spectrum.formal_integral.IntegrationError">IntegrationError</a>
 </li>
-      <li><a href="api/tardis.transport.montecarlo.montecarlo_transport_state.html#tardis.transport.montecarlo.montecarlo_transport_state.MonteCarloTransportState.integrator">integrator (tardis.transport.montecarlo.montecarlo_transport_state.MonteCarloTransportState property)</a>
+      <li><a href="api/tardis.spectrum.base.html#tardis.spectrum.base.SpectrumSolver.integrator">integrator (tardis.spectrum.base.SpectrumSolver property)</a>
 </li>
-      <li><a href="api/tardis.transport.montecarlo.formal_integral.html#tardis.transport.montecarlo.formal_integral.intensity_black_body">intensity_black_body() (in module tardis.transport.montecarlo.formal_integral)</a>
+      <li><a href="api/tardis.spectrum.formal_integral.html#tardis.spectrum.formal_integral.intensity_black_body">intensity_black_body() (in module tardis.spectrum.formal_integral)</a>
 
       <ul>
         <li><a href="api/tardis.util.base.html#tardis.util.base.intensity_black_body">(in module tardis.util.base)</a>
@@ -1349,7 +1394,7 @@
       </ul></li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="api/tardis.transport.montecarlo.formal_integral_cuda.html#tardis.transport.montecarlo.formal_integral_cuda.intensity_black_body_cuda">intensity_black_body_cuda() (in module tardis.transport.montecarlo.formal_integral_cuda)</a>
+      <li><a href="api/tardis.spectrum.formal_integral_cuda.html#tardis.spectrum.formal_integral_cuda.intensity_black_body_cuda">intensity_black_body_cuda() (in module tardis.spectrum.formal_integral_cuda)</a>
 </li>
       <li><a href="api/tardis.energy_input.energy_source.html#tardis.energy_input.energy_source.intensity_ratio">intensity_ratio() (in module tardis.energy_input.energy_source)</a>
 </li>
@@ -1359,7 +1404,7 @@
 </li>
       <li><a href="api/tardis.transport.montecarlo.macro_atom.html#tardis.transport.montecarlo.macro_atom.MacroAtomTransitionType.INTERNAL_UP">INTERNAL_UP (tardis.transport.montecarlo.macro_atom.MacroAtomTransitionType attribute)</a>
 </li>
-      <li><a href="api/tardis.transport.montecarlo.formal_integral.html#tardis.transport.montecarlo.formal_integral.FormalIntegrator.interpolate_integrator_quantities">interpolate_integrator_quantities() (tardis.transport.montecarlo.formal_integral.FormalIntegrator method)</a>
+      <li><a href="api/tardis.spectrum.formal_integral.html#tardis.spectrum.formal_integral.FormalIntegrator.interpolate_integrator_quantities">interpolate_integrator_quantities() (tardis.spectrum.formal_integral.FormalIntegrator method)</a>
 </li>
       <li><a href="api/tardis.visualization.widgets.shell_info.html#tardis.visualization.widgets.shell_info.BaseShellInfo.ion_count">ion_count() (tardis.visualization.widgets.shell_info.BaseShellInfo method)</a>
 </li>
@@ -1643,9 +1688,9 @@
 </li>
       <li><a href="api/tardis.transport.montecarlo.interaction.html#tardis.transport.montecarlo.interaction.line_scatter">line_scatter() (in module tardis.transport.montecarlo.interaction)</a>
 </li>
-      <li><a href="api/tardis.transport.montecarlo.formal_integral.html#tardis.transport.montecarlo.formal_integral.line_search">line_search() (in module tardis.transport.montecarlo.formal_integral)</a>
+      <li><a href="api/tardis.spectrum.formal_integral.html#tardis.spectrum.formal_integral.line_search">line_search() (in module tardis.spectrum.formal_integral)</a>
 </li>
-      <li><a href="api/tardis.transport.montecarlo.formal_integral_cuda.html#tardis.transport.montecarlo.formal_integral_cuda.line_search_cuda">line_search_cuda() (in module tardis.transport.montecarlo.formal_integral_cuda)</a>
+      <li><a href="api/tardis.spectrum.formal_integral_cuda.html#tardis.spectrum.formal_integral_cuda.line_search_cuda">line_search_cuda() (in module tardis.spectrum.formal_integral_cuda)</a>
 </li>
       <li><a href="api/tardis.visualization.widgets.line_info.html#tardis.visualization.widgets.line_info.LineInfoWidget">LineInfoWidget (class in tardis.visualization.widgets.line_info)</a>
 </li>
@@ -1691,7 +1736,7 @@
 </li>
       <li><a href="api/tardis.io.logger.logger.html#tardis.io.logger.logger.logging_state">logging_state() (in module tardis.io.logger.logger)</a>
 </li>
-      <li><a href="api/tardis.spectrum.html#tardis.spectrum.TARDISSpectrum.luminosity_to_flux">luminosity_to_flux() (tardis.spectrum.TARDISSpectrum static method)</a>
+      <li><a href="api/tardis.spectrum.spectrum.html#tardis.spectrum.spectrum.TARDISSpectrum.luminosity_to_flux">luminosity_to_flux() (tardis.spectrum.spectrum.TARDISSpectrum static method)</a>
 </li>
       <li><a href="api/tardis.plasma.properties.general.html#tardis.plasma.properties.general.LuminosityInner">LuminosityInner (class in tardis.plasma.properties.general)</a>
 </li>
@@ -1715,7 +1760,7 @@
 </li>
       <li><a href="api/tardis.scripts.cmfgen2tardis.html#tardis.scripts.cmfgen2tardis.main">main() (in module tardis.scripts.cmfgen2tardis)</a>
 </li>
-      <li><a href="api/tardis.transport.montecarlo.formal_integral.html#tardis.transport.montecarlo.formal_integral.FormalIntegrator.make_source_function">make_source_function() (tardis.transport.montecarlo.formal_integral.FormalIntegrator method)</a>
+      <li><a href="api/tardis.spectrum.formal_integral.html#tardis.spectrum.formal_integral.FormalIntegrator.make_source_function">make_source_function() (tardis.spectrum.formal_integral.FormalIntegrator method)</a>
 </li>
       <li><a href="api/tardis.util.base.html#tardis.util.base.MalformedElementSymbolError">MalformedElementSymbolError</a>
 </li>
@@ -1831,7 +1876,13 @@
 </li>
         <li><a href="api/tardis.io.model.html#module-tardis.io.model">tardis.io.model</a>
 </li>
+        <li><a href="api/tardis.io.model.parse_atom_data.html#module-tardis.io.model.parse_atom_data">tardis.io.model.parse_atom_data</a>
+</li>
         <li><a href="api/tardis.io.model.parse_packet_source_configuration.html#module-tardis.io.model.parse_packet_source_configuration">tardis.io.model.parse_packet_source_configuration</a>
+</li>
+        <li><a href="api/tardis.io.model.parse_radiation_field_configuration.html#module-tardis.io.model.parse_radiation_field_configuration">tardis.io.model.parse_radiation_field_configuration</a>
+</li>
+        <li><a href="api/tardis.io.model.parse_simulation_state.html#module-tardis.io.model.parse_simulation_state">tardis.io.model.parse_simulation_state</a>
 </li>
         <li><a href="api/tardis.io.model.readers.html#module-tardis.io.model.readers">tardis.io.model.readers</a>
 </li>
@@ -1871,8 +1922,6 @@
 </li>
         <li><a href="api/tardis.model.matter.decay.html#module-tardis.model.matter.decay">tardis.model.matter.decay</a>
 </li>
-        <li><a href="api/tardis.model.radiation_field_state.html#module-tardis.model.radiation_field_state">tardis.model.radiation_field_state</a>
-</li>
         <li><a href="api/tardis.opacities.html#module-tardis.opacities">tardis.opacities</a>
 </li>
         <li><a href="api/tardis.opacities.macro_atom.html#module-tardis.opacities.macro_atom">tardis.opacities.macro_atom</a>
@@ -1894,6 +1943,10 @@
         <li><a href="api/tardis.plasma.base.html#module-tardis.plasma.base">tardis.plasma.base</a>
 </li>
         <li><a href="api/tardis.plasma.exceptions.html#module-tardis.plasma.exceptions">tardis.plasma.exceptions</a>
+</li>
+        <li><a href="api/tardis.plasma.nlte.html#module-tardis.plasma.nlte">tardis.plasma.nlte</a>
+</li>
+        <li><a href="api/tardis.plasma.nlte.nlte_data.html#module-tardis.plasma.nlte.nlte_data">tardis.plasma.nlte.nlte_data</a>
 </li>
         <li><a href="api/tardis.plasma.properties.html#module-tardis.plasma.properties">tardis.plasma.properties</a>
 </li>
@@ -1933,11 +1986,11 @@
 </li>
         <li><a href="api/tardis.plasma.properties.util.integrate_array_by_blocks.html#module-tardis.plasma.properties.util.integrate_array_by_blocks">tardis.plasma.properties.util.integrate_array_by_blocks</a>
 </li>
+        <li><a href="api/tardis.plasma.radiation_field.html#module-tardis.plasma.radiation_field">tardis.plasma.radiation_field</a>
+</li>
+        <li><a href="api/tardis.plasma.radiation_field.planck_rad_field.html#module-tardis.plasma.radiation_field.planck_rad_field">tardis.plasma.radiation_field.planck_rad_field</a>
+</li>
         <li><a href="api/tardis.plasma.standard_plasmas.html#module-tardis.plasma.standard_plasmas">tardis.plasma.standard_plasmas</a>
-</li>
-        <li><a href="api/tardis.radiation_field.html#module-tardis.radiation_field">tardis.radiation_field</a>
-</li>
-        <li><a href="api/tardis.radiation_field.base.html#module-tardis.radiation_field.base">tardis.radiation_field.base</a>
 </li>
         <li><a href="api/tardis.scripts.html#module-tardis.scripts">tardis.scripts</a>
 </li>
@@ -1950,6 +2003,14 @@
         <li><a href="api/tardis.simulation.convergence.html#module-tardis.simulation.convergence">tardis.simulation.convergence</a>
 </li>
         <li><a href="api/tardis.spectrum.html#module-tardis.spectrum">tardis.spectrum</a>
+</li>
+        <li><a href="api/tardis.spectrum.base.html#module-tardis.spectrum.base">tardis.spectrum.base</a>
+</li>
+        <li><a href="api/tardis.spectrum.formal_integral.html#module-tardis.spectrum.formal_integral">tardis.spectrum.formal_integral</a>
+</li>
+        <li><a href="api/tardis.spectrum.formal_integral_cuda.html#module-tardis.spectrum.formal_integral_cuda">tardis.spectrum.formal_integral_cuda</a>
+</li>
+        <li><a href="api/tardis.spectrum.spectrum.html#module-tardis.spectrum.spectrum">tardis.spectrum.spectrum</a>
 </li>
         <li><a href="api/tardis.stats.html#module-tardis.stats">tardis.stats</a>
 </li>
@@ -1987,10 +2048,6 @@
 </li>
         <li><a href="api/tardis.transport.montecarlo.estimators.util.html#module-tardis.transport.montecarlo.estimators.util">tardis.transport.montecarlo.estimators.util</a>
 </li>
-        <li><a href="api/tardis.transport.montecarlo.formal_integral.html#module-tardis.transport.montecarlo.formal_integral">tardis.transport.montecarlo.formal_integral</a>
-</li>
-        <li><a href="api/tardis.transport.montecarlo.formal_integral_cuda.html#module-tardis.transport.montecarlo.formal_integral_cuda">tardis.transport.montecarlo.formal_integral_cuda</a>
-</li>
         <li><a href="api/tardis.transport.montecarlo.interaction.html#module-tardis.transport.montecarlo.interaction">tardis.transport.montecarlo.interaction</a>
 </li>
         <li><a href="api/tardis.transport.montecarlo.macro_atom.html#module-tardis.transport.montecarlo.macro_atom">tardis.transport.montecarlo.macro_atom</a>
@@ -2018,6 +2075,8 @@
         <li><a href="api/tardis.transport.montecarlo.utils.html#module-tardis.transport.montecarlo.utils">tardis.transport.montecarlo.utils</a>
 </li>
         <li><a href="api/tardis.transport.montecarlo.vpacket.html#module-tardis.transport.montecarlo.vpacket">tardis.transport.montecarlo.vpacket</a>
+</li>
+        <li><a href="api/tardis.transport.montecarlo.weighted_packet_source.html#module-tardis.transport.montecarlo.weighted_packet_source">tardis.transport.montecarlo.weighted_packet_source</a>
 </li>
         <li><a href="api/tardis.util.html#module-tardis.util">tardis.util</a>
 </li>
@@ -2052,19 +2111,17 @@
       </ul></li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="api/tardis.transport.montecarlo.montecarlo_transport_state.html#tardis.transport.montecarlo.montecarlo_transport_state.MonteCarloTransportState.montecarlo_emitted_luminosity">montecarlo_emitted_luminosity (tardis.transport.montecarlo.montecarlo_transport_state.MonteCarloTransportState property)</a>
+      <li><a href="api/tardis.spectrum.base.html#tardis.spectrum.base.SpectrumSolver.montecarlo_emitted_luminosity">montecarlo_emitted_luminosity (tardis.spectrum.base.SpectrumSolver property)</a>
 </li>
       <li><a href="api/tardis.transport.montecarlo.montecarlo_main_loop.html#tardis.transport.montecarlo.montecarlo_main_loop.montecarlo_main_loop">montecarlo_main_loop() (in module tardis.transport.montecarlo.montecarlo_main_loop)</a>
 </li>
-      <li><a href="api/tardis.transport.montecarlo.montecarlo_transport_state.html#tardis.transport.montecarlo.montecarlo_transport_state.MonteCarloTransportState.montecarlo_reabsorbed_luminosity">montecarlo_reabsorbed_luminosity (tardis.transport.montecarlo.montecarlo_transport_state.MonteCarloTransportState property)</a>
+      <li><a href="api/tardis.spectrum.base.html#tardis.spectrum.base.SpectrumSolver.montecarlo_reabsorbed_luminosity">montecarlo_reabsorbed_luminosity (tardis.spectrum.base.SpectrumSolver property)</a>
 </li>
-      <li><a href="api/tardis.transport.montecarlo.montecarlo_transport_state.html#tardis.transport.montecarlo.montecarlo_transport_state.MonteCarloTransportState.montecarlo_virtual_luminosity">montecarlo_virtual_luminosity (tardis.transport.montecarlo.montecarlo_transport_state.MonteCarloTransportState property)</a>
+      <li><a href="api/tardis.spectrum.base.html#tardis.spectrum.base.SpectrumSolver.montecarlo_virtual_luminosity">montecarlo_virtual_luminosity (tardis.spectrum.base.SpectrumSolver property)</a>
 </li>
       <li><a href="api/tardis.transport.montecarlo.configuration.base.html#tardis.transport.montecarlo.configuration.base.MonteCarloConfiguration">MonteCarloConfiguration (class in tardis.transport.montecarlo.configuration.base)</a>
 </li>
       <li><a href="api/tardis.transport.montecarlo.utils.html#tardis.transport.montecarlo.utils.MonteCarloException">MonteCarloException</a>
-</li>
-      <li><a href="api/tardis.radiation_field.base.html#tardis.radiation_field.base.MonteCarloRadiationFieldState">MonteCarloRadiationFieldState (class in tardis.radiation_field.base)</a>
 </li>
       <li><a href="api/tardis.transport.montecarlo.base.html#tardis.transport.montecarlo.base.MonteCarloTransportSolver">MonteCarloTransportSolver (class in tardis.transport.montecarlo.base)</a>
 </li>
@@ -2089,6 +2146,8 @@
       <li><a href="api/tardis.io.atom_data.base.html#tardis.io.atom_data.base.NLTEData">NLTEData (class in tardis.io.atom_data.base)</a>
 
       <ul>
+        <li><a href="api/tardis.plasma.nlte.nlte_data.html#tardis.plasma.nlte.nlte_data.NLTEData">(class in tardis.plasma.nlte.nlte_data)</a>
+</li>
         <li><a href="api/tardis.plasma.properties.atomic.html#tardis.plasma.properties.atomic.NLTEData">(class in tardis.plasma.properties.atomic)</a>
 </li>
       </ul></li>
@@ -2100,6 +2159,8 @@
 </li>
       <li><a href="api/tardis.plasma.properties.plasma_input.html#tardis.plasma.properties.plasma_input.NLTEIonizationSpecies">NLTEIonizationSpecies (class in tardis.plasma.properties.plasma_input)</a>
 </li>
+      <li><a href="api/tardis.plasma.nlte.nlte_data.html#tardis.plasma.nlte.nlte_data.NLTEMatrixFactory">NLTEMatrixFactory (class in tardis.plasma.nlte.nlte_data)</a>
+</li>
       <li><a href="api/tardis.plasma.properties.nlte_rate_equation_solver.html#tardis.plasma.properties.nlte_rate_equation_solver.NLTEPopulationSolverLU">NLTEPopulationSolverLU (class in tardis.plasma.properties.nlte_rate_equation_solver)</a>
 </li>
       <li><a href="api/tardis.plasma.properties.nlte_rate_equation_solver.html#tardis.plasma.properties.nlte_rate_equation_solver.NLTEPopulationSolverRoot">NLTEPopulationSolverRoot (class in tardis.plasma.properties.nlte_rate_equation_solver)</a>
@@ -2108,6 +2169,8 @@
 </li>
       <li><a href="api/tardis.model.base.html#tardis.model.base.SimulationState.no_of_raw_shells">no_of_raw_shells (tardis.model.base.SimulationState property)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="api/tardis.model.base.html#tardis.model.base.SimulationState.no_of_shells">no_of_shells (tardis.model.base.SimulationState property)</a>
 
       <ul>
@@ -2116,8 +2179,6 @@
         <li><a href="api/tardis.visualization.widgets.custom_abundance.html#tardis.visualization.widgets.custom_abundance.CustomAbundanceWidget.no_of_shells">(tardis.visualization.widgets.custom_abundance.CustomAbundanceWidget property)</a>
 </li>
       </ul></li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="api/tardis.model.geometry.radial1d.html#tardis.model.geometry.radial1d.HomologousRadial1DGeometry.no_of_shells_active">no_of_shells_active (tardis.model.geometry.radial1d.HomologousRadial1DGeometry property)</a>
 </li>
       <li><a href="api/tardis.opacities.macro_atom.transition_probabilities.html#tardis.opacities.macro_atom.transition_probabilities.NonContinuumTransProbsMask">NonContinuumTransProbsMask (class in tardis.opacities.macro_atom.transition_probabilities)</a>
@@ -2130,9 +2191,9 @@
 </li>
       <li><a href="api/tardis.transport.montecarlo.montecarlo_transport_state.html#tardis.transport.montecarlo.montecarlo_transport_state.MonteCarloTransportState.nu_bar_estimator">nu_bar_estimator (tardis.transport.montecarlo.montecarlo_transport_state.MonteCarloTransportState property)</a>
 </li>
-      <li><a href="api/tardis.transport.montecarlo.formal_integral.html#tardis.transport.montecarlo.formal_integral.numba_formal_integral">numba_formal_integral() (in module tardis.transport.montecarlo.formal_integral)</a>
+      <li><a href="api/tardis.spectrum.formal_integral.html#tardis.spectrum.formal_integral.numba_formal_integral">numba_formal_integral() (in module tardis.spectrum.formal_integral)</a>
 </li>
-      <li><a href="api/tardis.transport.montecarlo.formal_integral.html#tardis.transport.montecarlo.formal_integral.NumbaFormalIntegrator">NumbaFormalIntegrator (class in tardis.transport.montecarlo.formal_integral)</a>
+      <li><a href="api/tardis.spectrum.formal_integral.html#tardis.spectrum.formal_integral.NumbaFormalIntegrator">NumbaFormalIntegrator (class in tardis.spectrum.formal_integral)</a>
 </li>
       <li><a href="api/tardis.model.geometry.radial1d.html#tardis.model.geometry.radial1d.NumbaRadial1DGeometry">NumbaRadial1DGeometry (class in tardis.model.geometry.radial1d)</a>
 </li>
@@ -2353,6 +2414,8 @@
 </li>
         <li><a href="api/tardis.plasma.properties.plasma_input.html#tardis.plasma.properties.plasma_input.ContinuumInteractionSpecies.outputs">(tardis.plasma.properties.plasma_input.ContinuumInteractionSpecies attribute)</a>
 </li>
+        <li><a href="api/tardis.plasma.properties.plasma_input.html#tardis.plasma.properties.plasma_input.DilutePlanckianRadField.outputs">(tardis.plasma.properties.plasma_input.DilutePlanckianRadField attribute)</a>
+</li>
         <li><a href="api/tardis.plasma.properties.plasma_input.html#tardis.plasma.properties.plasma_input.DilutionFactor.outputs">(tardis.plasma.properties.plasma_input.DilutionFactor attribute)</a>
 </li>
         <li><a href="api/tardis.plasma.properties.plasma_input.html#tardis.plasma.properties.plasma_input.HeliumTreatment.outputs">(tardis.plasma.properties.plasma_input.HeliumTreatment attribute)</a>
@@ -2420,6 +2483,8 @@
 </li>
       <li><a href="api/tardis.energy_input.gamma_ray_interactions.html#tardis.energy_input.gamma_ray_interactions.pair_creation_packet">pair_creation_packet() (in module tardis.energy_input.gamma_ray_interactions)</a>
 </li>
+      <li><a href="api/tardis.io.model.parse_atom_data.html#tardis.io.model.parse_atom_data.parse_atom_data">parse_atom_data() (in module tardis.io.model.parse_atom_data)</a>
+</li>
       <li><a href="api/tardis.io.configuration.config_reader.html#tardis.io.configuration.config_reader.Configuration.parse_convergence_section">parse_convergence_section() (tardis.io.configuration.config_reader.Configuration static method)</a>
 </li>
       <li><a href="api/tardis.io.model.readers.csvy.html#tardis.io.model.readers.csvy.parse_csv_mass_fractions">parse_csv_mass_fractions() (in module tardis.io.model.readers.csvy)</a>
@@ -2429,6 +2494,12 @@
       <li><a href="api/tardis.io.model.parse_packet_source_configuration.html#tardis.io.model.parse_packet_source_configuration.parse_packet_source_from_config">parse_packet_source_from_config() (in module tardis.io.model.parse_packet_source_configuration)</a>
 </li>
       <li><a href="api/tardis.util.base.html#tardis.util.base.parse_quantity">parse_quantity() (in module tardis.util.base)</a>
+</li>
+      <li><a href="api/tardis.io.model.parse_radiation_field_configuration.html#tardis.io.model.parse_radiation_field_configuration.parse_radiation_field_state_from_config">parse_radiation_field_state_from_config() (in module tardis.io.model.parse_radiation_field_configuration)</a>
+</li>
+      <li><a href="api/tardis.io.model.parse_radiation_field_configuration.html#tardis.io.model.parse_radiation_field_configuration.parse_radiation_field_state_from_csvy">parse_radiation_field_state_from_csvy() (in module tardis.io.model.parse_radiation_field_configuration)</a>
+</li>
+      <li><a href="api/tardis.io.model.parse_simulation_state.html#tardis.io.model.parse_simulation_state.parse_simulation_state">parse_simulation_state() (in module tardis.io.model.parse_simulation_state)</a>
 </li>
       <li><a href="api/tardis.plasma.properties.partition_function.html#tardis.plasma.properties.partition_function.PartitionFunction">PartitionFunction (class in tardis.plasma.properties.partition_function)</a>
 </li>
@@ -2450,12 +2521,12 @@
 </li>
       <li><a href="api/tardis.plasma.properties.atomic.html#tardis.plasma.properties.atomic.PhotoIonizationData">PhotoIonizationData (class in tardis.plasma.properties.atomic)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="api/tardis.plasma.properties.continuum_processes.html#tardis.plasma.properties.continuum_processes.PhotoIonRateCoeff">PhotoIonRateCoeff (class in tardis.plasma.properties.continuum_processes)</a>
 </li>
       <li><a href="api/tardis.plasma.properties.continuum_processes.html#tardis.plasma.properties.continuum_processes.PhotoIonRateCoeffEstimator">PhotoIonRateCoeffEstimator (class in tardis.plasma.properties.continuum_processes)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="api/tardis.plasma.base.html#tardis.plasma.base.BasePlasma.plasma_properties_dict">plasma_properties_dict (tardis.plasma.base.BasePlasma property)</a>
 </li>
       <li><a href="api/tardis.plasma.exceptions.html#tardis.plasma.exceptions.PlasmaConfigError">PlasmaConfigError</a>
@@ -2474,7 +2545,7 @@
 </li>
       <li><a href="api/tardis.io.util.html#tardis.io.util.PlasmaWriterMixin">PlasmaWriterMixin (class in tardis.io.util)</a>
 </li>
-      <li><a href="api/tardis.spectrum.html#tardis.spectrum.TARDISSpectrum.plot">plot() (tardis.spectrum.TARDISSpectrum method)</a>
+      <li><a href="api/tardis.spectrum.spectrum.html#tardis.spectrum.spectrum.TARDISSpectrum.plot">plot() (tardis.spectrum.spectrum.TARDISSpectrum method)</a>
 </li>
       <li><a href="api/tardis.io.model.readers.arepo.html#tardis.io.model.readers.arepo.Profile.plot_profile">plot_profile() (tardis.io.model.readers.arepo.Profile method)</a>
 </li>
@@ -2482,9 +2553,9 @@
 </li>
       <li><a href="api/tardis.analysis.html#tardis.analysis.LastLineInteraction.plot_wave_in_out">plot_wave_in_out() (tardis.analysis.LastLineInteraction method)</a>
 </li>
-      <li><a href="api/tardis.transport.montecarlo.formal_integral.html#tardis.transport.montecarlo.formal_integral.populate_z">populate_z() (in module tardis.transport.montecarlo.formal_integral)</a>
+      <li><a href="api/tardis.spectrum.formal_integral.html#tardis.spectrum.formal_integral.populate_z">populate_z() (in module tardis.spectrum.formal_integral)</a>
 </li>
-      <li><a href="api/tardis.transport.montecarlo.formal_integral_cuda.html#tardis.transport.montecarlo.formal_integral_cuda.populate_z_cuda">populate_z_cuda() (in module tardis.transport.montecarlo.formal_integral_cuda)</a>
+      <li><a href="api/tardis.spectrum.formal_integral_cuda.html#tardis.spectrum.formal_integral_cuda.populate_z_cuda">populate_z_cuda() (in module tardis.spectrum.formal_integral_cuda)</a>
 </li>
       <li><a href="api/tardis.energy_input.energy_source.html#tardis.energy_input.energy_source.positronium_continuum">positronium_continuum() (in module tardis.energy_input.energy_source)</a>
 </li>
@@ -2600,10 +2671,10 @@
 </li>
       <li><a href="api/tardis.io.model.readers.cmfgen.html#tardis.io.model.readers.cmfgen.read_cmfgen_model">read_cmfgen_model() (in module tardis.io.model.readers.cmfgen)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="api/tardis.io.model.readers.generic_readers.html#tardis.io.model.readers.generic_readers.read_csv_composition">read_csv_composition() (in module tardis.io.model.readers.generic_readers)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="api/tardis.io.model.readers.util.html#tardis.io.model.readers.util.read_csv_isotope_mass_fractions">read_csv_isotope_mass_fractions() (in module tardis.io.model.readers.util)</a>
 </li>
       <li><a href="api/tardis.visualization.widgets.custom_abundance.html#tardis.visualization.widgets.custom_abundance.DensityEditor.read_density">read_density() (tardis.visualization.widgets.custom_abundance.DensityEditor method)</a>
@@ -2638,9 +2709,9 @@
 </li>
       <li><a href="api/tardis.io.atom_data.util.html#tardis.io.atom_data.util.resolve_atom_data_fname">resolve_atom_data_fname() (in module tardis.io.atom_data.util)</a>
 </li>
-      <li><a href="api/tardis.transport.montecarlo.formal_integral.html#tardis.transport.montecarlo.formal_integral.reverse_binary_search">reverse_binary_search() (in module tardis.transport.montecarlo.formal_integral)</a>
+      <li><a href="api/tardis.spectrum.formal_integral.html#tardis.spectrum.formal_integral.reverse_binary_search">reverse_binary_search() (in module tardis.spectrum.formal_integral)</a>
 </li>
-      <li><a href="api/tardis.transport.montecarlo.formal_integral_cuda.html#tardis.transport.montecarlo.formal_integral_cuda.reverse_binary_search_cuda">reverse_binary_search_cuda() (in module tardis.transport.montecarlo.formal_integral_cuda)</a>
+      <li><a href="api/tardis.spectrum.formal_integral_cuda.html#tardis.spectrum.formal_integral_cuda.reverse_binary_search_cuda">reverse_binary_search_cuda() (in module tardis.spectrum.formal_integral_cuda)</a>
 </li>
       <li><a href="api/tardis.plasma.properties.plasma_input.html#tardis.plasma.properties.plasma_input.RInner">RInner (class in tardis.plasma.properties.plasma_input)</a>
 </li>
@@ -2649,6 +2720,8 @@
       <li><a href="api/tardis.transport.montecarlo.r_packet.html#tardis.transport.montecarlo.r_packet.RPacket">RPacket (class in tardis.transport.montecarlo.r_packet)</a>
 </li>
       <li><a href="api/tardis.transport.montecarlo.packet_trackers.html#tardis.transport.montecarlo.packet_trackers.rpacket_trackers_to_dataframe">rpacket_trackers_to_dataframe() (in module tardis.transport.montecarlo.packet_trackers)</a>
+</li>
+      <li><a href="api/tardis.transport.montecarlo.packet_trackers.html#tardis.transport.montecarlo.packet_trackers.RPacketLastInteractionTracker">RPacketLastInteractionTracker (class in tardis.transport.montecarlo.packet_trackers)</a>
 </li>
       <li><a href="api/tardis.visualization.tools.rpacket_plot.html#tardis.visualization.tools.rpacket_plot.RPacketPlotter">RPacketPlotter (class in tardis.visualization.tools.rpacket_plot)</a>
 </li>
@@ -2742,10 +2815,10 @@
         <li><a href="api/tardis.visualization.widgets.custom_abundance.html#tardis.visualization.widgets.custom_abundance.DensityEditor.shell_no">(tardis.visualization.widgets.custom_abundance.DensityEditor property)</a>
 </li>
       </ul></li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="api/tardis.visualization.widgets.shell_info.html#tardis.visualization.widgets.shell_info.ShellInfoWidget">ShellInfoWidget (class in tardis.visualization.widgets.shell_info)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="api/tardis.visualization.widgets.shell_info.html#tardis.visualization.widgets.shell_info.BaseShellInfo.shells_data">shells_data() (tardis.visualization.widgets.shell_info.BaseShellInfo method)</a>
 </li>
       <li><a href="api/tardis.simulation.base.html#tardis.simulation.base.Simulation">Simulation (class in tardis.simulation.base)</a>
@@ -2756,9 +2829,11 @@
 </li>
       <li><a href="api/tardis.transport.montecarlo.single_packet_loop.html#tardis.transport.montecarlo.single_packet_loop.single_packet_loop">single_packet_loop() (in module tardis.transport.montecarlo.single_packet_loop)</a>
 </li>
-      <li><a href="api/tardis.transport.montecarlo.estimators.continuum_radfield_properties.html#tardis.transport.montecarlo.estimators.continuum_radfield_properties.DiluteBlackBodyContinuumPropertiesSolver.solve">solve() (tardis.transport.montecarlo.estimators.continuum_radfield_properties.DiluteBlackBodyContinuumPropertiesSolver method)</a>
+      <li><a href="api/tardis.spectrum.base.html#tardis.spectrum.base.SpectrumSolver.solve">solve() (tardis.spectrum.base.SpectrumSolver method)</a>
 
       <ul>
+        <li><a href="api/tardis.transport.montecarlo.estimators.continuum_radfield_properties.html#tardis.transport.montecarlo.estimators.continuum_radfield_properties.DiluteBlackBodyContinuumPropertiesSolver.solve">(tardis.transport.montecarlo.estimators.continuum_radfield_properties.DiluteBlackBodyContinuumPropertiesSolver method)</a>
+</li>
         <li><a href="api/tardis.transport.montecarlo.estimators.continuum_radfield_properties.html#tardis.transport.montecarlo.estimators.continuum_radfield_properties.MCContinuumPropertiesSolver.solve">(tardis.transport.montecarlo.estimators.continuum_radfield_properties.MCContinuumPropertiesSolver method)</a>
 </li>
         <li><a href="api/tardis.transport.montecarlo.estimators.dilute_blackbody_properties.html#tardis.transport.montecarlo.estimators.dilute_blackbody_properties.MCDiluteBlackBodyRadFieldSolver.solve">(tardis.transport.montecarlo.estimators.dilute_blackbody_properties.MCDiluteBlackBodyRadFieldSolver method)</a>
@@ -2772,13 +2847,15 @@
 </li>
       <li><a href="api/tardis.util.base.html#tardis.util.base.species_tuple_to_string">species_tuple_to_string() (in module tardis.util.base)</a>
 </li>
-      <li><a href="api/tardis.transport.montecarlo.montecarlo_transport_state.html#tardis.transport.montecarlo.montecarlo_transport_state.MonteCarloTransportState.spectrum">spectrum (tardis.transport.montecarlo.montecarlo_transport_state.MonteCarloTransportState property)</a>
+      <li><a href="api/tardis.spectrum.base.html#tardis.spectrum.base.SpectrumSolver.spectrum_integrated">spectrum_integrated (tardis.spectrum.base.SpectrumSolver property)</a>
 </li>
-      <li><a href="api/tardis.transport.montecarlo.montecarlo_transport_state.html#tardis.transport.montecarlo.montecarlo_transport_state.MonteCarloTransportState.spectrum_integrated">spectrum_integrated (tardis.transport.montecarlo.montecarlo_transport_state.MonteCarloTransportState property)</a>
+      <li><a href="api/tardis.spectrum.base.html#tardis.spectrum.base.SpectrumSolver.spectrum_real_packets">spectrum_real_packets (tardis.spectrum.base.SpectrumSolver property)</a>
 </li>
-      <li><a href="api/tardis.transport.montecarlo.montecarlo_transport_state.html#tardis.transport.montecarlo.montecarlo_transport_state.MonteCarloTransportState.spectrum_reabsorbed">spectrum_reabsorbed (tardis.transport.montecarlo.montecarlo_transport_state.MonteCarloTransportState property)</a>
+      <li><a href="api/tardis.spectrum.base.html#tardis.spectrum.base.SpectrumSolver.spectrum_real_packets_reabsorbed">spectrum_real_packets_reabsorbed (tardis.spectrum.base.SpectrumSolver property)</a>
 </li>
-      <li><a href="api/tardis.transport.montecarlo.montecarlo_transport_state.html#tardis.transport.montecarlo.montecarlo_transport_state.MonteCarloTransportState.spectrum_virtual">spectrum_virtual (tardis.transport.montecarlo.montecarlo_transport_state.MonteCarloTransportState property)</a>
+      <li><a href="api/tardis.spectrum.base.html#tardis.spectrum.base.SpectrumSolver.spectrum_virtual_packets">spectrum_virtual_packets (tardis.spectrum.base.SpectrumSolver property)</a>
+</li>
+      <li><a href="api/tardis.spectrum.base.html#tardis.spectrum.base.SpectrumSolver">SpectrumSolver (class in tardis.spectrum.base)</a>
 </li>
       <li><a href="api/tardis.energy_input.util.html#tardis.energy_input.util.spherical_to_cartesian">spherical_to_cartesian() (in module tardis.energy_input.util)</a>
 </li>
@@ -3059,10 +3136,31 @@
 </li>
       </ul></li>
       <li>
+    tardis.io.model.parse_atom_data
+
+      <ul>
+        <li><a href="api/tardis.io.model.parse_atom_data.html#module-tardis.io.model.parse_atom_data">module</a>
+</li>
+      </ul></li>
+      <li>
     tardis.io.model.parse_packet_source_configuration
 
       <ul>
         <li><a href="api/tardis.io.model.parse_packet_source_configuration.html#module-tardis.io.model.parse_packet_source_configuration">module</a>
+</li>
+      </ul></li>
+      <li>
+    tardis.io.model.parse_radiation_field_configuration
+
+      <ul>
+        <li><a href="api/tardis.io.model.parse_radiation_field_configuration.html#module-tardis.io.model.parse_radiation_field_configuration">module</a>
+</li>
+      </ul></li>
+      <li>
+    tardis.io.model.parse_simulation_state
+
+      <ul>
+        <li><a href="api/tardis.io.model.parse_simulation_state.html#module-tardis.io.model.parse_simulation_state">module</a>
 </li>
       </ul></li>
       <li>
@@ -3199,13 +3297,6 @@
 </li>
       </ul></li>
       <li>
-    tardis.model.radiation_field_state
-
-      <ul>
-        <li><a href="api/tardis.model.radiation_field_state.html#module-tardis.model.radiation_field_state">module</a>
-</li>
-      </ul></li>
-      <li>
     tardis.opacities
 
       <ul>
@@ -3280,6 +3371,20 @@
 
       <ul>
         <li><a href="api/tardis.plasma.exceptions.html#module-tardis.plasma.exceptions">module</a>
+</li>
+      </ul></li>
+      <li>
+    tardis.plasma.nlte
+
+      <ul>
+        <li><a href="api/tardis.plasma.nlte.html#module-tardis.plasma.nlte">module</a>
+</li>
+      </ul></li>
+      <li>
+    tardis.plasma.nlte.nlte_data
+
+      <ul>
+        <li><a href="api/tardis.plasma.nlte.nlte_data.html#module-tardis.plasma.nlte.nlte_data">module</a>
 </li>
       </ul></li>
       <li>
@@ -3418,24 +3523,24 @@
 </li>
       </ul></li>
       <li>
+    tardis.plasma.radiation_field
+
+      <ul>
+        <li><a href="api/tardis.plasma.radiation_field.html#module-tardis.plasma.radiation_field">module</a>
+</li>
+      </ul></li>
+      <li>
+    tardis.plasma.radiation_field.planck_rad_field
+
+      <ul>
+        <li><a href="api/tardis.plasma.radiation_field.planck_rad_field.html#module-tardis.plasma.radiation_field.planck_rad_field">module</a>
+</li>
+      </ul></li>
+      <li>
     tardis.plasma.standard_plasmas
 
       <ul>
         <li><a href="api/tardis.plasma.standard_plasmas.html#module-tardis.plasma.standard_plasmas">module</a>
-</li>
-      </ul></li>
-      <li>
-    tardis.radiation_field
-
-      <ul>
-        <li><a href="api/tardis.radiation_field.html#module-tardis.radiation_field">module</a>
-</li>
-      </ul></li>
-      <li>
-    tardis.radiation_field.base
-
-      <ul>
-        <li><a href="api/tardis.radiation_field.base.html#module-tardis.radiation_field.base">module</a>
 </li>
       </ul></li>
       <li>
@@ -3478,6 +3583,34 @@
 
       <ul>
         <li><a href="api/tardis.spectrum.html#module-tardis.spectrum">module</a>
+</li>
+      </ul></li>
+      <li>
+    tardis.spectrum.base
+
+      <ul>
+        <li><a href="api/tardis.spectrum.base.html#module-tardis.spectrum.base">module</a>
+</li>
+      </ul></li>
+      <li>
+    tardis.spectrum.formal_integral
+
+      <ul>
+        <li><a href="api/tardis.spectrum.formal_integral.html#module-tardis.spectrum.formal_integral">module</a>
+</li>
+      </ul></li>
+      <li>
+    tardis.spectrum.formal_integral_cuda
+
+      <ul>
+        <li><a href="api/tardis.spectrum.formal_integral_cuda.html#module-tardis.spectrum.formal_integral_cuda">module</a>
+</li>
+      </ul></li>
+      <li>
+    tardis.spectrum.spectrum
+
+      <ul>
+        <li><a href="api/tardis.spectrum.spectrum.html#module-tardis.spectrum.spectrum">module</a>
 </li>
       </ul></li>
       <li>
@@ -3607,20 +3740,6 @@
 </li>
       </ul></li>
       <li>
-    tardis.transport.montecarlo.formal_integral
-
-      <ul>
-        <li><a href="api/tardis.transport.montecarlo.formal_integral.html#module-tardis.transport.montecarlo.formal_integral">module</a>
-</li>
-      </ul></li>
-      <li>
-    tardis.transport.montecarlo.formal_integral_cuda
-
-      <ul>
-        <li><a href="api/tardis.transport.montecarlo.formal_integral_cuda.html#module-tardis.transport.montecarlo.formal_integral_cuda">module</a>
-</li>
-      </ul></li>
-      <li>
     tardis.transport.montecarlo.interaction
 
       <ul>
@@ -3716,6 +3835,13 @@
 
       <ul>
         <li><a href="api/tardis.transport.montecarlo.vpacket.html#module-tardis.transport.montecarlo.vpacket">module</a>
+</li>
+      </ul></li>
+      <li>
+    tardis.transport.montecarlo.weighted_packet_source
+
+      <ul>
+        <li><a href="api/tardis.transport.montecarlo.weighted_packet_source.html#module-tardis.transport.montecarlo.weighted_packet_source">module</a>
 </li>
       </ul></li>
       <li>
@@ -3829,13 +3955,15 @@
 </li>
       <li><a href="api/tardis.analysis.html#tardis.analysis.TARDISHistory">TARDISHistory (class in tardis.analysis)</a>
 </li>
-      <li><a href="api/tardis.spectrum.html#tardis.spectrum.TARDISSpectrum">TARDISSpectrum (class in tardis.spectrum)</a>
+      <li><a href="api/tardis.spectrum.spectrum.html#tardis.spectrum.spectrum.TARDISSpectrum">TARDISSpectrum (class in tardis.spectrum.spectrum)</a>
 </li>
       <li><a href="api/tardis.transport.montecarlo.nonhomologous_grid.html#tardis.transport.montecarlo.nonhomologous_grid.tau_sobolev_factor">tau_sobolev_factor() (in module tardis.transport.montecarlo.nonhomologous_grid)</a>
 </li>
       <li><a href="api/tardis.opacities.tau_sobolev.html#tardis.opacities.tau_sobolev.TauSobolev">TauSobolev (class in tardis.opacities.tau_sobolev)</a>
 </li>
       <li><a href="api/tardis.visualization.widgets.custom_abundance.html#tardis.visualization.widgets.custom_abundance.CustomAbundanceWidget.tbs_scale_eventhandler">tbs_scale_eventhandler() (tardis.visualization.widgets.custom_abundance.CustomAbundanceWidget method)</a>
+</li>
+      <li><a href="api/tardis.plasma.radiation_field.planck_rad_field.html#tardis.plasma.radiation_field.planck_rad_field.DilutePlanckianRadiationField.temperature_kelvin">temperature_kelvin (tardis.plasma.radiation_field.planck_rad_field.DilutePlanckianRadiationField property)</a>
 </li>
       <li><a href="api/tardis.plasma.base.html#tardis.plasma.base.BasePlasma.thaw">thaw() (tardis.plasma.base.BasePlasma method)</a>
 </li>
@@ -3859,7 +3987,7 @@
 </li>
       <li><a href="api/tardis.plasma.properties.plasma_input.html#tardis.plasma.properties.plasma_input.TInner">TInner (class in tardis.plasma.properties.plasma_input)</a>
 </li>
-      <li><a href="api/tardis.spectrum.html#tardis.spectrum.TARDISSpectrum.to_ascii">to_ascii() (tardis.spectrum.TARDISSpectrum method)</a>
+      <li><a href="api/tardis.spectrum.spectrum.html#tardis.spectrum.spectrum.TARDISSpectrum.to_ascii">to_ascii() (tardis.spectrum.spectrum.TARDISSpectrum method)</a>
 </li>
       <li><a href="api/tardis.visualization.widgets.custom_abundance.html#tardis.visualization.widgets.custom_abundance.CustomAbundanceWidget.to_csvy">to_csvy() (tardis.visualization.widgets.custom_abundance.CustomAbundanceWidget method)</a>
 </li>
@@ -3913,9 +4041,9 @@
       </ul></li>
       <li><a href="api/tardis.opacities.macro_atom.base.html#tardis.opacities.macro_atom.base.TransitionProbabilities">TransitionProbabilities (class in tardis.opacities.macro_atom.base)</a>
 </li>
-      <li><a href="api/tardis.transport.montecarlo.formal_integral.html#tardis.transport.montecarlo.formal_integral.trapezoid_integration">trapezoid_integration() (in module tardis.transport.montecarlo.formal_integral)</a>
+      <li><a href="api/tardis.spectrum.formal_integral.html#tardis.spectrum.formal_integral.trapezoid_integration">trapezoid_integration() (in module tardis.spectrum.formal_integral)</a>
 </li>
-      <li><a href="api/tardis.transport.montecarlo.formal_integral_cuda.html#tardis.transport.montecarlo.formal_integral_cuda.trapezoid_integration_cuda">trapezoid_integration_cuda() (in module tardis.transport.montecarlo.formal_integral_cuda)</a>
+      <li><a href="api/tardis.spectrum.formal_integral_cuda.html#tardis.spectrum.formal_integral_cuda.trapezoid_integration_cuda">trapezoid_integration_cuda() (in module tardis.spectrum.formal_integral_cuda)</a>
 </li>
       <li><a href="api/tardis.io.util.html#tardis.io.util.traverse_configs">traverse_configs() (in module tardis.io.util)</a>
 </li>
@@ -4132,7 +4260,7 @@
 
   <div role="contentinfo">
     <p>&#169; Copyright 2013-2024, TARDIS Collaboration.
-      <span class="lastupdated">Last updated on 25 Jul 2024.
+      <span class="lastupdated">Last updated on 29 Jul 2024.
       </span></p>
   </div>
 
