@@ -33,17 +33,7 @@ jobs:
             prefix: /usr/share/miniconda3/envs/tardis
     name: ${{ matrix.label }}
     runs-on: ${{ matrix.os }}
-    steps:
-      - uses: actions/checkout@v4
-
-      - name: Setup LFS
-        uses: ./.github/actions/setup_lfs
-      
-      - name: Setup environment
-        uses: ./.github/actions/setup_env
-        with:
-          os-label: ${{ matrix.label }}
-      
+    steps:     
       - uses: actions/checkout@v4
         with:
           repository: tardis-sn/stardis
@@ -51,15 +41,15 @@ jobs:
       - name: Install TARDIS
         id: install-tardis
         run: |
-          pip install git+https://github.com/tardis-sn/tardis.git
+          pip install git+https://github.com/tardis-sn/tardis.git@${{ github.event.pull_request.head.sha }}
           
       - name: Install STARDIS
         id: install-stardis
         run: |
           pip install -e .[test]
 
-      - name: Setup tmate session
-        uses: mxschmitt/action-tmate@v3
+      # - name: Setup tmate session
+      #   uses: mxschmitt/action-tmate@v3
 
       - name: Run Stardis tests  
         run: pytest
