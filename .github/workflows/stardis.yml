@@ -79,5 +79,3 @@ jobs:
 
       - name: Run Stardis tests  
         run: pytest
-
-  
