@@ -4,6 +4,7 @@ on:
   push:
     branches:
     - '*'
+
   pull_request:
     branches:
     - '*'
@@ -25,7 +26,7 @@ jobs:
   build:
     strategy:
       matrix:
-        label: [osx-arm, linux-64]
+        label: [osx-64, linux-64]
         include:
           - os: ubuntu-latest
             label: linux-64
