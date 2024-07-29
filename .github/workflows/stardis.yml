@@ -27,11 +27,6 @@ defaults:
   run:
     shell: bash -l {0}
  
-concurrency:
-  group: ${{ github.workflow }}-${{ github.head_ref || github.ref }}
-  cancel-in-progress: true
-    
-
 jobs:
   build:
     if: github.repository_owner == 'tardis-sn'
@@ -46,7 +41,7 @@ jobs:
           - label: linux-64
             os: ubuntu-latest
             prefix: /usr/share/miniconda3/envs/tardis
-    name: ${{ matrix.label }}-Stardis
+    name: ${{ matrix.label }}
     runs-on: ${{ matrix.os }}
     steps:
       - uses: actions/checkout@v4
@@ -59,8 +54,22 @@ jobs:
         with:
           os-label: ${{ matrix.label }}
       
-      - name: Install Stardis package git
-        run: pip install git+https://github.com/tardis-sn/stardis.git
+      - uses: actions/checkout@v4
+        with:
+          repository: tardis-sn/stardis
+      
+      - name: Install TARDIS
+        id: install-tardis
+        run: |
+          pip install git+https://github.com/tardis-sn/tardis.git
+          
+      - name: Install STARDIS
+        id: install-stardis
+        run: |
+          pip install -e .[test]
 
-      - name: Run tests
-        run: pytest stardis ${{ env.PYTEST_FLAGS }}
+      - name: Setup tmate session
+        uses: mxschmitt/action-tmate@v3
+
+      - name: Run Stardis tests  
+        run: pytest
