@@ -38,12 +38,10 @@ class BenchmarkMontecarloMontecarloNumbaOpacities(BenchmarkBase):
                 {
                     "Ejecta_density": 0.01,
                     "Energy": 511.0,
-                    "Iron_group_fraction": 0.5,
                 },
                 {
                     "Ejecta_density": 0.01,
                     "Energy": 5110000000.0,
-                    "Iron_group_fraction": 0.0,
                 },
                 {
                     "Ejecta_density": 0.01,
