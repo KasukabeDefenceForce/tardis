@@ -14,14 +14,6 @@ class BenchmarkTransportGeometryCalculateDistances(BenchmarkBase):
     def model(self):
         return 5.2e7
 
-    def time_calculate_distance_boundary(self):
-        mu = 0.3
-        r = 7.5e14
-
-        calculate_distances.calculate_distance_boundary(
-            r, mu, self.geometry.r_inner[0], self.geometry.r_outer[0]
-        )
-
     @parameterize(
         {
             "Parameters": [
