@@ -30,7 +30,7 @@ defaults:
 
 jobs:
   build:
-    if: github.repository_owner == 'tardis-sn' &&
+    if: 
       (github.event_name == 'push' ||
       (!github.event.pull_request.draft) ||
       github.event_name == 'workflow_dispatch' ||
