@@ -16,8 +16,6 @@ class BenchmarkTransportMontecarloInteraction(BenchmarkBase):
     """
 
     def time_thomson_scatter(self):
-        packet = self.packet
-        time_explosion = self.verysimple_time_explosion
         enable_full_relativity = self.verysimple_enable_full_relativity
 
         interaction.thomson_scatter(

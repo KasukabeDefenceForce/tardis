@@ -3,12 +3,17 @@ name: stardis-tests
 on:
   push:
     branches:
-    - '*'
+    - 'master'
 
   pull_request:
     branches:
     - '*'
 
+    types:
+      - opened
+      - reopened
+      - synchronize
+      - ready_for_review
   workflow_dispatch:
 
 defaults:
@@ -34,6 +39,7 @@ jobs:
 
     name: ${{ matrix.label }}
     runs-on: ${{ matrix.os }}
+    if: ${{ !github.event.pull_request.draft }}
     steps:     
       - uses: actions/checkout@v4
         with:
