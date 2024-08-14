@@ -34,7 +34,7 @@ jobs:
             - name: Run the ADS notebook
               run: |
                 jupyter nbconvert --to python  docs/resources/research_done_using_TARDIS/ads.ipynb
-                python3 ads.py
+                python3 docs/resources/research_done_using_TARDIS/ads.py
             
             - uses: actions/upload-artifact@v4
               with:
