@@ -27,10 +27,7 @@ jobs:
               run: |
                 python -m pip install --upgrade pip
                 pip install jupyter nbconvert
-            
-            - name: Setup tmate session
-              uses: mxschmitt/action-tmate@v3
-            
+                        
             - name: Run the ADS notebook
               run: |
                 jupyter nbconvert --to python  docs/resources/research_done_using_TARDIS/ads.ipynb
@@ -38,7 +35,7 @@ jobs:
             
             - uses: actions/upload-artifact@v4
               with:
-                name: research_papers
+                name: resource_papers
                 path: |
                     docs/resources/research_done_using_TARDIS/resource_papers.rst
             
@@ -54,19 +51,22 @@ jobs:
     
             - name: Copy files to repository
               run: |
-                cp /tmp/research_papers/* .
+                cp /tmp/resource_papers/docs/resources/research_done_using_TARDIS/resource_papers.rst .
     
+            - name: Setup tmate session
+              uses: mxschmitt/action-tmate@v3
+
             - name: Get current date
               run: echo "DATE=$(date +'%Y.%m.%d')" >> $GITHUB_ENV
     
             - uses: peter-evans/create-pull-request@v4
               with:
                 token: ${{ secrets.BOT_TOKEN }}
-                committer: TARDIS Bot <tardis.sn.bot@gmail.com>
-                author: TARDIS Bot <tardis.sn.bot@gmail.com>
+                committer: abhinav <abhinavohri13@gmail.com>
+                author: abhinav <abhinavohri13@gmail.com>
                 branch: TARDIS-research-papers-${{ env.DATE }}
                 base: master
-                push-to-fork: tardis-bot/tardis
+                push-to-fork: KasukabeDefenceForce/tardis
                 commit-message: Automated changes for TARDIS-research-papers ${{ env.DATE }}
                 title: TARDIS-research-papers ${{ env.DATE }}
                 body: |
