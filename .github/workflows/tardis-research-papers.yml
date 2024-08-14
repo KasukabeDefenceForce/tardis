@@ -63,7 +63,6 @@ jobs:
                 author: abhinav <abhinavohri13@gmail.com>
                 branch: TARDIS-research-papers-${{ env.DATE }}
                 base: master
-                push-to-fork: KasukabeDefenceForce/tardis
                 commit-message: Automated changes for TARDIS-research-papers ${{ env.DATE }}
                 title: TARDIS-research-papers ${{ env.DATE }}
                 body: |
