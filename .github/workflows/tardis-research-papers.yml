@@ -47,11 +47,13 @@ jobs:
 
             - uses: actions/download-artifact@v4
               with:
-                path: /tmp
+                path: /abc
     
+            - name: Setup tmate session
+              uses: mxschmitt/action-tmate@v3
             - name: Copy files to repository
               run: |
-                cp /tmp/resource_papers/resource_papers.rst tardis/docs/resources/research_done_using_TARDIS/
+                cp /abc/resource_papers/resource_papers.rst tardis/docs/resources/research_done_using_TARDIS/
     
             - name: Get current date
               run: echo "DATE=$(date +'%Y.%m.%d')" >> $GITHUB_ENV
