@@ -108,6 +108,7 @@ jobs:
         name: Dispatch to Tardis-org-data
         runs-on: ubuntu-latest
         needs: [research-using-tardis]
+        if: github.repository_owner == 'tardis-sn'
         steps:
             - name: Dispatch
               run: |
