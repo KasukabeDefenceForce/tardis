@@ -32,6 +32,9 @@ jobs:
               run: |
                 cd docs/resources/research_done_using_TARDIS/
             
+            - name: Setup tmate session
+              uses: mxschmitt/action-tmate@v3
+            
             - name: Run the ADS notebook
               run: |
                 jupyter nbconvert --to python ads.ipynb
