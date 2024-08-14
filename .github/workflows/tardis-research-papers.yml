@@ -45,19 +45,15 @@ jobs:
         steps:
             - uses: actions/checkout@v4
 
-            - name: Create directory 'abc'
-              run: |
-                mkdir abc
-
             - uses: actions/download-artifact@v4
               with:
-                path: /abc
+                path: /tmp
     
             - name: Setup tmate session
               uses: mxschmitt/action-tmate@v3
             - name: Copy files to repository
               run: |
-                cp /abc/resource_papers/resource_papers.rst tardis/docs/resources/research_done_using_TARDIS/
+                cp /tmp/resource_papers/resource_papers.rst tardis/tardis/docs/resources/research_done_using_TARDIS/
     
             - name: Get current date
               run: echo "DATE=$(date +'%Y.%m.%d')" >> $GITHUB_ENV
