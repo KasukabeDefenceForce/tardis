@@ -53,7 +53,7 @@ jobs:
               uses: mxschmitt/action-tmate@v3
             - name: Copy files to repository
               run: |
-                cp -r /tmp/resource_papers tardis/docs/resources/research_done_using_TARDIS/
+                cp -r /tmp/resource_papers docs/resources/research_done_using_TARDIS/
     
             - name: Get current date
               run: echo "DATE=$(date +'%Y.%m.%d')" >> $GITHUB_ENV
