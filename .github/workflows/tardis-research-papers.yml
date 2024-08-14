@@ -51,7 +51,7 @@ jobs:
     
             - name: Copy files to repository
               run: |
-                cp /tmp/resource_papers/docs/resources/research_done_using_TARDIS/resource_papers.rst .
+                cp /tmp/resource_papers/resource_papers.rst .
     
             - name: Setup tmate session
               uses: mxschmitt/action-tmate@v3
