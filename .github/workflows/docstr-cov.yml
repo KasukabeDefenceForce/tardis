@@ -18,8 +18,8 @@ on:
 env:
   THRESHOLD: 0.05
   RANGE: 50..75
-  ENDPOINT: https://jsonbin.org/tardis-bot/${{ github.event.repository.name }}
-  TOKEN: ${{ secrets.JSONBIN_APIKEY }}
+  ENDPOINT: https://jsonbin.org/kasukabedefenceforce/${{ github.event.repository.name }}
+  TOKEN: "b531e97f-af7d-4abd-b50f-ac4fd71f24a3"
 
 jobs:
   check:
