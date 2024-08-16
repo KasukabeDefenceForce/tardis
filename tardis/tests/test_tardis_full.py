@@ -19,11 +19,6 @@ def test_run_tardis_from_config_obj(
     Tests whether the run_tardis function can take in the Configuration object
     as arguments
     """
-    config = Configuration.from_yaml(
-        example_configuration_dir / "tardis_configv1_verysimple.yml"
-    )
-    config["atom_data"] = atomic_data_fname
-
     try:
         sim = run_tardis(config)
     except Exception as e:
