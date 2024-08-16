@@ -79,7 +79,7 @@ jobs:
       - name: Install package git
         if: ${{ inputs.pip_git }}
         run: |
-          pip install git+https://github.com/tardis-sn/tardis.git@master
+          pip install git+https://github.com/tardis-sn/tardis.git@${{ github.sha }}
 
       - name: Run tests
         run: pytest tardis ${{ env.PYTEST_FLAGS }} -m "${{ matrix.continuum }} continuum and ${{ matrix.rpacket_tracking }} rpacket_tracking" 
