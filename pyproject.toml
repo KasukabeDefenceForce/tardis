@@ -73,6 +73,9 @@ omit-covered-files = false
 quiet = false
 verbose = 0
 #whitelist-regex = []
+badge-style = "flat"
+generate-badge = "."
+badge-format = "svg"
 
 [tool.ruff]
 line-length = 80
