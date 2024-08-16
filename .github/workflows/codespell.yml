@@ -25,6 +25,9 @@ jobs:
           python-version: '3.10'
           cache: "pip"
 
+      - name: Install Codespell
+        run: pip install codespell==1.10.0
+
       - name: Run codespell
         run: |
           codespell
