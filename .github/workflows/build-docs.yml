@@ -110,7 +110,7 @@ jobs:
           pip install sphinxcontrib-googleanalytics
 
       - name: Generate doc string badge
-        uses: docstr-cov
+        uses: ./.github/workflows/docstr-cov
 
       - name: Build documentation
         run: cd docs/ && make html NCORES=auto
