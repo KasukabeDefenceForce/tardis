@@ -19,8 +19,7 @@ requesting a total output luminosity of
 A simple power-law density profile (seventh order polynomial fit to the Nomoto
 et al. 1984 W7 model) is used together with a uniform composition, involving
 only six elements. To avoid long run times only a moderate number of real and
-virtual Monte Carlo packets are used. Also, very simple ionization and
-excitation assumptions are adopted.
+
 
 The following YAML file summarizes the tardis_example setup:
 
