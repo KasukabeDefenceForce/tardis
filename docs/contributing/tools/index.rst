@@ -2,7 +2,7 @@
 Developer Tools
 ***************
 
-The following pages contain information about coding concepts used in the development of TARDIS:
+The followin pags contin information abot cding concepts used in the development of TARDIS:
 
 .. toctree::
 
