@@ -74,7 +74,7 @@ quiet = false
 verbose = 0
 #whitelist-regex = []
 badge-style = "flat"
-generate-badge = "."
+generate-badge = "docs/_static"
 badge-format = "svg"
 
 [tool.ruff]
