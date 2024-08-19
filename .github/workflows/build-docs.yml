@@ -109,9 +109,6 @@ jobs:
         run: |
           pip install sphinxcontrib-googleanalytics
 
-      - name: Generate doc string badge
-        uses: ./.github/workflows/docstr-cov
-
       - name: Build documentation
         run: cd docs/ && make html NCORES=auto
 
@@ -212,3 +209,10 @@ jobs:
         env:
           URL: https://github.com/${{ github.repository_owner }}/${{ github.event.repository.name }}/actions/runs/${{ github.run_id }}?check_suite_focus=true
         if: failure() && github.event_name == 'pull_request_target'
+
+  generate-docstr-badge:
+     runs-on: ubuntu-latest
+     needs: build-docs
+     steps:
+      - name: Generate doc string badge
+        uses: ./.github/workflows/docstr-cov
