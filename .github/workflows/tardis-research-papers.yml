@@ -23,7 +23,7 @@ jobs:
           with:
             environment-name: fetch-env
             create-args: >-
-              python=3.10
+              python
               jupyter
                     
         - name: Run the ADS notebook
