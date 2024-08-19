@@ -75,6 +75,13 @@ jobs:
         if: steps.trigger_check.outcome != 'success'
         continue-on-error: true
 
+  generate-docstr-badge:
+    runs-on: ubuntu-latest
+    needs: build-docs
+    steps:
+      - name: Generate doc string badge
+        uses: ./docstr-cov
+
   build-docs:
     runs-on: ubuntu-latest
     needs: check-for-changes
@@ -210,9 +217,4 @@ jobs:
           URL: https://github.com/${{ github.repository_owner }}/${{ github.event.repository.name }}/actions/runs/${{ github.run_id }}?check_suite_focus=true
         if: failure() && github.event_name == 'pull_request_target'
 
-  generate-docstr-badge:
-     runs-on: ubuntu-latest
-     needs: build-docs
-     steps:
-      - name: Generate doc string badge
-        uses: ./.github/workflows/docstr-cov
+
