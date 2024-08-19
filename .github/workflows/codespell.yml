@@ -22,7 +22,7 @@ jobs:
         with:
           environment-name: codespell-env
           create-args: >-
-            python=3.x
+            python
             codespell
 
       - name: Run codespell
