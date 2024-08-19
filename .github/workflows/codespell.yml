@@ -15,6 +15,14 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
+        if: github.event_name != 'pull_request_target'
+
+      - name: Checkout pull/${{ github.event.number }}
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          ref: ${{ github.event.pull_request.head.sha }}
+        if: github.event_name == 'pull_request_target'
 
       - name: Setup micromamba
         uses: mamba-org/setup-micromamba@v1
