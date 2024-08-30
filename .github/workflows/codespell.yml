@@ -32,8 +32,9 @@ jobs:
             python
 
       - name: Install Codespell
-        run: pip install codespell==1.10.0 tomli
+        run: pip install tomli codespell
 
       - name: Run codespell
         run: |
+          ls -la .
           codespell docs/
