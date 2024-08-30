@@ -230,12 +230,10 @@ class SpectrumSolver(HDFWriterMixin):
                     &quot;This RETURNS AN EMPTY SPECTRUM!&quot;,
                     UserWarning,
                 )
-                return TARDISSpectrum(
+                self._spectrum_integrated = TARDISSpectrum(
                     np.array([np.nan, np.nan]) * u.Hz,
                     np.array([np.nan]) * u.erg / u.s,
                 )
-        else:
-            self._spectrum_integrated = None
         return self._spectrum_integrated
 
     @property
@@ -336,7 +334,7 @@ class SpectrumSolver(HDFWriterMixin):
 
   <div role="contentinfo">
     <p>&#169; Copyright 2013-2024, TARDIS Collaboration.
-      <span class="lastupdated">Last updated on 21 Aug 2024.
+      <span class="lastupdated">Last updated on 30 Aug 2024.
       </span></p>
   </div>
 
