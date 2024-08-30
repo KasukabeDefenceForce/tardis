@@ -19,13 +19,13 @@ Many new TARDIS developments are made through GSOC students. To learn more about
 Restructure
 ===========
 
-Restructuring TARDIS to be more modularized in order to facilitate the addition of new physics modules and improve maintainability.
+Rtructuring TARDIS to be moe modularized in order to facilitate the addition of new physics modules and improve maintainability.
 
 
 New Physics
 ===========
 
-TARDIS is currently capable of simulating spherically symmetric type Ia and stripped envelope supernovae at a single point in time in the earlier stages of the explosion. To expand to more types of supernovae, such as type Ib, Ic, and IIP, and to model a larger variety of times after the explosion, new physics capabilities are necessary.
+TARDIS is currently capab of simulating spherically symmetric type Ia and stripped envelope supernovae at a single point in time in the earlier stages of the explosion. To expand to more types of supernovae, such as type Ib, Ic, and IIP, and to model a larger variety of times after the explosion, new physics capabilities are necessary.
 
 
 Simulate Supernovae in the Nebular Phase
