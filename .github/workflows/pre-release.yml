@@ -59,6 +59,9 @@ jobs:
           name: zenodo_json
           path: .zenodo.json
 
+      - name: Setup tmate session
+        uses: mxschmitt/action-tmate@v3
+
   pull_request:
     needs: zenodo
     runs-on: ubuntu-latest
