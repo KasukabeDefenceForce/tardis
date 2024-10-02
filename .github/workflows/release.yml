@@ -61,8 +61,7 @@ jobs:
       - name: Fetch Latest DOI from Zenodo
         id: fetch-doi
         run: |
-          CONCEPT_DOI="592480"
-          response=$(curl -s "https://zenodo.org/api/records/${CONCEPT_DOI}")
+          response=$(curl -s "https://zenodo.org/api/records/592480")
           specific_doi=$(echo $response | jq -r '.id')
           doi_badge="![DOI Badge](https://img.shields.io/badge/DOI-10.5281/zenodo.${specific_doi}-blue)"
           
