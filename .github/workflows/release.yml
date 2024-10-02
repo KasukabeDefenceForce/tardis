@@ -37,11 +37,13 @@ jobs:
           echo "CHANGELOG<<EOF" >> $GITHUB_ENV
           echo "$CHANGELOG" >> $GITHUB_ENV
           echo "EOF" >> $GITHUB_ENV
-          - name: Create initial release
-          id: create_release
-          uses: softprops/action-gh-release@v2
-          with:
-            body_path: CHANGELOG.md
+        continue-on-error: true
+        
+      - name: Create initial release
+        id: create_release
+        uses: softprops/action-gh-release@v2
+        with:
+          body_path: CHANGELOG.md
   
       - name: Fetch Latest DOI from Zenodo
         id: fetch-doi
