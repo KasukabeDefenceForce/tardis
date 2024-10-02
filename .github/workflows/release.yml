@@ -61,12 +61,19 @@ jobs:
       - name: Fetch Latest DOI from Zenodo
         id: fetch-doi
         run: |
-          response=$(curl -s "https://zenodo.org/api/records/592480")
-          specific_doi=$(echo $response | jq -r '.id')
-          doi_badge="![DOI Badge](https://img.shields.io/badge/DOI-10.5281/zenodo.${specific_doi}-blue)"
-          
-          echo "doi_badge=${doi_badge}" >> $GITHUB_ENV
-  
+          CONCEPT_DOI="592480"
+          response=$(curl -s "https://zenodo.org/api/records/${CONCEPT_DOI}")
+
+          # Check if the response is valid JSON
+          if echo "$response" | jq . >/dev/null 2>&1; then
+              specific_doi=$(echo "$response" | jq -r '.id')
+              doi_url="https://doi.org/10.5281/zenodo.${specific_doi}"
+              doi_badge="![DOI Badge](https://img.shields.io/badge/DOI-10.5281/zenodo.${specific_doi}-blue)"
+              echo "doi_badge=${doi_badge}" >> $GITHUB_ENV
+          else
+              echo "Error: Invalid JSON response"
+              echo "$response"  # Print the response for debugging
+          fi
       - name: Update Changelog with Zenodo Badge
         run: |
           changelog_file="CHANGELOG.md"
