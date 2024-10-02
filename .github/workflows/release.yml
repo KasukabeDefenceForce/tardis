@@ -38,44 +38,42 @@ jobs:
           echo "$CHANGELOG" >> $GITHUB_ENV
           echo "EOF" >> $GITHUB_ENV
 
-      - name: Create new release
-        uses: softprops/action-gh-release@v1
-        with:
-          # token: ${{ secrets.BOT_TOKEN }}
-          name: TARDIS v${{ env.NEW_TAG}}
-          tag_name: release-${{ env.NEW_TAG }}
-          prerelease: false
-          body: |
-            This release has been created automatically by the TARDIS continuous delivery pipeline.
-            
-            ${{ env.CHANGELOG }}
-            
-            A complete list of changes for this release is available at [CHANGELOG.md](https://github.com/tardis-sn/tardis/blob/master/CHANGELOG.md).
-          files: |
-            conda-osx-arm64.lock
-            conda-linux-64.lock
-            conda-osx-64.lock
-            conda-lock.yml
-          fail_on_unmatched_files: false
+          name: Create initial release
+          id: create_release
+          uses: softprops/action-gh-release@v2
+          with:
+            draft: false
+            prerelease: false
+            body_path: CHANGELOG.md
 
       - name: Fetch Latest DOI from Zenodo
         id: fetch-doi
         run: |
           CONCEPT_DOI="592480"
           response=$(curl -s "https://zenodo.org/api/records/${CONCEPT_DOI}")
-
-          # Check if the response is valid JSON
           if echo "$response" | jq . >/dev/null 2>&1; then
-              specific_doi=$(echo "$response" | jq -r '.id')
-              doi_url="https://doi.org/10.5281/zenodo.${specific_doi}"
-              doi_badge="![DOI Badge](https://img.shields.io/badge/DOI-10.5281/zenodo.${specific_doi}-blue)"
-              echo "doi_badge=${doi_badge}" >> $GITHUB_ENV
+            specific_doi=$(echo "$response" | jq -r '.id')
+            doi_badge="![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.${specific_doi}.svg)"
+            echo "doi_badge=${doi_badge}" >> $GITHUB_ENV
           else
-              echo "Error: Invalid JSON response"
-              echo "$response"  # Print the response for debugging
+            echo "Error: Invalid JSON response"
+            echo "$response"
           fi
+
       - name: Update Changelog with Zenodo Badge
         run: |
           changelog_file="CHANGELOG.md"
-          sed -i "/^## Changelog/a ${doi_badge}" "$changelog_file"
+          if [ -n "${{ env.doi_badge }}" ]; then
+            sed -i "1,/^## Changelog/!b; /^## Changelog/a\\
+            ${{ env.doi_badge }}" "$changelog_file"
+            echo "DOI badge added to CHANGELOG.md"
+          else
+            echo "Warning: DOI badge not available. Skipping changelog update."
+          fi
 
+      - name: Update release with modified changelog
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ github.ref }}
+          body_path: CHANGELOG.md
+          files: CHANGELOG.md
