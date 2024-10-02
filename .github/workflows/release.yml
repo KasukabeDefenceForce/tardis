@@ -60,19 +60,16 @@ jobs:
 
       - name: Fetch Latest DOI from Zenodo
         id: fetch-doi
-        if: always()
         run: |
-          CONCEPT_DOI="592480"  # Replace with your actual concept DOI
+          CONCEPT_DOI="592480"
           response=$(curl -s "https://zenodo.org/api/records/${CONCEPT_DOI}")
-          specific_doi=$(echo $response | jq -r '.id')  # Extracts the specific DOI ID from JSON response
-
-          # Construct badge URL and citation text for changelog update
-          doi_url="https://doi.org/10.5281/zenodo.${specific_doi}"
+          specific_doi=$(echo $response | jq -r '.id')
           doi_badge="![DOI Badge](https://img.shields.io/badge/DOI-10.5281/zenodo.${specific_doi}-blue)"
-
+          
           echo "doi_badge=${doi_badge}" >> $GITHUB_ENV
   
       - name: Update Changelog with Zenodo Badge
-        if: always()
         run: |
-          echo "${{ env.doi_badge }}" >> CHANGELOG.md
+          changelog_file="CHANGELOG.md"
+          sed -i "/^## Changelog/a ${doi_badge}" "$changelog_file"
+
