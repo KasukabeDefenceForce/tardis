@@ -37,43 +37,39 @@ jobs:
           echo "CHANGELOG<<EOF" >> $GITHUB_ENV
           echo "$CHANGELOG" >> $GITHUB_ENV
           echo "EOF" >> $GITHUB_ENV
-
-          name: Create initial release
+          - name: Create initial release
           id: create_release
           uses: softprops/action-gh-release@v2
           with:
-            draft: false
-            prerelease: false
             body_path: CHANGELOG.md
-
+  
       - name: Fetch Latest DOI from Zenodo
         id: fetch-doi
         run: |
-          CONCEPT_DOI="592480"
-          response=$(curl -s "https://zenodo.org/api/records/${CONCEPT_DOI}")
-          if echo "$response" | jq . >/dev/null 2>&1; then
-            specific_doi=$(echo "$response" | jq -r '.id')
-            doi_badge="![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.${specific_doi}.svg)"
-            echo "doi_badge=${doi_badge}" >> $GITHUB_ENV
-          else
-            echo "Error: Invalid JSON response"
-            echo "$response"
-          fi
-
+            CONCEPT_DOI="592480"
+            response=$(curl -s "https://zenodo.org/api/records/${CONCEPT_DOI}")
+            if echo "$response" | jq . >/dev/null 2>&1; then
+              specific_doi=$(echo "$response" | jq -r '.id')
+              doi_badge="![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.${specific_doi}.svg)"
+              echo "doi_badge=${doi_badge}" >> $GITHUB_ENV
+            else
+              echo "Error: Invalid JSON response"
+              echo "$response"
+            fi
+  
       - name: Update Changelog with Zenodo Badge
         run: |
           changelog_file="CHANGELOG.md"
           if [ -n "${{ env.doi_badge }}" ]; then
-            sed -i "1,/^## Changelog/!b; /^## Changelog/a\\
-            ${{ env.doi_badge }}" "$changelog_file"
+            sed -i "1i${{ env.doi_badge }}\n" "$changelog_file"
             echo "DOI badge added to CHANGELOG.md"
           else
             echo "Warning: DOI badge not available. Skipping changelog update."
           fi
 
-      - name: Update release with modified changelog
+      - name: Update release with DOI
         uses: softprops/action-gh-release@v2
         with:
-          tag_name: ${{ github.ref }}
+          tag_name: ${{ github.ref_name }}
           body_path: CHANGELOG.md
-          files: CHANGELOG.md
+          append_body: true
