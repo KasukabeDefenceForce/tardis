@@ -42,10 +42,20 @@ jobs:
       - name: Fetch Latest DOI from Zenodo
         id: fetch-doi
         run: |
-            response=$(curl -s -L -H "Accept: application/x-bibtex" "https://zenodo.org/api/records/592480")
-            doi=$(echo "$response" | grep -oP 'doi\s*=\s*{([^}]+)}' | grep -oP '([^/]+)$')
-            doi_url="https://doi.org/${doi}"
+            CONCEPT_DOI="592480"
+            # Make the API request for BibTeX format, following redirects
+            response=$(curl -s -L -H "Accept: application/x-bibtex" "https://zenodo.org/api/records/${CONCEPT_DOI}")
+        
+            # Extract the full DOI value correctly
+            doi=$(echo "$response" | grep -oP 'doi\s*=\s*{([^}]+)}' | grep -oP '([^/]+/[^}]+)')
+        
+            # Extract the DOI URL directly from the response
+            doi_url=$(echo "$response" | grep -oP 'doi_url\s*=\s*{([^}]+)}' | grep -oP '([^}]+)')
+        
+            # Create DOI badge using the full DOI value
             doi_badge="![DOI Badge](https://img.shields.io/badge/DOI-${doi}-blue)"
+        
+            # Store results in GitHub environment variables
             echo "doi_badge=${doi_badge}" >> $GITHUB_ENV
             echo "doi_url=${doi_url}" >> $GITHUB_ENV
         
