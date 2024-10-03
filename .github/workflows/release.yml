@@ -38,12 +38,17 @@ jobs:
           echo "$CHANGELOG" >> $GITHUB_ENV
           echo "EOF" >> $GITHUB_ENV
         continue-on-error: true
-        
-      - name: Create initial release
+
+      - name: Create new release
         id: create_release
-        uses: softprops/action-gh-release@v2
+        uses: softprops/action-gh-release@v1
         with:
-          body_path: CHANGELOG.md
+          name: TARDIS v${{ env.NEW_TAG }}
+          tag_name: release-${{ env.NEW_TAG }}
+          body: |
+            This release has been created automatically by the TARDIS continuous delivery pipeline.
+            ${{ env.CHANGELOG }}
+            A complete list of changes for this release is available at [CHANGELOG.md](https://github.com/tardis-sn/tardis/blob/master/CHANGELOG.md).
   
       - name: Fetch Latest DOI from Zenodo
         id: fetch-doi
