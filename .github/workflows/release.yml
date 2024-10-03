@@ -42,10 +42,7 @@ jobs:
       - name: Fetch Latest DOI from Zenodo
         id: fetch-doi
         run: |
-            CONCEPT_DOI="592480"
-            # Make the API request for BibTeX format, following redirects
-            response=$(curl -s -L -H "Accept: application/x-bibtex" "https://zenodo.org/api/records/${CONCEPT_DOI}")
-        
+            response=$(curl -s -L -H "Accept: application/x-bibtex" "https://zenodo.org/api/records/592480")
             doi=$(echo "$response" | jq -r '.doi')
             doi_url="https://doi.org/${doi}"
             doi_badge="![DOI Badge](https://img.shields.io/badge/DOI-${doi}-blue)"
