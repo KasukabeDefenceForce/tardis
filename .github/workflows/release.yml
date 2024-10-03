@@ -38,45 +38,58 @@ jobs:
           echo "$CHANGELOG" >> $GITHUB_ENV
           echo "EOF" >> $GITHUB_ENV
         continue-on-error: true
-
-      - name: Create new release
-        id: create_release
+      
+      - name: Initialize release
         uses: softprops/action-gh-release@v1
         with:
           name: TARDIS v${{ env.NEW_TAG }}
           tag_name: release-${{ env.NEW_TAG }}
-          body: |
-            This release has been created automatically by the TARDIS continuous delivery pipeline.
-            ${{ env.CHANGELOG }}
-            A complete list of changes for this release is available at [CHANGELOG.md](https://github.com/tardis-sn/tardis/blob/master/CHANGELOG.md).
-  
+          body: "This release has been created automatically by the TARDIS continuous delivery pipeline."
+          draft: true
+      
       - name: Fetch Latest DOI from Zenodo
         id: fetch-doi
         run: |
-            CONCEPT_DOI="592480"
-            response=$(curl -s "https://zenodo.org/api/records/${CONCEPT_DOI}")
-            if echo "$response" | jq . >/dev/null 2>&1; then
-              specific_doi=$(echo "$response" | jq -r '.id')
-              doi_badge="![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.${specific_doi}.svg)"
-              echo "doi_badge=${doi_badge}" >> $GITHUB_ENV
-            else
-              echo "Error: Invalid JSON response"
-              echo "$response"
-            fi
-  
-      - name: Update Changelog with Zenodo Badge
-        run: |
-          changelog_file="CHANGELOG.md"
-          if [ -n "${{ env.doi_badge }}" ]; then
-            sed -i "1i${{ env.doi_badge }}\n" "$changelog_file"
-            echo "DOI badge added to CHANGELOG.md"
+          CONCEPT_DOI="592480"
+          response=$(curl -s "https://zenodo.org/api/records/${CONCEPT_DOI}")
+          if echo "$response" | jq . >/dev/null 2>&1; then
+            specific_doi=$(echo "$response" | jq -r '.id')
+            doi_url="https://doi.org/10.5281/zenodo.${specific_doi}"
+            doi_badge="![DOI Badge](https://img.shields.io/badge/DOI-10.5281/zenodo.${specific_doi}-blue)"
+            echo "doi_badge=${doi_badge}" >> $GITHUB_ENV
+            echo "doi_url=${doi_url}" >> $GITHUB_ENV
           else
-            echo "Warning: DOI badge not available. Skipping changelog update."
+            echo "Error: Invalid JSON response"
+            echo "$response" # Print the response for debugging
           fi
-
-      - name: Update release with DOI
-        uses: softprops/action-gh-release@v2
+      
+      - name: Generate and process changelog
+        run: |
+          FULL_CHANGELOG=$(git cliff --config pyproject.toml --unreleased | sed -n '/^## Changelog/,$p' | grep -vE '^(ERROR|WARN)')
+          TRUNCATED_CHANGELOG=$(echo "$FULL_CHANGELOG" | head -c 100000)
+          if [ ${#FULL_CHANGELOG} -gt 100000 ]; then
+            TRUNCATED_CHANGELOG+=$'\n\n... (truncated due to length, see CHANGELOG.md for full details)'
+          fi
+          echo "CHANGELOG<<EOF" >> $GITHUB_ENV
+          echo "$TRUNCATED_CHANGELOG" >> $GITHUB_ENV
+          echo "EOF" >> $GITHUB_ENV
+          echo "$FULL_CHANGELOG" > FULL_CHANGELOG.md
+        continue-on-error: true
+      
+      - name: Update release with changelog and DOI
+        uses: softprops/action-gh-release@v1
         with:
-          tag_name: ${{ github.ref_name }}
-          body_path: CHANGELOG.md
-          append_body: true
+          tag_name: release-${{ env.NEW_TAG }}
+          body: |
+            This release has been created automatically by the TARDIS continuous delivery pipeline.
+            ${{ env.doi_badge }}
+            ${{ env.CHANGELOG }}
+            
+            A complete list of changes for this release is available at [CHANGELOG.md](https://github.com/tardis-sn/tardis/blob/master/CHANGELOG.md).
+          files: |
+            FULL_CHANGELOG.md
+            conda-osx-arm64.lock
+            conda-linux-64.lock
+            conda-osx-64.lock
+            conda-lock.yml
+          draft: false
