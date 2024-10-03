@@ -30,14 +30,6 @@ jobs:
         run: |
           python .ci-helpers/get_next_version.py
           echo "NEW_TAG=$(python .ci-helpers/get_next_version.py)" >> $GITHUB_ENV
-
-      - name: Generate and process changelog
-        run: |
-          CHANGELOG=$(git cliff --config pyproject.toml --unreleased | sed -n '/^## Changelog/,$p' | grep -vE '^(ERROR|WARN)')
-          echo "CHANGELOG<<EOF" >> $GITHUB_ENV
-          echo "$CHANGELOG" >> $GITHUB_ENV
-          echo "EOF" >> $GITHUB_ENV
-        continue-on-error: true
       
       - name: Initialize release
         uses: softprops/action-gh-release@v1
@@ -54,19 +46,12 @@ jobs:
             # Make the API request for BibTeX format, following redirects
             response=$(curl -s -L -H "Accept: application/x-bibtex" "https://zenodo.org/api/records/${CONCEPT_DOI}")
         
-            # Check if response is valid JSON
-            if echo "$response" | jq . >/dev/null 2>&1; then
-              specific_doi=$(echo "$response" | jq -r '.id')
-              doi_url="https://doi.org/10.5281/zenodo.${specific_doi}"
-              doi_badge="![DOI Badge](https://img.shields.io/badge/DOI-10.5281/zenodo.${specific_doi}-blue)"
-              echo "doi_badge=${doi_badge}" >> $GITHUB_ENV
-              echo "doi_url=${doi_url}" >> $GITHUB_ENV
-            else
-              echo "Error: Invalid JSON response"
-              echo "$response" # Print the response for debugging
-            fi
+            doi=$(echo "$response" | jq -r '.doi')
+            doi_url="https://doi.org/${doi}"
+            doi_badge="![DOI Badge](https://img.shields.io/badge/DOI-${doi}-blue)"
+            echo "doi_badge=${doi_badge}" >> $GITHUB_ENV
+            echo "doi_url=${doi_url}" >> $GITHUB_ENV
         
-      
       - name: Generate and process changelog
         run: |
           FULL_CHANGELOG=$(git cliff --config pyproject.toml --unreleased | sed -n '/^## Changelog/,$p' | grep -vE '^(ERROR|WARN)')
