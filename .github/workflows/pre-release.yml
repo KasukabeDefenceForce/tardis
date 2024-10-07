@@ -31,7 +31,7 @@ jobs:
         run:  wget -q https://raw.githubusercontent.com/tardis-sn/tardis/master/conda-linux-64.lock
         shell: bash
 
-      - name: Generate Cache Key
+      - name: Generate
         run: |
           file_hash=$(cat conda-linux-64.lock | shasum -a 256 | cut -d' ' -f1)
           echo "file_hash=$file_hash" >> "${GITHUB_OUTPUT}"
