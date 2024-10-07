@@ -9,7 +9,7 @@ from tardis.opacities.opacities import compton_opacity_calculation
 
 class BenchmarkMontecarloMontecarloNumbaOpacities(BenchmarkBase):
     """
-    Class to benchmark the numba opacities function.
+    numba opacities function.
     """
     def time_compton_opacity_calculation(self):
         energy = 511.0
