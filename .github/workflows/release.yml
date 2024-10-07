@@ -41,13 +41,13 @@ jobs:
       - name: Initialize release
         uses: softprops/action-gh-release@v1
         with:
-          name: TARDIS v311
-          tag_name: release-311
+          name: TARDIS v312
+          tag_name: release-312
           body: "This release has been created automatically by the TARDIS continuous delivery pipeline."
-          draft: true
+          draft: false
       
       - name: Wait for 100 seconds
-        run: sleep 100
+        run: sleep 30
       
       - name: Fetch Latest DOI from Zenodo
         id: fetch-doi
@@ -85,7 +85,7 @@ jobs:
       - name: Update release with changelog and DOI
         uses: softprops/action-gh-release@v1
         with:
-          tag_name: release-311
+          tag_name: release-312
           body: |
             This release has been created automatically by the TARDIS continuous delivery pipeline.
             ${{ env.doi_badge }}
