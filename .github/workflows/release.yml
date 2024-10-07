@@ -68,6 +68,9 @@ jobs:
             echo "doi_badge=${doi_badge}" >> $GITHUB_ENV
             echo "doi_url=${url}" >> $GITHUB_ENV
         
+      - name: REsponse
+        run: echo "$response"
+
       - name: Generate and process changelog
         run: |
           CHANGELOG=$(git cliff --config pyproject.toml --unreleased | sed -n '/^## Changelog/,$p' | grep -vE '^(ERROR|WARN)')
