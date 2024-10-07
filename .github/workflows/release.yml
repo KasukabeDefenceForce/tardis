@@ -49,7 +49,7 @@ jobs:
       - name: Fetch Latest DOI from Zenodo
         id: fetch-doi
         run: |
-            CONCEPT_DOI="592480"
+            CONCEPT_DOI="13889791"
             # Make the API request for BibTeX format, following redirects
             response=$(curl -s -L -H "Accept: application/x-bibtex" "https://zenodo.org/api/records/${CONCEPT_DOI}")
         
