@@ -12,10 +12,7 @@ from tardis.opacities.opacity_state import opacity_state_initialize
 
 @parameterize({"Input params": ["scatter", "macroatom"]})
 class BenchmarkOpacitiesOpacityState(BenchmarkBase):
-    """
-    Class to benchmark the numba interface function.
-    """
-    repeat = 2
+    
 
     @functools.cache
     def setup(self, input_params):
