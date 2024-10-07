@@ -78,7 +78,7 @@ jobs:
       - name: Update release with changelog and DOI
         uses: softprops/action-gh-release@v1
         with:
-          tag_name: release-${{ env.NEW_TAG }}
+          tag_name: release-300
           body: |
             This release has been created automatically by the TARDIS continuous delivery pipeline.
             ${{ env.doi_badge }}
