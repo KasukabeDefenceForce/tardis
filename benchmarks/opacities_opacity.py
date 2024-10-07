@@ -11,14 +11,12 @@ class BenchmarkMontecarloMontecarloNumbaOpacities(BenchmarkBase):
     """
     Class to benchmark the numba opacities function.
     """
-
     def time_compton_opacity_calculation(self):
         energy = 511.0
         electron_number_density = 1e15
         calculate_opacity.compton_opacity_calculation(
             energy, electron_number_density
         )
-
     def time_photoabsorption_opacity_calculation(self):
         energy = 255.5
         ejecta_density = 100000.0
