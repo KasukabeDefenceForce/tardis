@@ -13,7 +13,7 @@ from tardis.opacities.opacity_state import opacity_state_initialize
 @parameterize({"Input params": ["scatter", "macroatom"]})
 class BenchmarkOpacitiesOpacityState(BenchmarkBase):
     
-
+    """ffffffffffffffff"""
     @functools.cache
     def setup(self, input_params):
         self.sim = self.nb_simulation_verysimple
