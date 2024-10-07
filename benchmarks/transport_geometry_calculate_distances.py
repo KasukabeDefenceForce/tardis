@@ -6,10 +6,6 @@ from benchmarks.benchmark_base import BenchmarkBase
 
 
 class BenchmarkTransportGeometryCalculateDistances(BenchmarkBase):
-    """
-    Class to benchmark the calculate distances function.
-    """
-
     @functools.cache
     def setup(self):
         self.StaticPacket = self.static_packet
