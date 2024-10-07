@@ -41,8 +41,8 @@ jobs:
       - name: Initialize release
         uses: softprops/action-gh-release@v1
         with:
-          name: TARDIS v302
-          tag_name: release-302
+          name: TARDIS v303
+          tag_name: release-303
           body: "This release has been created automatically by the TARDIS continuous delivery pipeline."
           draft: false
       
@@ -82,7 +82,7 @@ jobs:
       - name: Update release with changelog and DOI
         uses: softprops/action-gh-release@v1
         with:
-          tag_name: release-302
+          tag_name: release-303
           body: |
             This release has been created automatically by the TARDIS continuous delivery pipeline.
             ${{ env.doi_badge }}
