@@ -29,6 +29,9 @@ jobs:
         with:
           os-label: linux-64
   
-      - name: Run codespell
+      - name: Activate Environment and Run Codespell
         run: |
-          codespell docs/
+            source ~/.bashrc  # Ensure micromamba is initialized
+            micromamba activate tardis  # Activate the environment
+            codespell docs/
+  
