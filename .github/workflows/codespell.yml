@@ -29,6 +29,10 @@ jobs:
         with:
           os-label: linux-64
       
+      - name: Print codespell version
+        run: |
+          codespell --version
+  
       - name: Run codespell
         run: |
           codespell docs/
