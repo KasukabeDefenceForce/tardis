@@ -32,9 +32,7 @@ jobs:
       - name: Setup tmate session
         uses: mxschmitt/action-tmate@v3
   
-      - name: Activate Environment and Run Codespell
+      - name: run codespell
         run: |
-            source ~/.bashrc  # Ensure micromamba is initialized
-            micromamba activate tardis  # Activate the environment
             codespell docs/
   
