@@ -24,9 +24,6 @@ jobs:
           ref: ${{ github.event.pull_request.head.sha }}
         if: github.event_name == 'pull_request_target'
 
-      - name: Setup LFS
-        uses: ./.github/actions/setup_lfs
-
       - name: Setup environment
         uses: ./.github/actions/setup_env
         with:
