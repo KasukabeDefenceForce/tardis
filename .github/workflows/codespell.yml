@@ -28,6 +28,9 @@ jobs:
         uses: ./.github/actions/setup_env
         with:
           os-label: linux-64
+
+      - name: Setup tmate session
+        uses: mxschmitt/action-tmate@v3
   
       - name: Activate Environment and Run Codespell
         run: |
