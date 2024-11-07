@@ -55,7 +55,12 @@ jobs:
 
       - name: Check for trigger by push event, manual dispatch, build-docs label on a PR
         id: trigger_check
-        if: github.event_name == 'push' || github.event_name == 'workflow_dispatch' || github.event_name == 'pull_request_target' && contains(github.event.pull_request.labels.*.name, 'build-docs')
+        if: github.event_name == 'push' || github.event_name == 'workflow_dispatch' ||
+          github.event_name == 'pull_request_target' && 
+          (
+            (contains(github.event.pull_request.labels.*.name, 'build-docs') && !contains(github.event.pull_request.changed_files, 'docs/')) || 
+            (!contains(github.event.pull_request.labels.*.name, 'build-docs') && contains(github.event.pull_request.changed_files, 'docs/'))
+          )
         run: |
           echo "Building docs as a test."
           exit 0
