@@ -1,10 +1,4 @@
-.. _installation:
-
-************
-Installation
-************
-
-
+(needs.check-for-changes.outputs.trigger-check-outcome == 'success' && needs.check-for-changes.outputs.docs-check-outcome == 'success')
 .. warning::
     
     - TARDIS is only supported on macOS and GNU/Linux. Windows users can run TARDIS 
