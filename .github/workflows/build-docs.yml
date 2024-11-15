@@ -89,11 +89,6 @@ jobs:
               echo "should-run after PR label condition: $should_run"
             fi
           fi
-
-      - name: Debug should-run output
-        run: |
-          echo "The value of should-run is: ${{ steps.check_conditions.outputs.should-run }}
-
         
   build-docs:
     runs-on: ubuntu-latest
