@@ -64,26 +64,36 @@ jobs:
             exit 0
           fi
 
-           # For pull_request_target events
+          # For pull_request_target events
           if [[ "${{ github.event_name }}" == "pull_request_target" ]]; then
-            # Check if docs directory has changes
+            HAS_DOCS_CHANGES=false
+            NUM_CHANGED_FILES=0
+            
             if git diff origin/master..."$(git rev-parse --abbrev-ref HEAD)" --name-only | grep '^docs/' | grep -q .; then
-              num_files=$(git diff --name-only origin/master...HEAD | grep '^docs/' | wc -l)
-              echo "Changes found in documentation files: $num_files"
-              echo "should-run=true" >> $GITHUB_OUTPUT
-              exit 0
+              HAS_DOCS_CHANGES=true
+              NUM_CHANGED_FILES=$(git diff --name-only origin/master...HEAD | grep '^docs/' | wc -l)
+              echo "Number of documentation files changed: $NUM_CHANGED_FILES"
             else
-              echo "No changes found in documentation files."
+              echo "No changes found in documentation files"
             fi
-
-            # Check if PR has build-docs label
-            HAS_BUILD_DOCS_LABEL=${{ contains(github.event.pull_request.labels.*.name, 'build-docs') }}
-            if [[ "$HAS_BUILD_DOCS_LABEL" == "true" ]]; then
-              echo "should-run=true" >> $GITHUB_OUTPUT
-              exit 0
+            
+            # Check if this is a 'labeled' event
+            if [[ "${{ github.event.action }}" == "labeled" ]]; then
+              # Only run if the added label is 'build-docs' and there are no docs changes
+              if [[ "${{ github.event.label.name }}" == "build-docs" ]] && [[ "$HAS_DOCS_CHANGES" == "false" ]]; then
+                echo "Running due to build-docs label addition"
+                echo "should-run=true" >> $GITHUB_OUTPUT
+                exit 0
+              fi
+            else
+              # For non-label events, check for docs changes
+              if [[ "$HAS_DOCS_CHANGES" == "true" ]]; then
+                echo "Running due to docs directory changes ($NUM_CHANGED_FILES files changed)"
+                echo "should-run=true" >> $GITHUB_OUTPUT
+                exit 0
+              fi
             fi
           fi
-
   build-docs:
     runs-on: ubuntu-latest
     needs: check-for-changes
