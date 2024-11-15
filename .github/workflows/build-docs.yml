@@ -83,10 +83,14 @@ jobs:
             # Check if PR has build-docs label
             HAS_BUILD_DOCS_LABEL=${{ contains(github.event.pull_request.labels.*.name, 'build-docs') }}
 
-            if [[ "$HAS_DOCS_CHANGES" == "true" && "$HAS_BUILD_DOCS_LABEL" == "false" ]] || \
-               [[ "$HAS_DOCS_CHANGES" == "false" && "$HAS_BUILD_DOCS_LABEL" == "true" ]]; then
-              echo "should-run=true" >> $GITHUB_OUTPUT
-              echo "should-run after PR label condition: $should_run"
+            if [[ "$HAS_DOCS_CHANGES" == "true" && "$HAS_BUILD_DOCS_LABEL" == "true" ]]; then
+              # If both are present, skip canceling or restarting the workflow
+              echo "Both docs changes and build-docs label are present, but the workflow is already running. Skipping restart."
+              should_run="false"
+            # Combined condition for docs changes or build-docs label
+            elif [[ "$HAS_DOCS_CHANGES" == "true" || "$HAS_BUILD_DOCS_LABEL" == "true" ]]; then
+              # If either docs changes or the build-docs label is present, trigger the workflow
+              should_run="true"
             fi
           fi
         
