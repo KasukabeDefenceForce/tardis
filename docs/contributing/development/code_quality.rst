@@ -18,9 +18,7 @@ TARDIS follows the `PEP 8 <https://www.python.org/dev/peps/pep-0008/>`_ style gu
 
 Ruff
 ----
-`Ruff <https://docs.astral.sh/ruff/>`_ is a code linter and formatter that checks for common mistakes and automatically fixes them. It is currently not installed in the TARDIS conda environment, so you will have to install it manually: ::
 
-    conda install -c conda-forge ruff
 
 To run Ruff, use the following command: ::
 
