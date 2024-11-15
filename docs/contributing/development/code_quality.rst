@@ -129,5 +129,3 @@ Code should be written with a bit of foresight to handle errors that can occur d
                 "allowed values are 'virtual' or 'real'"
             )
         # Rest of the code ...
-
-Here, the ``packets_mode`` parameter can only be string "virtual" or "real". Thus, in case of an invalid value passed, it raises a specific exception (``ValueError``) and informs the user of what the error is and how it can be resolved. Aside from raising exception an exception, this method safely returns without executing code with an invalid parameter value which would have caused unwanted behaviour.
