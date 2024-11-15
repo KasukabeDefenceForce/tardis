@@ -19,7 +19,6 @@ touch release_hashes.txt
 for release_hash in "${RELEASE_HASHES[@]}"; do
   echo "${release_hash}" >>release_hashes.txt
 done
-
 function show_timed_time {
   local time=${1}
   local milliseconds="${time: -3}"
