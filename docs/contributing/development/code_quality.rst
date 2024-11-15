@@ -6,35 +6,7 @@ Code quality ensures that new developers will have an easier time understanding 
 
 - **It does what it is supposed to do** - code should perform the functions that it is written for.
 
-- **It does not contain defects or problems** - things shouldn't break on edge cases and defects should throw exceptions instead of causing unwanted behavior.
-
-- **It is easy to read, maintain, and extend** - code should be easy to comprehend and it should be easy to add a new feature in it without disrupting previous features.
-
-
-Code Style Conventions
-======================
-
-TARDIS follows the `PEP 8 <https://www.python.org/dev/peps/pep-0008/>`_ style guide written by the author of the Python programming language. It defines a consistent way to write your code making, it easier to read and maintain.
-
-Ruff
-----
-`Ruff <https://docs.astral.sh/ruff/>`_ is a code linter and formatter that checks for common mistakes and automatically fixes them. It is currently not installed in the TARDIS conda environment, so you will have to install it manually: ::
-
-    conda install -c conda-forge ruff
-
-To run Ruff, use the following command: ::
-
-    ruff check <source_file_or_directory> # Lints the code
-    ruff check <source_file_or_directory> --fix # Lints and fixes any fixable errors
-
-.. note :: We adopt the linting rules utilized by astropy. Permanent rules are defined in the ``pyproject.toml``, non-permanent rules are defined in the ``.ruff.toml`` file. If you want to add a new rule, please add it to the ``.ruff.toml`` file. If you want to add a permanent rule, please open a PR to the ``pyproject.toml``.
-
-Pre-commit (Optional)
-----
-`Pre-commit <https://pre-commit.com/>`_ hooks are tools that help enforce quality standards by running checks on your code before you commit. If you choose to use pre-commit on your local machine, please follow these steps:
-
-Install pre-commit by running: ::
-
+- **I
     pip install pre-commit
 
 Set up the pre-commit hooks with: ::

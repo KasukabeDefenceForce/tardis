@@ -30,11 +30,9 @@ env:
 concurrency:
   group: ${{ github.workflow }}-${{ github.head_ref || github.ref }}
   cancel-in-progress: true
-
 defaults:
   run:
     shell: bash -l {0}
-
 jobs:
   check-for-changes:
     runs-on: ubuntu-latest
