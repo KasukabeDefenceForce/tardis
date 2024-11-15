@@ -8,22 +8,6 @@ Code quality ensures that new developers will have an easier time understanding 
 
 - **It does not contain defects or problems** - things shouldn't break on edge cases and defects should throw exceptions instead of causing unwanted behavior.
 
-- **It is easy to read, maintain, and extend** - code should be easy to comprehend and it should be easy to add a new feature in it without disrupting previous features.
-
-
-Code Style Conventions
-======================
-
-TARDIS follows the `PEP 8 <https://www.python.org/dev/peps/pep-0008/>`_ style guide written by the author of the Python programming language. It defines a consistent way to write your code making, it easier to read and maintain.
-
-Ruff
-----
-`Ruff <https://docs.astral.sh/ruff/>`_ is a code linter and formatter that checks for common mistakes and automatically fixes them. It is currently not installed in the TARDIS conda environment, so you will have to install it manually: ::
-
-    conda install -c conda-forge ruff
-
-To run Ruff, use the following command: ::
-
     ruff check <source_file_or_directory> # Lints the code
     ruff check <source_file_or_directory> --fix # Lints and fixes any fixable errors
 
