@@ -6,23 +6,7 @@ Code quality ensures that new developers will have an easier time understanding 
 
 - **It does what it is supposed to do** - code should perform the functions that it is written for.
 
-- **It does not contain defects or problems** - things shouldn't break on edge cases and defects should throw exceptions instead of causing unwanted behavior.
-
--
-
-To run Ruff, use the following command: ::
-
-    ruff check <source_file_or_directory> # Lints the code
-    ruff check <source_file_or_directory> --fix # Lints and fixes any fixable errors
-
-.. note :: We adopt the linting rules utilized by astropy. Permanent rules are defined in the ``pyproject.toml``, non-permanent rules are defined in the ``.ruff.toml`` file. If you want to add a new rule, please add it to the ``.ruff.toml`` file. If you want to add a permanent rule, please open a PR to the ``pyproject.toml``.
-
-Pre-commit (Optional)
-----
-`Pre-commit <https://pre-commit.com/>`_ hooks are tools that help enforce quality standards by running checks on your code before you commit. If you choose to use pre-commit on your local machine, please follow these steps:
-
-Install pre-commit by running: ::
-
+- **I
     pip install pre-commit
 
 Set up the pre-commit hooks with: ::
