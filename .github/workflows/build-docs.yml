@@ -57,10 +57,12 @@ jobs:
         run: |
           # Initialize should-run as false
           echo "should-run=false" >> $GITHUB_OUTPUT
-
+          echo "Initial should-run value: $should_run"
+      
           # Always run for push and workflow_dispatch
           if [[ "${{ github.event_name }}" == "push" ]] || [[ "${{ github.event_name }}" == "workflow_dispatch" ]]; then
             echo "should-run=true" >> $GITHUB_OUTPUT
+            echo "sssssssssssssssssss should-run value: $should_run"
             exit 0
           fi
 
@@ -76,18 +78,21 @@ jobs:
               echo "No changes found in documentation files - will stop running the pipeline."
             fi
 
+            echo "should-run before checking label: $should_run"
+
             # Check if PR has build-docs label
             HAS_BUILD_DOCS_LABEL=${{ contains(github.event.pull_request.labels.*.name, 'build-docs') }}
 
             if [[ "$HAS_DOCS_CHANGES" == "true" && "$HAS_BUILD_DOCS_LABEL" == "false" ]] || \
                [[ "$HAS_DOCS_CHANGES" == "false" && "$HAS_BUILD_DOCS_LABEL" == "true" ]]; then
               echo "should-run=true" >> $GITHUB_OUTPUT
+              echo "should-run after PR label condition: $should_run"
             fi
           fi
 
       - name: Debug should-run output
         run: |
-          echo "The value of should-run is: ${{ needs.check-for-changes.outputs.should-run }}"
+          echo "The value of should-run is: ${{ steps.check_conditions.outputs.should-run }}
 
         
   build-docs:
