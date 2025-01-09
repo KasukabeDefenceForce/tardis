@@ -5,6 +5,7 @@ import re
 import numpy as np
 
 from tardis.util.base import (
+    atomic_number2element_symbol,
     element_symbol2atomic_number,
     int_to_roman,
     roman_to_int,
