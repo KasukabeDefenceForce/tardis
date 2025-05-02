@@ -97,18 +97,16 @@ class RPacketPlotter:
         if hasattr(sim.transport.transport_state, "rpacket_tracker_df"):
             if sim.last_no_of_packets >= no_of_packets:
                 return cls(sim, no_of_packets)
-            else:
-                logger.warning(
-                    """
+            logger.warning(
+                """
                 no_of_packets specified are more than the actual no of packets in the model. Using all packets in the model.
                 """
-                )
-                return cls(sim, sim.last_no_of_packets)
-        else:
-            raise AttributeError(
-                """ There is no attribute named rpacket_tracker in the simulation object passed. Try enabling the
-                rpacket tracking in the configuration. To enable rpacket tracking see: https://tardis-sn.github.io/tardis/io/output/rpacket_tracking.html#How-to-Setup-the-Tracking-for-the-RPackets?"""
             )
+            return cls(sim, sim.last_no_of_packets)
+        raise AttributeError(
+            """ There is no attribute named rpacket_tracker in the simulation object passed. Try enabling the
+                rpacket tracking in the configuration. To enable rpacket tracking see: https://tardis-sn.github.io/tardis/io/output/rpacket_tracking.html#How-to-Setup-the-Tracking-for-the-RPackets?"""
+        )
 
     def generate_plot(self, theme="light"):
         """
@@ -435,28 +433,20 @@ class RPacketPlotter:
                 theta.append(theta_initial)
             # for further steps we calculate thetas with the formula derived in the documentation
             else:
-                if r_track[step_no] < r_track[step_no - 1]:
-                    theta.append(
-                        theta[-1]
-                        - math.pi
-                        + math.asin(
-                            r_track[step_no - 1]
-                            * math.sin(math.acos(mu_track[step_no - 1]))
-                            / r_track[step_no]
-                        )
-                        + math.acos(mu_track[step_no - 1])
-                    )
+                curr_r = r_track[step_no]
+                prev_r = r_track[step_no - 1]
+                prev_mu = mu_track[step_no - 1]
+
+                acos_mu = math.acos(prev_mu)
+                sin_term = prev_r * math.sin(acos_mu) / curr_r
+                new_theta = theta[-1] + acos_mu
+
+                if curr_r < prev_r:
+                    new_theta -= math.pi
+                    new_theta += math.asin(sin_term)
                 else:
-                    theta.append(
-                        theta[-1]
-                        + math.asin(
-                            -1
-                            * r_track[step_no - 1]
-                            * math.sin(math.acos(mu_track[step_no - 1]))
-                            / r_track[step_no]
-                        )
-                        + math.acos(mu_track[step_no - 1])
-                    )
+                    new_theta += math.asin(-1 * sin_term)
+                theta.append(new_theta)
 
         # converting the thetas into x and y coordinates using radius as radius*cos(theta) and radius*sin(theta) respectively
         rpacket_x = (np.array(r_track)) * np.cos(np.array(theta)) * 1e-5 / time
