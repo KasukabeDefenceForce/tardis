@@ -23,7 +23,7 @@ of supernovae. It is developed and maintained by a
 including software engineers, computer scientists, statisticians,
 and astrophysicists.
 
-The tardis package is the core package provided by the TARDIS Project. To learn
+
 more about the complete project, other packages it provides, and the community
 behind it, please check the `project website <https://tardis-sn.github.io>`_.
 
