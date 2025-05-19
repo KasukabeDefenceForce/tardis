@@ -8,6 +8,8 @@ Subpackages
    :maxdepth: 4
 
    tardis.plasma.assembly
+   tardis.plasma.electron_energy_distribution
+   tardis.plasma.equilibrium
    tardis.plasma.properties
    tardis.plasma.radiation_field
 
@@ -26,5 +28,5 @@ Module contents
 
 .. automodule:: tardis.plasma
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:

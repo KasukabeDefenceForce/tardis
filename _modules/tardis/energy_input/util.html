@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" data-content_root="../../../">
 <head>
@@ -13,22 +15,22 @@
     
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>tardis.energy_input.util &mdash; tardis</title>
-      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=80d5e7a1" />
-      <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css?v=19f00094" />
-      <link rel="stylesheet" type="text/css" href="../../../_static/graphviz.css?v=fd3f3429" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/graphviz.css?v=4ae1632d" />
       <link rel="stylesheet" type="text/css" href="../../../_static/plot_directive.css" />
 
   
     <link rel="shortcut icon" href="../../../_static/tardis_logo.ico"/>
-  <!--[if lt IE 9]>
-    <script src="../../../_static/js/html5shiv.min.js"></script>
-  <![endif]-->
-  
-        <script src="../../../_static/documentation_options.js?v=5929fcd5"></script>
-        <script src="../../../_static/doctools.js?v=9a2dae69"></script>
-        <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
-        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-        <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.1/dist/embed-amd.js"></script>
+      <script src="../../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../../_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="../../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/@jupyter-widgets/html-manager@^1.0.1/dist/embed-amd.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/@jupyter-widgets/html-manager@^1.0.1/dist/embed-amd.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/@jupyter-widgets/html-manager@1.0.13/dist/embed-amd.min.js"></script>
     <script src="../../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
@@ -47,9 +49,6 @@
           <a href="../../../index.html" class="icon icon-home">
             tardis
           </a>
-              <div class="version">
-                latest
-              </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
@@ -63,6 +62,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../../../quickstart.html">Quickstart for TARDIS</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../tutorials.html">Tutorials</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../how_to_guides.html">How-To Guides</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../workflows.html">Workflows</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../faq.html">Frequently Asked Questions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../api/modules.html">API</a></li>
 </ul>
@@ -72,8 +72,15 @@
 <li class="toctree-l1"><a class="reference internal" href="../../../io/configuration/index.html">Configuration (Required Input)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../io/model/index.html">Reading Models</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../io/optional/index.html">Optional Inputs</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../io/visualization/index.html">Visualization Tools &amp; Widgets</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../io/output/index.html">Additional Outputs</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Analyzing Tardis</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../analyzing_tardis/visualization/index.html">Visualization Tools &amp; Widgets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../analyzing_tardis/spectrum/index.html">Analyzing TARDIS Spectra</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../analyzing_tardis/liv_plot_notebook.html">Analyzing Last Interaction Velocity (LIV) Distribution</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../analyzing_tardis/rpacket_plot_notebook.html">Analysing Montecarlo Packets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../analyzing_tardis/analysing_convergence_plot.html">Convergence Plots</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Physics Walkthrough</span></p>
 <ul>
@@ -82,6 +89,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../../../physics/montecarlo/index.html">Monte Carlo Iteration</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../physics/update_and_conv/update_and_conv.html">Updating Plasma and Convergence</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../physics/spectrum/index.html">Spectrum Generation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../physics/tardisgamma/index.html">TARDIS-High Energy</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Contributing to TARDIS</span></p>
 <ul>
@@ -204,7 +212,36 @@ def doppler_factor_3d(direction_vector, position_vector, time):
         Doppler factor
     &quot;&quot;&quot;
     velocity_vector = position_vector / time
-    return 1 - (np.dot(direction_vector, velocity_vector) / C_CGS)</div>
+    direction_vector_contiguous = np.ascontiguousarray(direction_vector)
+    velocity_vector_contiguous = np.ascontiguousarray(velocity_vector)
+    return 1 - (
+        np.dot(direction_vector_contiguous, velocity_vector_contiguous) / C_CGS
+    )</div>
+
+
+
+<div class="viewcode-block" id="doppler_factor_3D_all_packets">
+<a class="viewcode-back" href="../../../api/tardis.energy_input.util.html#tardis.energy_input.util.doppler_factor_3D_all_packets">[docs]</a>
+@njit(**njit_dict_no_parallel)
+def doppler_factor_3D_all_packets(direction_vectors, position_vectors, times):
+    &quot;&quot;&quot;Doppler shift for photons in 3D
+
+    Parameters
+    ----------
+    direction_vectors : array
+    position_vectors : array
+    times : array
+
+    Returns
+    -------
+    array
+        Doppler factors
+    &quot;&quot;&quot;
+    velocity_vector = position_vectors / times
+    vel_mul_dir = np.multiply(velocity_vector, direction_vectors)
+    doppler_factors = 1 - (np.sum(vel_mul_dir, axis=0) / C_CGS)
+
+    return doppler_factors</div>
 
 
 
@@ -308,13 +345,13 @@ def solve_quadratic_equation(position, direction, radius):
     a = np.sum(direction**2)
     b = 2.0 * np.sum(position * direction)
     c = -(radius**2) + np.sum(position**2)
-    root = b**2 - 4 * a * c
+    discriminant = b**2 - 4 * a * c
     solution_1 = -np.inf
     solution_2 = -np.inf
-    if root &gt; 0.0:
-        solution_1 = (-b + np.sqrt(root)) / (2 * a)
-        solution_2 = (-b - np.sqrt(root)) / (2 * a)
-    elif root == 0:
+    if discriminant &gt; 0.0:
+        solution_1 = (-b + np.sqrt(discriminant)) / (2 * a)
+        solution_2 = (-b - np.sqrt(discriminant)) / (2 * a)
+    elif discriminant == 0:
         solution_1 = -b / (2 * a)
 
     return solution_1, solution_2</div>
@@ -345,13 +382,13 @@ def solve_quadratic_equation_expanding(position, direction, time, radius):
     a = np.dot(direction, direction) - (radius / light_distance) ** 2.0
     b = 2.0 * (np.dot(position, direction) - radius**2.0 / light_distance)
     c = np.dot(position, position) - radius**2.0
-    root = b**2.0 - 4.0 * a * c
+    discriminant = b**2.0 - 4.0 * a * c
     solution_1 = -np.inf
     solution_2 = -np.inf
-    if root &gt; 0.0:
-        solution_1 = (-b + np.sqrt(root)) / (2.0 * a)
-        solution_2 = (-b - np.sqrt(root)) / (2.0 * a)
-    elif root == 0:
+    if discriminant &gt; 0.0:
+        solution_1 = (-b + np.sqrt(discriminant)) / (2.0 * a)
+        solution_2 = (-b - np.sqrt(discriminant)) / (2.0 * a)
+    elif discriminant == 0:
         solution_1 = -b / (2.0 * a)
 
     return solution_1, solution_2</div>
@@ -559,6 +596,32 @@ def get_index(value, array):
 
     return i</div>
 
+
+
+<div class="viewcode-block" id="make_isotope_string_tardis_like">
+<a class="viewcode-back" href="../../../api/tardis.energy_input.util.html#tardis.energy_input.util.make_isotope_string_tardis_like">[docs]</a>
+def make_isotope_string_tardis_like(isotope_dict):
+    &quot;&quot;&quot;Converts isotope string to TARDIS format
+        Ni-56 -&gt; Ni56, Co-56 -&gt; Co56
+    Parameters
+    ----------
+    isotope : str
+        Isotope string
+
+    Returns
+    -------
+    str
+        TARDIS-like isotope string
+    &quot;&quot;&quot;
+
+    new_isotope_dict = {}
+
+    for key in isotope_dict.keys():
+        new_key = key.replace(&quot;-&quot;, &quot;&quot;)
+        new_isotope_dict[new_key] = isotope_dict[key]
+
+    return new_isotope_dict</div>
+
 </pre></div>
 
            </div>
@@ -568,8 +631,8 @@ def get_index(value, array):
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2013-2024, TARDIS Collaboration.
-      <span class="lastupdated">Last updated on 30 Aug 2024.
+    <p>&#169; Copyright 2013-2025, TARDIS Collaboration.
+      <span class="lastupdated">Last updated on 19 May 2025.
       </span></p>
   </div>
 

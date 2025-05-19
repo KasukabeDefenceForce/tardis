@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" data-content_root="../../../../">
 <head>
@@ -13,22 +15,22 @@
     
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>tardis.io.atom_data.base &mdash; tardis</title>
-      <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css?v=80d5e7a1" />
-      <link rel="stylesheet" type="text/css" href="../../../../_static/css/theme.css?v=19f00094" />
-      <link rel="stylesheet" type="text/css" href="../../../../_static/graphviz.css?v=fd3f3429" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/graphviz.css?v=4ae1632d" />
       <link rel="stylesheet" type="text/css" href="../../../../_static/plot_directive.css" />
 
   
     <link rel="shortcut icon" href="../../../../_static/tardis_logo.ico"/>
-  <!--[if lt IE 9]>
-    <script src="../../../../_static/js/html5shiv.min.js"></script>
-  <![endif]-->
-  
-        <script src="../../../../_static/documentation_options.js?v=5929fcd5"></script>
-        <script src="../../../../_static/doctools.js?v=9a2dae69"></script>
-        <script src="../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
-        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-        <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.1/dist/embed-amd.js"></script>
+      <script src="../../../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../../../_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="../../../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/@jupyter-widgets/html-manager@^1.0.1/dist/embed-amd.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/@jupyter-widgets/html-manager@^1.0.1/dist/embed-amd.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/@jupyter-widgets/html-manager@1.0.13/dist/embed-amd.min.js"></script>
     <script src="../../../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../../../genindex.html" />
     <link rel="search" title="Search" href="../../../../search.html" />
@@ -47,9 +49,6 @@
           <a href="../../../../index.html" class="icon icon-home">
             tardis
           </a>
-              <div class="version">
-                latest
-              </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
@@ -63,6 +62,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../../../../quickstart.html">Quickstart for TARDIS</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../tutorials.html">Tutorials</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../how_to_guides.html">How-To Guides</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../workflows.html">Workflows</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../faq.html">Frequently Asked Questions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../api/modules.html">API</a></li>
 </ul>
@@ -72,8 +72,15 @@
 <li class="toctree-l1"><a class="reference internal" href="../../../../io/configuration/index.html">Configuration (Required Input)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../io/model/index.html">Reading Models</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../io/optional/index.html">Optional Inputs</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../../io/visualization/index.html">Visualization Tools &amp; Widgets</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../io/output/index.html">Additional Outputs</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Analyzing Tardis</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../analyzing_tardis/visualization/index.html">Visualization Tools &amp; Widgets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../analyzing_tardis/spectrum/index.html">Analyzing TARDIS Spectra</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../analyzing_tardis/liv_plot_notebook.html">Analyzing Last Interaction Velocity (LIV) Distribution</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../analyzing_tardis/rpacket_plot_notebook.html">Analysing Montecarlo Packets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../analyzing_tardis/analysing_convergence_plot.html">Convergence Plots</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Physics Walkthrough</span></p>
 <ul>
@@ -82,6 +89,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../../../../physics/montecarlo/index.html">Monte Carlo Iteration</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../physics/update_and_conv/update_and_conv.html">Updating Plasma and Convergence</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../physics/spectrum/index.html">Spectrum Generation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../physics/tardisgamma/index.html">TARDIS-High Energy</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Contributing to TARDIS</span></p>
 <ul>
@@ -125,11 +133,11 @@
              
   <h1>Source code for tardis.io.atom_data.base</h1><div class="highlight"><pre>
 <span></span>import logging
+from dataclasses import dataclass
 
 import numpy as np
 import pandas as pd
 from astropy.units import Quantity
-from dataclasses import dataclass
 
 from tardis import constants as const
 from tardis.io.atom_data.collision_data import (
@@ -305,7 +313,6 @@ class AtomData:
     # Either all or none of the related dataframes must be given
     related_groups = [
         (&quot;macro_atom_data_all&quot;, &quot;macro_atom_references_all&quot;),
-        (&quot;collision_data&quot;, &quot;collision_data_temperatures&quot;),
     ]
 
 <div class="viewcode-block" id="AtomData.from_hdf">
@@ -339,35 +346,32 @@ class AtomData:
                     store[&quot;metadata&quot;].loc[(&quot;format&quot;, &quot;version&quot;)].value
                 )
                 carsus_version = tuple(map(int, carsus_version_str.split(&quot;.&quot;)))
-                if carsus_version == (1, 0):
-                    # Checks for various collisional data from Carsus files
-                    if &quot;collisions_data&quot; in store:
-                        try:
+                # Checks for various collisional data from Carsus files
+                if &quot;collisions_data&quot; in store:
+                    try:
+                        if carsus_version == (1, 0):
                             dataframes[&quot;collision_data_temperatures&quot;] = store[
                                 &quot;collisions_metadata&quot;
                             ].temperatures
-                            if &quot;cmfgen&quot; in store[&quot;collisions_metadata&quot;].dataset:
-                                dataframes[&quot;yg_data&quot;] = store[&quot;collisions_data&quot;]
-                                dataframes[&quot;collision_data&quot;] = &quot;dummy value&quot;
-                            elif (
-                                &quot;chianti&quot;
-                                in store[&quot;collisions_metadata&quot;].dataset
-                            ):
-                                dataframes[&quot;collision_data&quot;] = store[
-                                    &quot;collisions_data&quot;
-                                ]
-                            else:
-                                raise KeyError(
-                                    &quot;Atomic Data Collisions Not a Valid Chanti or CMFGEN Carsus Data File&quot;
-                                )
-                        except KeyError as e:
-                            logger.warning(
-                                &quot;Atomic Data is not a Valid Carsus Atomic Data File&quot;
+                        if &quot;cmfgen&quot; in store[&quot;collisions_metadata&quot;].dataset:
+                            dataframes[&quot;yg_data&quot;] = store[&quot;collisions_data&quot;]
+                            dataframes[&quot;collision_data&quot;] = &quot;dummy value&quot;
+                        elif &quot;chianti&quot; in store[&quot;collisions_metadata&quot;].dataset:
+                            dataframes[&quot;collision_data&quot;] = store[
+                                &quot;collisions_data&quot;
+                            ]
+                        else:
+                            raise KeyError(
+                                &quot;Atomic Data Collisions Not a Valid Chanti or CMFGEN Carsus Data File&quot;
                             )
-                            raise
-                    dataframes[&quot;levels&quot;] = store[&quot;levels_data&quot;]
-                    dataframes[&quot;lines&quot;] = store[&quot;lines_data&quot;]
-                else:
+                    except KeyError as e:
+                        logger.warning(
+                            &quot;Atomic Data is not a Valid Carsus Atomic Data File&quot;
+                        )
+                        raise
+                dataframes[&quot;levels&quot;] = store[&quot;levels_data&quot;]
+                dataframes[&quot;lines&quot;] = store[&quot;lines_data&quot;]
+                if carsus_version != (1, 0) and carsus_version != (2, 0):
                     raise ValueError(
                         f&quot;Current carsus version, {carsus_version}, is not supported.&quot;
                     )
@@ -400,7 +404,7 @@ class AtomData:
             )
             if nonavailable:
                 logger.info(
-                    &quot;Non provided Atomic Data: {0}&quot;.format(
+                    &quot;Non provided Atomic Data: {}&quot;.format(
                         &quot;, &quot;.join(nonavailable)
                     )
                 )
@@ -594,8 +598,11 @@ class AtomData:
                 self.selected_atomic_numbers, level=&quot;atomic_number&quot;
             )
         ]
-
-        self.lines = self.lines.sort_values(by=&quot;wavelength&quot;)</div>
+        # see https://github.com/numpy/numpy/issues/27725#issuecomment-2465471648
+        # with kind=&quot;stable&quot; the returned array will maintain the relative order of a values which compare as equal.
+        # this is important especially after numpy v2 release
+        # https://numpy.org/doc/stable/release/2.0.0-notes.html#minor-changes-in-behavior-of-sorting-functions
+        self.lines = self.lines.sort_values(by=[&quot;wavelength&quot;, &quot;line_id&quot;], kind=&quot;stable&quot;)</div>
 
 
 <div class="viewcode-block" id="AtomData.prepare_line_level_indexes">
@@ -676,9 +683,9 @@ class AtomData:
         )
 
         level_idxs2continuum_idx = photo_ion_levels_idx.copy()
-        level_idxs2continuum_idx[
-            &quot;continuum_idx&quot;
-        ] = self.level2continuum_edge_idx
+        level_idxs2continuum_idx[&quot;continuum_idx&quot;] = (
+            self.level2continuum_edge_idx
+        )
         self.level_idxs2continuum_idx = level_idxs2continuum_idx.set_index(
             [&quot;source_level_idx&quot;, &quot;destination_level_idx&quot;]
         )</div>
@@ -715,31 +722,33 @@ class AtomData:
                 self.macro_atom_references = self.macro_atom_references.loc[
                     self.macro_atom_references[&quot;count_down&quot;] &gt; 0
                 ]
-                self.macro_atom_references.loc[
-                    :, &quot;count_total&quot;
-                ] = self.macro_atom_references[&quot;count_down&quot;]
-                self.macro_atom_references.loc[
-                    :, &quot;block_references&quot;
-                ] = np.hstack(
-                    (
-                        0,
-                        np.cumsum(
-                            self.macro_atom_references[&quot;count_down&quot;].values[:-1]
-                        ),
+                self.macro_atom_references.loc[:, &quot;count_total&quot;] = (
+                    self.macro_atom_references[&quot;count_down&quot;]
+                )
+                self.macro_atom_references.loc[:, &quot;block_references&quot;] = (
+                    np.hstack(
+                        (
+                            0,
+                            np.cumsum(
+                                self.macro_atom_references[&quot;count_down&quot;].values[
+                                    :-1
+                                ]
+                            ),
+                        )
                     )
                 )
 
             elif line_interaction_type == &quot;macroatom&quot;:
-                self.macro_atom_references.loc[
-                    :, &quot;block_references&quot;
-                ] = np.hstack(
-                    (
-                        0,
-                        np.cumsum(
-                            self.macro_atom_references[&quot;count_total&quot;].values[
-                                :-1
-                            ]
-                        ),
+                self.macro_atom_references.loc[:, &quot;block_references&quot;] = (
+                    np.hstack(
+                        (
+                            0,
+                            np.cumsum(
+                                self.macro_atom_references[
+                                    &quot;count_total&quot;
+                                ].values[:-1]
+                            ),
+                        )
                     )
                 )
 
@@ -900,8 +909,8 @@ class MoleculeData:
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2013-2024, TARDIS Collaboration.
-      <span class="lastupdated">Last updated on 30 Aug 2024.
+    <p>&#169; Copyright 2013-2025, TARDIS Collaboration.
+      <span class="lastupdated">Last updated on 19 May 2025.
       </span></p>
   </div>
 

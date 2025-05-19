@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" data-content_root="../../../../">
 <head>
@@ -13,22 +15,22 @@
     
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>tardis.transport.montecarlo.packet_trackers &mdash; tardis</title>
-      <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css?v=80d5e7a1" />
-      <link rel="stylesheet" type="text/css" href="../../../../_static/css/theme.css?v=19f00094" />
-      <link rel="stylesheet" type="text/css" href="../../../../_static/graphviz.css?v=fd3f3429" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/graphviz.css?v=4ae1632d" />
       <link rel="stylesheet" type="text/css" href="../../../../_static/plot_directive.css" />
 
   
     <link rel="shortcut icon" href="../../../../_static/tardis_logo.ico"/>
-  <!--[if lt IE 9]>
-    <script src="../../../../_static/js/html5shiv.min.js"></script>
-  <![endif]-->
-  
-        <script src="../../../../_static/documentation_options.js?v=5929fcd5"></script>
-        <script src="../../../../_static/doctools.js?v=9a2dae69"></script>
-        <script src="../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
-        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-        <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.1/dist/embed-amd.js"></script>
+      <script src="../../../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../../../_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="../../../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/@jupyter-widgets/html-manager@^1.0.1/dist/embed-amd.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/@jupyter-widgets/html-manager@^1.0.1/dist/embed-amd.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/@jupyter-widgets/html-manager@1.0.13/dist/embed-amd.min.js"></script>
     <script src="../../../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../../../genindex.html" />
     <link rel="search" title="Search" href="../../../../search.html" />
@@ -47,9 +49,6 @@
           <a href="../../../../index.html" class="icon icon-home">
             tardis
           </a>
-              <div class="version">
-                latest
-              </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
@@ -63,6 +62,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../../../../quickstart.html">Quickstart for TARDIS</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../tutorials.html">Tutorials</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../how_to_guides.html">How-To Guides</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../workflows.html">Workflows</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../faq.html">Frequently Asked Questions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../api/modules.html">API</a></li>
 </ul>
@@ -72,8 +72,15 @@
 <li class="toctree-l1"><a class="reference internal" href="../../../../io/configuration/index.html">Configuration (Required Input)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../io/model/index.html">Reading Models</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../io/optional/index.html">Optional Inputs</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../../io/visualization/index.html">Visualization Tools &amp; Widgets</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../io/output/index.html">Additional Outputs</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Analyzing Tardis</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../analyzing_tardis/visualization/index.html">Visualization Tools &amp; Widgets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../analyzing_tardis/spectrum/index.html">Analyzing TARDIS Spectra</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../analyzing_tardis/liv_plot_notebook.html">Analyzing Last Interaction Velocity (LIV) Distribution</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../analyzing_tardis/rpacket_plot_notebook.html">Analysing Montecarlo Packets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../analyzing_tardis/analysing_convergence_plot.html">Convergence Plots</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Physics Walkthrough</span></p>
 <ul>
@@ -82,6 +89,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../../../../physics/montecarlo/index.html">Monte Carlo Iteration</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../physics/update_and_conv/update_and_conv.html">Updating Plasma and Convergence</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../physics/spectrum/index.html">Spectrum Generation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../physics/tardisgamma/index.html">TARDIS-High Energy</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Contributing to TARDIS</span></p>
 <ul>
@@ -124,12 +132,11 @@
            <div itemprop="articleBody">
              
   <h1>Source code for tardis.transport.montecarlo.packet_trackers</h1><div class="highlight"><pre>
-<span></span>from numba import float64, int64, njit, from_dtype
+<span></span>import numpy as np
+import pandas as pd
+from numba import float64, from_dtype, int64, njit
 from numba.experimental import jitclass
 from numba.typed import List
-import numpy as np
-import pandas as pd
-
 
 boundary_interaction_dtype = np.dtype(
     [
@@ -161,9 +168,10 @@ rpacket_tracker_spec = [
 <div class="viewcode-block" id="RPacketTracker">
 <a class="viewcode-back" href="../../../../api/tardis.transport.montecarlo.packet_trackers.html#tardis.transport.montecarlo.packet_trackers.RPacketTracker">[docs]</a>
 @jitclass(rpacket_tracker_spec)
-class RPacketTracker(object):
+class RPacketTracker:
     &quot;&quot;&quot;
     Numba JITCLASS for storing the information for each interaction a RPacket instance undergoes.
+
     Parameters
     ----------
         length : int
@@ -331,7 +339,7 @@ def rpacket_trackers_to_dataframe(rpacket_trackers):
             rpacket_tracker_ndarray[column_name][
                 prev_index:cur_index
             ] = getattr(rpacket_tracker, column_name)
-        index_array[0][prev_index:cur_index] = getattr(rpacket_tracker, &quot;index&quot;)
+        index_array[0][prev_index:cur_index] = rpacket_tracker.index
         index_array[1][prev_index:cur_index] = range(cur_index - prev_index)
     return pd.DataFrame(
         rpacket_tracker_ndarray,
@@ -354,9 +362,10 @@ rpacket_last_interaction_tracker_spec = [
 <div class="viewcode-block" id="RPacketLastInteractionTracker">
 <a class="viewcode-back" href="../../../../api/tardis.transport.montecarlo.packet_trackers.html#tardis.transport.montecarlo.packet_trackers.RPacketLastInteractionTracker">[docs]</a>
 @jitclass(rpacket_last_interaction_tracker_spec)
-class RPacketLastInteractionTracker(object):
+class RPacketLastInteractionTracker:
     &quot;&quot;&quot;
     Numba JITCLASS for storing the last interaction the RPacket undergoes.
+
     Parameters
     ----------
         index : int
@@ -399,14 +408,12 @@ class RPacketLastInteractionTracker(object):
         &quot;&quot;&quot;
         Added to make RPacketLastInteractionTracker compatible with RPacketTracker
         &quot;&quot;&quot;
-        pass
 
     # To make it compatible with RPacketTracker
     def track_boundary_interaction(self, current_shell_id, next_shell_id):
         &quot;&quot;&quot;
         Added to make RPacketLastInteractionTracker compatible with RPacketTracker
-        &quot;&quot;&quot;
-        pass</div>
+        &quot;&quot;&quot;</div>
 
 
 
@@ -458,8 +465,8 @@ def generate_rpacket_last_interaction_tracker_list(no_of_packets):
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2013-2024, TARDIS Collaboration.
-      <span class="lastupdated">Last updated on 30 Aug 2024.
+    <p>&#169; Copyright 2013-2025, TARDIS Collaboration.
+      <span class="lastupdated">Last updated on 19 May 2025.
       </span></p>
   </div>
 

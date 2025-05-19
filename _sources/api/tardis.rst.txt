@@ -21,6 +21,7 @@ Subpackages
    tardis.transport
    tardis.util
    tardis.visualization
+   tardis.workflows
 
 Submodules
 ----------
@@ -37,5 +38,5 @@ Module contents
 
 .. automodule:: tardis
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:

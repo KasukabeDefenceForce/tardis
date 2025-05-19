@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" data-content_root="../../../../">
 <head>
@@ -13,22 +15,22 @@
     
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>tardis.plasma.assembly.base &mdash; tardis</title>
-      <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css?v=80d5e7a1" />
-      <link rel="stylesheet" type="text/css" href="../../../../_static/css/theme.css?v=19f00094" />
-      <link rel="stylesheet" type="text/css" href="../../../../_static/graphviz.css?v=fd3f3429" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/graphviz.css?v=4ae1632d" />
       <link rel="stylesheet" type="text/css" href="../../../../_static/plot_directive.css" />
 
   
     <link rel="shortcut icon" href="../../../../_static/tardis_logo.ico"/>
-  <!--[if lt IE 9]>
-    <script src="../../../../_static/js/html5shiv.min.js"></script>
-  <![endif]-->
-  
-        <script src="../../../../_static/documentation_options.js?v=ef06369f"></script>
-        <script src="../../../../_static/doctools.js?v=9a2dae69"></script>
-        <script src="../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
-        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-        <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.1/dist/embed-amd.js"></script>
+      <script src="../../../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../../../_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="../../../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/@jupyter-widgets/html-manager@^1.0.1/dist/embed-amd.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/@jupyter-widgets/html-manager@^1.0.1/dist/embed-amd.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/@jupyter-widgets/html-manager@1.0.13/dist/embed-amd.min.js"></script>
     <script src="../../../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../../../genindex.html" />
     <link rel="search" title="Search" href="../../../../search.html" />
@@ -47,9 +49,6 @@
           <a href="../../../../index.html" class="icon icon-home">
             tardis
           </a>
-              <div class="version">
-                latest
-              </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
@@ -63,6 +62,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../../../../quickstart.html">Quickstart for TARDIS</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../tutorials.html">Tutorials</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../how_to_guides.html">How-To Guides</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../workflows.html">Workflows</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../faq.html">Frequently Asked Questions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../api/modules.html">API</a></li>
 </ul>
@@ -72,8 +72,15 @@
 <li class="toctree-l1"><a class="reference internal" href="../../../../io/configuration/index.html">Configuration (Required Input)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../io/model/index.html">Reading Models</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../io/optional/index.html">Optional Inputs</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../../io/visualization/index.html">Visualization Tools &amp; Widgets</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../io/output/index.html">Additional Outputs</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Analyzing Tardis</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../analyzing_tardis/visualization/index.html">Visualization Tools &amp; Widgets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../analyzing_tardis/spectrum/index.html">Analyzing TARDIS Spectra</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../analyzing_tardis/liv_plot_notebook.html">Analyzing Last Interaction Velocity (LIV) Distribution</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../analyzing_tardis/rpacket_plot_notebook.html">Analysing Montecarlo Packets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../analyzing_tardis/analysing_convergence_plot.html">Convergence Plots</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Physics Walkthrough</span></p>
 <ul>
@@ -82,6 +89,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../../../../physics/montecarlo/index.html">Monte Carlo Iteration</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../physics/update_and_conv/update_and_conv.html">Updating Plasma and Convergence</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../physics/spectrum/index.html">Spectrum Generation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../physics/tardisgamma/index.html">TARDIS-High Energy</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Contributing to TARDIS</span></p>
 <ul>
@@ -124,7 +132,8 @@
            <div itemprop="articleBody">
              
   <h1>Source code for tardis.plasma.assembly.base</h1><div class="highlight"><pre>
-<span></span>import logging
+<span></span>import importlib
+import logging
 
 import numpy as np
 import pandas as pd
@@ -148,26 +157,6 @@ from tardis.plasma.properties.nlte_rate_equation_solver import (
     NLTEPopulationSolverLU,
     NLTEPopulationSolverRoot,
 )
-from tardis.plasma.properties.property_collections import (
-    adiabatic_cooling_properties,
-    basic_inputs,
-    basic_properties,
-    continuum_interaction_inputs,
-    continuum_interaction_properties,
-    dilute_lte_excitation_properties,
-    helium_lte_properties,
-    helium_nlte_properties,
-    helium_numerical_nlte_properties,
-    lte_excitation_properties,
-    lte_ionization_properties,
-    macro_atom_properties,
-    nebular_ionization_properties,
-    nlte_lu_solver_properties,
-    nlte_properties,
-    nlte_root_solver_properties,
-    non_nlte_properties,
-    two_photon_properties,
-)
 from tardis.plasma.properties.rate_matrix_index import NLTEIndexHelper
 from tardis.transport.montecarlo.estimators.continuum_radfield_properties import (
     DiluteBlackBodyContinuumPropertiesSolver,
@@ -184,83 +173,29 @@ def map_species_from_string(species):
 
 
 
+<div class="viewcode-block" id="convert_species_to_multi_index">
+<a class="viewcode-back" href="../../../../api/tardis.plasma.assembly.base.html#tardis.plasma.assembly.base.convert_species_to_multi_index">[docs]</a>
+def convert_species_to_multi_index(species_strs):
+    return pd.MultiIndex.from_tuples(
+        map_species_from_string(species_strs),
+        names=[&quot;atomic_number&quot;, &quot;ion_number&quot;],
+    )</div>
+
+
+
 <div class="viewcode-block" id="PlasmaSolverFactory">
 <a class="viewcode-back" href="../../../../api/tardis.plasma.assembly.base.html#tardis.plasma.assembly.base.PlasmaSolverFactory">[docs]</a>
 class PlasmaSolverFactory:
-    &quot;&quot;&quot;Factory class for creating plasma solvers.
-
-    atom_data : object
-        Object containing atomic data.
-    selected_atomic_numbers : list
-        List of selected atomic numbers.
-
-    Attributes
-    ----------
-    excitation_analytical_approximation : str
-        Analytical approximation for excitation (default: &quot;lte&quot;).
-    ionization_analytical_approximation : str
-        Analytical approximation for ionization (default: &quot;lte&quot;).
-    nebular_ionization_delta_treatment : tuple
-        Species to use for the delta_treatment in nebular ionization ML93 (default: ()).
-    link_t_rad_t_electron : float
-        Link between t_rad and t_electron (default: 1.0).
-    radiative_rates_type : str
-        Type of radiative rates (default: &quot;dilute-blackbody&quot;).
-    delta_treatment : float or None
-        Delta treatment (default: None).
-    legacy_nlte_species : list
-        List of legacy non-LTE species (default: []).
-    nlte_excitation_species : list
-        List of non-LTE excitation species (default: []).
-    nlte_ionization_species : list
-        List of non-LTE ionization species (default: []).
-    nlte_solver : str
-        Non-LTE solver (default: &quot;lu&quot;).
-        Helium treatment options (default: &quot;none&quot;).
-    heating_rate_data_file : str
-        Heating rate data file (default: &quot;none&quot;).
-    continuum_interaction_species : list
-        List of continuum interaction species (default: []).
-    enable_adiabatic_cooling : bool
-        Flag for enabling adiabatic cooling (default: False).
-    enable_two_photon_decay : bool
-        Flag for enabling two-photon decay (default: False).
-    line_interaction_type : str
-        Type of line interaction (default: &quot;scatter&quot;).
-    plasma_modules : list
-        List of plasma modules (default: []).
-    kwargs : dict
-        Additional keyword arguments (default: {}).
-    property_kwargs : dict
-        Additional keyword arguments for properties (default: {}).
-
-    Methods
-    -------
-    parse_plasma_config(plasma_config)
-    continuum_interaction_species_multi_index()
-        Get the continuum interaction species as a multi-index.
-    setup_factory(config)
-    setup_helium_treatment()
-    setup_legacy_nlte(nlte_config)
-        Set up the non-LTE properties for the legacy species.
-    setup_analytical_approximations()
-        Set up the analytical approximations for excitation and ionization.
-    initialize_j_blues(dilute_planckian_radiation_field, lines_df)
-        Initialize j_blues.
-    &quot;&quot;&quot;
-
     ## Analytical Approximations
     excitation_analytical_approximation: str = &quot;lte&quot;
     ionization_analytical_approximation: str = &quot;lte&quot;
-    nebular_ionization_delta_treatment: (
-        tuple
-    ) = ()  # species to use for the delta_treatment in nebular ionization ML93
+    nebular_ionization_delta_treatment: tuple  # species to use for the delta_treatment in nebular ionization ML93
 
     link_t_rad_t_electron: float = 1.0
 
     radiative_rates_type: str = &quot;dilute-blackbody&quot;
 
-    delta_treatment: float | None = None
+    delta_treatment = None
 
     ## Statistical Balance Solver
     legacy_nlte_species: list = []
@@ -285,27 +220,23 @@ class PlasmaSolverFactory:
     plasma_modules: list = []
     kwargs: dict = {}
     property_kwargs: dict = {}
+    plasma_collection = importlib.import_module(
+        &quot;tardis.plasma.properties.legacy_property_collections&quot;
+    )
 
-    def __init__(self, atom_data, selected_atomic_numbers, config=None) -&gt; None:
-        self.plasma_modules = []
-        self.kwargs = {}
-        self.property_kwargs = {}
-
+    def __init__(
+        self,
+        atom_data,
+        config=None,
+    ) -&gt; None:
         if config is not None:
             self.parse_plasma_config(config.plasma)
         self.atom_data = atom_data
-        self.atom_data.prepare_atom_data(
-            selected_atomic_numbers,
-            line_interaction_type=self.line_interaction_type,
-            continuum_interaction_species=self.continuum_interaction_species_multi_index,
-            nlte_species=self.legacy_nlte_species,
-        )
 
     @property
     def continuum_interaction_species_multi_index(self):
-        return pd.MultiIndex.from_tuples(
-            map_species_from_string(self.continuum_interaction_species),
-            names=[&quot;atomic_number&quot;, &quot;ion_number&quot;],
+        return convert_species_to_multi_index(
+            self.continuum_interaction_species
         )
 
 <div class="viewcode-block" id="PlasmaSolverFactory.parse_plasma_config">
@@ -352,20 +283,38 @@ class PlasmaSolverFactory:
         )</div>
 
 
-<div class="viewcode-block" id="PlasmaSolverFactory.setup_factory">
-<a class="viewcode-back" href="../../../../api/tardis.plasma.assembly.base.html#tardis.plasma.assembly.base.PlasmaSolverFactory.setup_factory">[docs]</a>
-    def setup_factory(self, config=None):
+<div class="viewcode-block" id="PlasmaSolverFactory.prepare_factory">
+<a class="viewcode-back" href="../../../../api/tardis.plasma.assembly.base.html#tardis.plasma.assembly.base.PlasmaSolverFactory.prepare_factory">[docs]</a>
+    def prepare_factory(
+        self, selected_atomic_numbers, property_collections, config=None
+    ):
         &quot;&quot;&quot;
         Set up the plasma factory.
 
         Parameters
         ----------
+        selected_atomic_numbers : list of int
+            Selected atomic numbers in the simulation.
+        property_collections : str
+            The property collection module to be used in the plasma assembly.
         config : object, optional
             Configuration object containing plasma settings (default: None).
         &quot;&quot;&quot;
+        self.plasma_collection = importlib.import_module(property_collections)
+
+        self.atom_data.prepare_atom_data(
+            selected_atomic_numbers,
+            line_interaction_type=self.line_interaction_type,
+            continuum_interaction_species=self.continuum_interaction_species_multi_index,
+            nlte_species=self.legacy_nlte_species,
+        )
+
         self.check_continuum_interaction_species()
 
-        self.plasma_modules = basic_inputs + basic_properties
+        self.plasma_modules = (
+            self.plasma_collection.basic_inputs
+            + self.plasma_collection.basic_properties
+        )
 
         self.setup_analytical_approximations()
         self.property_kwargs[RadiationFieldCorrection] = dict(
@@ -374,12 +323,12 @@ class PlasmaSolverFactory:
         if (config is not None) and len(self.legacy_nlte_species) &gt; 0:
             self.setup_legacy_nlte(config.plasma.nlte)
         else:
-            self.plasma_modules += non_nlte_properties
+            self.plasma_modules += self.plasma_collection.non_nlte_properties
 
         if self.line_interaction_type in (&quot;downbranch&quot;, &quot;macroatom&quot;) and (
             len(self.continuum_interaction_species) == 0
         ):
-            self.plasma_modules += macro_atom_properties
+            self.plasma_modules += self.plasma_collection.macro_atom_properties
 
         self.setup_helium_treatment()
 
@@ -433,9 +382,11 @@ class PlasmaSolverFactory:
         # TODO: Disentangle these if else block such that compatible components
         # can be added independently.
         if self.helium_treatment == &quot;recomb-nlte&quot;:
-            self.plasma_modules += helium_nlte_properties
+            self.plasma_modules += self.plasma_collection.helium_nlte_properties
         elif self.helium_treatment == &quot;numerical-nlte&quot;:
-            self.plasma_modules += helium_numerical_nlte_properties
+            self.plasma_modules += (
+                self.plasma_collection.helium_numerical_nlte_properties
+            )
             if self.heating_rate_data_file in [&quot;none&quot;, None]:
                 raise PlasmaConfigError(&quot;Heating rate data file not specified&quot;)
             self.property_kwargs[HeliumNumericalNLTE] = dict(
@@ -451,7 +402,9 @@ class PlasmaSolverFactory:
             ):
                 self.plasma_modules.append(LevelNumberDensity)
             else:
-                self.plasma_modules += helium_lte_properties</div>
+                self.plasma_modules += (
+                    self.plasma_collection.helium_lte_properties
+                )</div>
 
 
 <div class="viewcode-block" id="PlasmaSolverFactory.setup_legacy_nlte">
@@ -465,7 +418,7 @@ class PlasmaSolverFactory:
         nlte_config : dict
             A dictionary containing the NLTE configuration.
         &quot;&quot;&quot;
-        self.plasma_modules += nlte_properties
+        self.plasma_modules += self.plasma_collection.nlte_properties
         self.plasma_modules.append(
             LevelBoltzmannFactorNLTE.from_config(nlte_config)
         )
@@ -485,18 +438,26 @@ class PlasmaSolverFactory:
         None
         &quot;&quot;&quot;
         if self.excitation_analytical_approximation == &quot;lte&quot;:
-            self.plasma_modules += lte_excitation_properties
+            self.plasma_modules += (
+                self.plasma_collection.lte_excitation_properties
+            )
         elif self.excitation_analytical_approximation == &quot;dilute-lte&quot;:
-            self.plasma_modules += dilute_lte_excitation_properties
+            self.plasma_modules += (
+                self.plasma_collection.dilute_lte_excitation_properties
+            )
         else:
             raise PlasmaConfigError(
                 f&#39;Invalid excitation analytical approximation. Configured as {self.excitation_analytical_approximation} but needs to be either &quot;lte&quot; or &quot;dilute-lte&quot;&#39;
             )
 
         if self.ionization_analytical_approximation == &quot;lte&quot;:
-            self.plasma_modules += lte_ionization_properties
+            self.plasma_modules += (
+                self.plasma_collection.lte_ionization_properties
+            )
         elif self.ionization_analytical_approximation == &quot;nebular&quot;:
-            self.plasma_modules += nebular_ionization_properties
+            self.plasma_modules += (
+                self.plasma_collection.nebular_ionization_properties
+            )
         else:
             raise PlasmaConfigError(
                 f&#39;Invalid excitation analytical approximation. Configured as {self.ionization_analytical_approximation} but needs to be either &quot;lte&quot; or &quot;nebular&quot;&#39;
@@ -644,14 +605,20 @@ class PlasmaSolverFactory:
                 f&quot;macroatom (instead of {self.line_interaction_type}).&quot;
             )
 
-        self.plasma_modules += continuum_interaction_properties
-        self.plasma_modules += continuum_interaction_inputs
+        self.plasma_modules += (
+            self.plasma_collection.continuum_interaction_properties
+        )
+        self.plasma_modules += (
+            self.plasma_collection.continuum_interaction_inputs
+        )
 
         if self.enable_adiabatic_cooling:
-            self.plasma_modules += adiabatic_cooling_properties
+            self.plasma_modules += (
+                self.plasma_collection.adiabatic_cooling_properties
+            )
 
         if self.enable_two_photon_decay:
-            self.plasma_modules += two_photon_properties
+            self.plasma_modules += self.plasma_collection.two_photon_properties
 
         transition_probabilities_outputs = [
             plasma_property.transition_probabilities_outputs
@@ -687,12 +654,16 @@ class PlasmaSolverFactory:
                 &quot;nlte_excitation_species&quot;: self.nlte_excitation_species,
             }
             if self.nlte_solver == &quot;lu&quot;:
-                self.plasma_modules += nlte_lu_solver_properties
+                self.plasma_modules += (
+                    self.plasma_collection.nlte_lu_solver_properties
+                )
                 logger.warning(
                     &quot;LU solver will be inaccurate for NLTE excitation, proceed with caution.&quot;
                 )
             elif self.nlte_solver == &quot;root&quot;:
-                self.plasma_modules += nlte_root_solver_properties
+                self.plasma_modules += (
+                    self.plasma_collection.nlte_root_solver_properties
+                )
             else:
                 raise PlasmaConfigError(
                     f&quot;NLTE solver type unknown - {self.nlte_solver}&quot;
@@ -759,6 +730,7 @@ class PlasmaSolverFactory:
         dilute_planckian_radiation_field,
         time_explosion,
         electron_densities=None,
+        **kwargs,
     ):
         &quot;&quot;&quot;
         Assemble the plasma based on the provided parameters and settings.
@@ -791,7 +763,7 @@ class PlasmaSolverFactory:
             RADIATIVE_RATES_TYPE=self.radiative_rates_type
         )
 
-        kwargs = dict(
+        plasma_assemble_kwargs = dict(
             time_explosion=time_explosion,
             dilute_planckian_radiation_field=dilute_planckian_radiation_field,
             number_density=number_densities,
@@ -802,12 +774,11 @@ class PlasmaSolverFactory:
             nlte_ionization_species=self.nlte_ionization_species,
             nlte_excitation_species=self.nlte_excitation_species,
         )
-
         if len(self.continuum_interaction_species) &gt; 0:
             initial_continuum_properties = self.initialize_continuum_properties(
                 dilute_planckian_radiation_field
             )
-            kwargs.update(
+            plasma_assemble_kwargs.update(
                 gamma=initial_continuum_properties.photo_ionization_rate_coefficient,
                 bf_heating_coeff_estimator=None,
                 stim_recomb_cooling_coeff_estimator=None,
@@ -816,13 +787,15 @@ class PlasmaSolverFactory:
 
         if electron_densities is not None:
             electron_densities = pd.Series(electron_densities.cgs.value)
-            self.setup_electron_densities(electron_densities)
-        kwargs[&quot;helium_treatment&quot;] = self.helium_treatment
+
+        self.setup_electron_densities(electron_densities)
+        plasma_assemble_kwargs[&quot;helium_treatment&quot;] = self.helium_treatment
+        plasma_assemble_kwargs.update(kwargs)
         return BasePlasma(
             plasma_properties=self.plasma_modules,
             property_kwargs=self.property_kwargs,
             plasma_solver_settings=plasma_solver_settings,
-            **kwargs,
+            **plasma_assemble_kwargs,
         )</div>
 </div>
 
@@ -835,8 +808,8 @@ class PlasmaSolverFactory:
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2013-2024, TARDIS Collaboration.
-      <span class="lastupdated">Last updated on 19 Aug 2024.
+    <p>&#169; Copyright 2013-2025, TARDIS Collaboration.
+      <span class="lastupdated">Last updated on 19 May 2025.
       </span></p>
   </div>
 

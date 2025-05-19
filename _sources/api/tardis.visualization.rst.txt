@@ -7,6 +7,7 @@ Subpackages
 .. toctree::
    :maxdepth: 4
 
+   tardis.visualization.sdec
    tardis.visualization.tools
    tardis.visualization.widgets
 
@@ -23,5 +24,5 @@ Module contents
 
 .. automodule:: tardis.visualization
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:

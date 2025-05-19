@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" data-content_root="../../../../">
 <head>
@@ -13,22 +15,22 @@
     
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>tardis.opacities.macro_atom.base &mdash; tardis</title>
-      <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css?v=80d5e7a1" />
-      <link rel="stylesheet" type="text/css" href="../../../../_static/css/theme.css?v=19f00094" />
-      <link rel="stylesheet" type="text/css" href="../../../../_static/graphviz.css?v=fd3f3429" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/graphviz.css?v=4ae1632d" />
       <link rel="stylesheet" type="text/css" href="../../../../_static/plot_directive.css" />
 
   
     <link rel="shortcut icon" href="../../../../_static/tardis_logo.ico"/>
-  <!--[if lt IE 9]>
-    <script src="../../../../_static/js/html5shiv.min.js"></script>
-  <![endif]-->
-  
-        <script src="../../../../_static/documentation_options.js?v=5929fcd5"></script>
-        <script src="../../../../_static/doctools.js?v=9a2dae69"></script>
-        <script src="../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
-        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-        <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.1/dist/embed-amd.js"></script>
+      <script src="../../../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../../../_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="../../../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/@jupyter-widgets/html-manager@^1.0.1/dist/embed-amd.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/@jupyter-widgets/html-manager@^1.0.1/dist/embed-amd.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/@jupyter-widgets/html-manager@1.0.13/dist/embed-amd.min.js"></script>
     <script src="../../../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../../../genindex.html" />
     <link rel="search" title="Search" href="../../../../search.html" />
@@ -47,9 +49,6 @@
           <a href="../../../../index.html" class="icon icon-home">
             tardis
           </a>
-              <div class="version">
-                latest
-              </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
@@ -63,6 +62,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../../../../quickstart.html">Quickstart for TARDIS</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../tutorials.html">Tutorials</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../how_to_guides.html">How-To Guides</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../workflows.html">Workflows</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../faq.html">Frequently Asked Questions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../api/modules.html">API</a></li>
 </ul>
@@ -72,8 +72,15 @@
 <li class="toctree-l1"><a class="reference internal" href="../../../../io/configuration/index.html">Configuration (Required Input)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../io/model/index.html">Reading Models</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../io/optional/index.html">Optional Inputs</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../../io/visualization/index.html">Visualization Tools &amp; Widgets</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../io/output/index.html">Additional Outputs</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Analyzing Tardis</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../analyzing_tardis/visualization/index.html">Visualization Tools &amp; Widgets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../analyzing_tardis/spectrum/index.html">Analyzing TARDIS Spectra</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../analyzing_tardis/liv_plot_notebook.html">Analyzing Last Interaction Velocity (LIV) Distribution</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../analyzing_tardis/rpacket_plot_notebook.html">Analysing Montecarlo Packets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../analyzing_tardis/analysing_convergence_plot.html">Convergence Plots</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Physics Walkthrough</span></p>
 <ul>
@@ -82,6 +89,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../../../../physics/montecarlo/index.html">Monte Carlo Iteration</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../physics/update_and_conv/update_and_conv.html">Updating Plasma and Convergence</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../physics/spectrum/index.html">Spectrum Generation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../physics/tardisgamma/index.html">TARDIS-High Energy</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Contributing to TARDIS</span></p>
 <ul>
@@ -171,127 +179,6 @@ def initialize_transition_probabilities(
         &quot;transition_probability_coef&quot;: transition_probability_coef,
         &quot;block_references&quot;: block_references,
     }</div>
-
-
-
-<div class="viewcode-block" id="calculate_transition_probabilities">
-<a class="viewcode-back" href="../../../../api/tardis.opacities.macro_atom.base.html#tardis.opacities.macro_atom.base.calculate_transition_probabilities">[docs]</a>
-def calculate_transition_probabilities(
-    atomic_data,
-    beta_sobolev,
-    j_blues,
-    stimulated_emission_factor,
-    tau_sobolevs,
-    transition_probability_coef,
-    block_references,
-    normalize=True,
-):
-    &quot;&quot;&quot;Computes transition probabilities and provides them as a pd.DataFrame
-
-    Parameters
-    ----------
-    atomic_data : tardis.io.atom_data.AtomData
-            Atomic Data
-    beta_sobolev : pd.DataFrame
-        Beta Sobolevs
-    j_blues : pd.DataFrame
-        mean intensity
-    stimulated_emission_factor : np.ndarray
-        Stimulated Emission Factors
-    tau_sobolev : pd.DataFrame
-            Expansion Optical Depths
-    transition_probability_coef : np.ndarray
-        Reshaped macro atom transition probabilities
-    block_references : np.ndarray
-        macro atom block references
-    normalize : bool
-        Whether or not to normalize the transition probabilities to unity
-
-    Returns
-    -------
-    pd.DataFrame
-        transition probabilities
-    &quot;&quot;&quot;
-    # I wonder why?
-    # Not sure who wrote this but the answer is that when the plasma is
-    # first initialised (before the first iteration, without temperature
-    # values etc.) there are no j_blues values so this just prevents
-    # an error. Aoife.
-    if len(j_blues) == 0:
-        return None
-    macro_atom_data = get_macro_atom_data(atomic_data)
-
-    transition_probabilities = calculate_transition_probability(
-        macro_atom_data,
-        beta_sobolev,
-        j_blues,
-        stimulated_emission_factor,
-        transition_probability_coef,
-        block_references,
-        normalize,
-    )
-    transition_probabilities = pd.DataFrame(
-        transition_probabilities,
-        index=macro_atom_data.transition_line_id,
-        columns=tau_sobolevs.columns,
-    )
-    return transition_probabilities</div>
-
-
-
-<div class="viewcode-block" id="calculate_transition_probability">
-<a class="viewcode-back" href="../../../../api/tardis.opacities.macro_atom.base.html#tardis.opacities.macro_atom.base.calculate_transition_probability">[docs]</a>
-def calculate_transition_probability(
-    macro_atom_data,
-    beta_sobolev,
-    j_blues,
-    stimulated_emission_factor,
-    transition_probability_coef,
-    block_references,
-    normalize,
-):
-    &quot;&quot;&quot;Calculate the transition probabilities using optimized functions
-    Parameters
-    ----------
-    macro_atom_data : pd.DataFrame
-        Macro Atom Data
-    beta_sobolev : pd.DataFrame
-        Beta Sobolevs
-    j_blues : pd.DataFrame
-        mean intensity
-    stimulated_emission_factor : np.ndarray
-        Stimulated Emission Factors
-    transition_probability_coef : np.ndarray
-        Reshaped macro atom transition probabilities
-    block_references : np.ndarray
-        macro atom block references
-    normalize : bool
-        Whether or not to normalize the transition probabilities to unity
-
-    Returns
-    -------
-    np.ndarray
-        transition probabilities
-    &quot;&quot;&quot;
-    transition_probabilities = np.empty(
-        (transition_probability_coef.shape[0], beta_sobolev.shape[1])
-    )
-    # trans_old = self.calculate_transition_probabilities(macro_atom_data, beta_sobolev, j_blues, stimulated_emission_factor)
-    transition_type = macro_atom_data.transition_type.values
-    lines_idx = macro_atom_data.lines_idx.values
-    tpos = macro_atom_data.transition_probability.values
-    util.fast_calculate_transition_probabilities(
-        tpos,
-        beta_sobolev.values,
-        j_blues.values,
-        stimulated_emission_factor,
-        transition_type,
-        lines_idx,
-        block_references,
-        transition_probabilities,
-        normalize,
-    )
-    return transition_probabilities</div>
 
 
 
@@ -403,11 +290,7 @@ class TransitionProbabilities(
         stimulated_emission_factor,
         tau_sobolevs,
     ):
-        # I wonder why?
-        # Not sure who wrote this but the answer is that when the plasma is
-        # first initialised (before the first iteration, without temperature
-        # values etc.) there are no j_blues values so this just prevents
-        # an error. Aoife.
+        # Referenced in https://github.com/tardis-sn/tardis/issues/3009
         if len(j_blues) == 0:
             return None
         macro_atom_data = self._get_macro_atom_data(atomic_data)
@@ -436,7 +319,6 @@ class TransitionProbabilities(
         transition_probabilities = np.empty(
             (self.transition_probability_coef.shape[0], beta_sobolev.shape[1])
         )
-        # trans_old = self.calculate_transition_probabilities(macro_atom_data, beta_sobolev, j_blues, stimulated_emission_factor)
         transition_type = macro_atom_data.transition_type.values
         lines_idx = macro_atom_data.lines_idx.values
         tpos = macro_atom_data.transition_probability.values
@@ -452,17 +334,6 @@ class TransitionProbabilities(
             self.normalize,
         )
         return transition_probabilities
-
-<div class="viewcode-block" id="TransitionProbabilities.calculate_transition_probabilities">
-<a class="viewcode-back" href="../../../../api/tardis.opacities.macro_atom.base.html#tardis.opacities.macro_atom.base.TransitionProbabilities.calculate_transition_probabilities">[docs]</a>
-    def calculate_transition_probabilities(
-        self, macro_atom_data, beta_sobolev, j_blues, stimulated_emission_factor
-    ):
-        transition_probabilities = self.prepare_transition_probabilities(
-            macro_atom_data, beta_sobolev, j_blues, stimulated_emission_factor
-        )
-        return transition_probabilities</div>
-
 
 <div class="viewcode-block" id="TransitionProbabilities.initialize_macro_atom_transition_type_filters">
 <a class="viewcode-back" href="../../../../api/tardis.opacities.macro_atom.base.html#tardis.opacities.macro_atom.base.TransitionProbabilities.initialize_macro_atom_transition_type_filters">[docs]</a>
@@ -536,8 +407,8 @@ class NonMarkovChainTransitionProbabilities(
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2013-2024, TARDIS Collaboration.
-      <span class="lastupdated">Last updated on 30 Aug 2024.
+    <p>&#169; Copyright 2013-2025, TARDIS Collaboration.
+      <span class="lastupdated">Last updated on 19 May 2025.
       </span></p>
   </div>
 

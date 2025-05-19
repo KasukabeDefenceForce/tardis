@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" data-content_root="./">
 <head>
@@ -13,22 +15,22 @@
     
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Python Module Index &mdash; tardis</title>
-      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
-      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
-      <link rel="stylesheet" type="text/css" href="_static/graphviz.css?v=fd3f3429" />
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="_static/graphviz.css?v=4ae1632d" />
       <link rel="stylesheet" type="text/css" href="_static/plot_directive.css" />
 
   
     <link rel="shortcut icon" href="_static/tardis_logo.ico"/>
-  <!--[if lt IE 9]>
-    <script src="_static/js/html5shiv.min.js"></script>
-  <![endif]-->
-  
-        <script src="_static/documentation_options.js?v=5929fcd5"></script>
-        <script src="_static/doctools.js?v=9a2dae69"></script>
-        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
-        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-        <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.1/dist/embed-amd.js"></script>
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="_static/doctools.js?v=9bcbadda"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/@jupyter-widgets/html-manager@^1.0.1/dist/embed-amd.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/@jupyter-widgets/html-manager@^1.0.1/dist/embed-amd.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/@jupyter-widgets/html-manager@1.0.13/dist/embed-amd.min.js"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -50,9 +52,6 @@
           <a href="index.html" class="icon icon-home">
             tardis
           </a>
-              <div class="version">
-                latest
-              </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
@@ -66,6 +65,7 @@
 <li class="toctree-l1"><a class="reference internal" href="quickstart.html">Quickstart for TARDIS</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tutorials.html">Tutorials</a></li>
 <li class="toctree-l1"><a class="reference internal" href="how_to_guides.html">How-To Guides</a></li>
+<li class="toctree-l1"><a class="reference internal" href="workflows.html">Workflows</a></li>
 <li class="toctree-l1"><a class="reference internal" href="faq.html">Frequently Asked Questions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="api/modules.html">API</a></li>
 </ul>
@@ -75,8 +75,15 @@
 <li class="toctree-l1"><a class="reference internal" href="io/configuration/index.html">Configuration (Required Input)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="io/model/index.html">Reading Models</a></li>
 <li class="toctree-l1"><a class="reference internal" href="io/optional/index.html">Optional Inputs</a></li>
-<li class="toctree-l1"><a class="reference internal" href="io/visualization/index.html">Visualization Tools &amp; Widgets</a></li>
 <li class="toctree-l1"><a class="reference internal" href="io/output/index.html">Additional Outputs</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Analyzing Tardis</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="analyzing_tardis/visualization/index.html">Visualization Tools &amp; Widgets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="analyzing_tardis/spectrum/index.html">Analyzing TARDIS Spectra</a></li>
+<li class="toctree-l1"><a class="reference internal" href="analyzing_tardis/liv_plot_notebook.html">Analyzing Last Interaction Velocity (LIV) Distribution</a></li>
+<li class="toctree-l1"><a class="reference internal" href="analyzing_tardis/rpacket_plot_notebook.html">Analysing Montecarlo Packets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="analyzing_tardis/analysing_convergence_plot.html">Convergence Plots</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Physics Walkthrough</span></p>
 <ul>
@@ -85,6 +92,7 @@
 <li class="toctree-l1"><a class="reference internal" href="physics/montecarlo/index.html">Monte Carlo Iteration</a></li>
 <li class="toctree-l1"><a class="reference internal" href="physics/update_and_conv/update_and_conv.html">Updating Plasma and Convergence</a></li>
 <li class="toctree-l1"><a class="reference internal" href="physics/spectrum/index.html">Spectrum Generation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="physics/tardisgamma/index.html">TARDIS-High Energy</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Contributing to TARDIS</span></p>
 <ul>
@@ -141,7 +149,8 @@
    <a href="#cap-s"><strong>s</strong></a> | 
    <a href="#cap-t"><strong>t</strong></a> | 
    <a href="#cap-u"><strong>u</strong></a> | 
-   <a href="#cap-v"><strong>v</strong></a>
+   <a href="#cap-v"><strong>v</strong></a> | 
+   <a href="#cap-w"><strong>w</strong></a>
    </div>
 
    <table class="indextable modindextable">
@@ -354,12 +363,12 @@
      <tr class="cg-3">
        <td></td>
        <td>&#160;&#160;&#160;
-       <a href="api/tardis.io.model.parse_packet_source_configuration.html#module-tardis.io.model.parse_packet_source_configuration"><code class="xref">tardis.io.model.parse_packet_source_configuration</code></a></td><td>
+       <a href="api/tardis.io.model.parse_density_configuration.html#module-tardis.io.model.parse_density_configuration"><code class="xref">tardis.io.model.parse_density_configuration</code></a></td><td>
        <em></em></td></tr>
      <tr class="cg-3">
        <td></td>
        <td>&#160;&#160;&#160;
-       <a href="api/tardis.io.model.parse_radiation_field_configuration.html#module-tardis.io.model.parse_radiation_field_configuration"><code class="xref">tardis.io.model.parse_radiation_field_configuration</code></a></td><td>
+       <a href="api/tardis.io.model.parse_packet_source_configuration.html#module-tardis.io.model.parse_packet_source_configuration"><code class="xref">tardis.io.model.parse_packet_source_configuration</code></a></td><td>
        <em></em></td></tr>
      <tr class="cg-3">
        <td></td>
@@ -566,7 +575,82 @@
      <tr class="cg-6">
        <td></td>
        <td>&#160;&#160;&#160;
+       <a href="api/tardis.plasma.assembly.base.html#module-tardis.plasma.assembly.base"><code class="xref">tardis.plasma.assembly.base</code></a></td><td>
+       <em></em></td></tr>
+     <tr class="cg-6">
+       <td></td>
+       <td>&#160;&#160;&#160;
+       <a href="api/tardis.plasma.assembly.legacy_assembly.html#module-tardis.plasma.assembly.legacy_assembly"><code class="xref">tardis.plasma.assembly.legacy_assembly</code></a></td><td>
+       <em></em></td></tr>
+     <tr class="cg-6">
+       <td></td>
+       <td>&#160;&#160;&#160;
        <a href="api/tardis.plasma.base.html#module-tardis.plasma.base"><code class="xref">tardis.plasma.base</code></a></td><td>
+       <em></em></td></tr>
+     <tr class="cg-6">
+       <td></td>
+       <td>&#160;&#160;&#160;
+       <a href="api/tardis.plasma.electron_energy_distribution.html#module-tardis.plasma.electron_energy_distribution"><code class="xref">tardis.plasma.electron_energy_distribution</code></a></td><td>
+       <em></em></td></tr>
+     <tr class="cg-6">
+       <td></td>
+       <td>&#160;&#160;&#160;
+       <a href="api/tardis.plasma.electron_energy_distribution.base.html#module-tardis.plasma.electron_energy_distribution.base"><code class="xref">tardis.plasma.electron_energy_distribution.base</code></a></td><td>
+       <em></em></td></tr>
+     <tr class="cg-6">
+       <td></td>
+       <td>&#160;&#160;&#160;
+       <a href="api/tardis.plasma.equilibrium.html#module-tardis.plasma.equilibrium"><code class="xref">tardis.plasma.equilibrium</code></a></td><td>
+       <em></em></td></tr>
+     <tr class="cg-6">
+       <td></td>
+       <td>&#160;&#160;&#160;
+       <a href="api/tardis.plasma.equilibrium.level_populations.html#module-tardis.plasma.equilibrium.level_populations"><code class="xref">tardis.plasma.equilibrium.level_populations</code></a></td><td>
+       <em></em></td></tr>
+     <tr class="cg-6">
+       <td></td>
+       <td>&#160;&#160;&#160;
+       <a href="api/tardis.plasma.equilibrium.rate_matrix.html#module-tardis.plasma.equilibrium.rate_matrix"><code class="xref">tardis.plasma.equilibrium.rate_matrix</code></a></td><td>
+       <em></em></td></tr>
+     <tr class="cg-6">
+       <td></td>
+       <td>&#160;&#160;&#160;
+       <a href="api/tardis.plasma.equilibrium.rates.html#module-tardis.plasma.equilibrium.rates"><code class="xref">tardis.plasma.equilibrium.rates</code></a></td><td>
+       <em></em></td></tr>
+     <tr class="cg-6">
+       <td></td>
+       <td>&#160;&#160;&#160;
+       <a href="api/tardis.plasma.equilibrium.rates.collision_strengths.html#module-tardis.plasma.equilibrium.rates.collision_strengths"><code class="xref">tardis.plasma.equilibrium.rates.collision_strengths</code></a></td><td>
+       <em></em></td></tr>
+     <tr class="cg-6">
+       <td></td>
+       <td>&#160;&#160;&#160;
+       <a href="api/tardis.plasma.equilibrium.rates.collisional_ionization_rates.html#module-tardis.plasma.equilibrium.rates.collisional_ionization_rates"><code class="xref">tardis.plasma.equilibrium.rates.collisional_ionization_rates</code></a></td><td>
+       <em></em></td></tr>
+     <tr class="cg-6">
+       <td></td>
+       <td>&#160;&#160;&#160;
+       <a href="api/tardis.plasma.equilibrium.rates.collisional_ionization_strengths.html#module-tardis.plasma.equilibrium.rates.collisional_ionization_strengths"><code class="xref">tardis.plasma.equilibrium.rates.collisional_ionization_strengths</code></a></td><td>
+       <em></em></td></tr>
+     <tr class="cg-6">
+       <td></td>
+       <td>&#160;&#160;&#160;
+       <a href="api/tardis.plasma.equilibrium.rates.collisional_rates.html#module-tardis.plasma.equilibrium.rates.collisional_rates"><code class="xref">tardis.plasma.equilibrium.rates.collisional_rates</code></a></td><td>
+       <em></em></td></tr>
+     <tr class="cg-6">
+       <td></td>
+       <td>&#160;&#160;&#160;
+       <a href="api/tardis.plasma.equilibrium.rates.photoionization_rates.html#module-tardis.plasma.equilibrium.rates.photoionization_rates"><code class="xref">tardis.plasma.equilibrium.rates.photoionization_rates</code></a></td><td>
+       <em></em></td></tr>
+     <tr class="cg-6">
+       <td></td>
+       <td>&#160;&#160;&#160;
+       <a href="api/tardis.plasma.equilibrium.rates.photoionization_strengths.html#module-tardis.plasma.equilibrium.rates.photoionization_strengths"><code class="xref">tardis.plasma.equilibrium.rates.photoionization_strengths</code></a></td><td>
+       <em></em></td></tr>
+     <tr class="cg-6">
+       <td></td>
+       <td>&#160;&#160;&#160;
+       <a href="api/tardis.plasma.equilibrium.rates.radiative_rates.html#module-tardis.plasma.equilibrium.rates.radiative_rates"><code class="xref">tardis.plasma.equilibrium.rates.radiative_rates</code></a></td><td>
        <em></em></td></tr>
      <tr class="cg-6">
        <td></td>
@@ -627,6 +711,11 @@
        <td></td>
        <td>&#160;&#160;&#160;
        <a href="api/tardis.plasma.properties.ion_population.html#module-tardis.plasma.properties.ion_population"><code class="xref">tardis.plasma.properties.ion_population</code></a></td><td>
+       <em></em></td></tr>
+     <tr class="cg-6">
+       <td></td>
+       <td>&#160;&#160;&#160;
+       <a href="api/tardis.plasma.properties.legacy_property_collections.html#module-tardis.plasma.properties.legacy_property_collections"><code class="xref">tardis.plasma.properties.legacy_property_collections</code></a></td><td>
        <em></em></td></tr>
      <tr class="cg-6">
        <td></td>
@@ -960,6 +1049,16 @@
      <tr class="cg-13">
        <td></td>
        <td>&#160;&#160;&#160;
+       <a href="api/tardis.visualization.sdec.html#module-tardis.visualization.sdec"><code class="xref">tardis.visualization.sdec</code></a></td><td>
+       <em></em></td></tr>
+     <tr class="cg-13">
+       <td></td>
+       <td>&#160;&#160;&#160;
+       <a href="api/tardis.visualization.sdec.util.html#module-tardis.visualization.sdec.util"><code class="xref">tardis.visualization.sdec.util</code></a></td><td>
+       <em></em></td></tr>
+     <tr class="cg-13">
+       <td></td>
+       <td>&#160;&#160;&#160;
        <a href="api/tardis.visualization.tools.html#module-tardis.visualization.tools"><code class="xref">tardis.visualization.tools</code></a></td><td>
        <em></em></td></tr>
      <tr class="cg-13">
@@ -1012,6 +1111,45 @@
        <td>&#160;&#160;&#160;
        <a href="api/tardis.visualization.widgets.util.html#module-tardis.visualization.widgets.util"><code class="xref">tardis.visualization.widgets.util</code></a></td><td>
        <em></em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-w"><td></td><td>
+       <strong>w</strong></td><td></td></tr>
+     <tr>
+       <td><img src="_static/minus.png" class="toggler"
+              id="toggle-14" style="display: none" alt="-" /></td>
+       <td>
+       <a href="api/tardis.workflows.html#module-tardis.workflows"><code class="xref">tardis.workflows</code></a></td><td>
+       <em></em></td></tr>
+     <tr class="cg-14">
+       <td></td>
+       <td>&#160;&#160;&#160;
+       <a href="api/tardis.workflows.simple_tardis_workflow.html#module-tardis.workflows.simple_tardis_workflow"><code class="xref">tardis.workflows.simple_tardis_workflow</code></a></td><td>
+       <em></em></td></tr>
+     <tr class="cg-14">
+       <td></td>
+       <td>&#160;&#160;&#160;
+       <a href="api/tardis.workflows.standard_tardis_workflow.html#module-tardis.workflows.standard_tardis_workflow"><code class="xref">tardis.workflows.standard_tardis_workflow</code></a></td><td>
+       <em></em></td></tr>
+     <tr class="cg-14">
+       <td></td>
+       <td>&#160;&#160;&#160;
+       <a href="api/tardis.workflows.tardis_he_workflow.html#module-tardis.workflows.tardis_he_workflow"><code class="xref">tardis.workflows.tardis_he_workflow</code></a></td><td>
+       <em></em></td></tr>
+     <tr class="cg-14">
+       <td></td>
+       <td>&#160;&#160;&#160;
+       <a href="api/tardis.workflows.util.html#module-tardis.workflows.util"><code class="xref">tardis.workflows.util</code></a></td><td>
+       <em></em></td></tr>
+     <tr class="cg-14">
+       <td></td>
+       <td>&#160;&#160;&#160;
+       <a href="api/tardis.workflows.v_inner_solver.html#module-tardis.workflows.v_inner_solver"><code class="xref">tardis.workflows.v_inner_solver</code></a></td><td>
+       <em></em></td></tr>
+     <tr class="cg-14">
+       <td></td>
+       <td>&#160;&#160;&#160;
+       <a href="api/tardis.workflows.workflow_logging.html#module-tardis.workflows.workflow_logging"><code class="xref">tardis.workflows.workflow_logging</code></a></td><td>
+       <em></em></td></tr>
    </table>
 
 
@@ -1022,8 +1160,8 @@
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2013-2024, TARDIS Collaboration.
-      <span class="lastupdated">Last updated on 30 Aug 2024.
+    <p>&#169; Copyright 2013-2025, TARDIS Collaboration.
+      <span class="lastupdated">Last updated on 19 May 2025.
       </span></p>
   </div>
 

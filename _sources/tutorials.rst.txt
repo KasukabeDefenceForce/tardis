@@ -3,8 +3,6 @@ Tutorials
 
 The following pages contain the TARDIS tutorials:
 
-* :doc:`io/visualization/tutorial_convergence_plot`
-* :doc:`io/visualization/tutorial_montecarlo_packet_visualization`
-* :doc:`io/configuration/tutorial_read_configuration`
-* :doc:`io/optional/tutorial_logging_configuration`
-* :doc:`io/optional/tutorial_callback_example`
+* :doc:`tutorial_read_configuration`
+* :doc:`tutorial_logging_configuration`
+* :doc:`tutorial_callback_example`
