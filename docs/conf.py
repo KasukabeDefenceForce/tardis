@@ -172,7 +172,7 @@ nbsphinx_prolog = r"""
             line-height: 2em;
         }
     </style>
-    
+
     <div class="admonition note">
     <p class="note-p">You can interact with this notebook online: <a href="https://mybinder.org/v2/gh/tardis-sn/tardis/HEAD?filepath={{ docname|e }}" class="launch-btn" target="_blank" rel="noopener noreferrer">Launch notebook</a></p>
     </div>
