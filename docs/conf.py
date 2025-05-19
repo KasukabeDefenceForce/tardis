@@ -171,11 +171,8 @@ nbsphinx_prolog = r"""
             margin-bottom: 0.4em;
             line-height: 2em;
         }
-        .nboutput:has(.prompt.empty):has(.output_area:empty) {
-            display: none;
-        }
     </style>
-    
+
     <div class="admonition note">
     <p class="note-p">You can interact with this notebook online: <a href="https://mybinder.org/v2/gh/tardis-sn/tardis/HEAD?filepath={{ docname|e }}" class="launch-btn" target="_blank" rel="noopener noreferrer">Launch notebook</a></p>
     </div>
