@@ -1,0 +1,6 @@
+{%- if block.output_area -%}
+<div class="nboutput docutils container">
+  {{ block.input_prompt() }}
+  {{ block.output_area() }}
+</div>
+{%- endif -%}
